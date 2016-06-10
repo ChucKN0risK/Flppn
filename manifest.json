@@ -14,6 +14,7 @@
     "http://*/*",
     "https://*/*",
     "activeTab",
+    "background",
     "tabs"
   ],
   "icons": {
@@ -27,7 +28,8 @@
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["assets/js/content.js"]
+      "js": ["assets/js/smartSaver.js"],
+      "run_at": "document_end"
     }
   ],
   "incognito": "spanning",

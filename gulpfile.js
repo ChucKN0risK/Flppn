@@ -143,46 +143,6 @@ gulp.task('svgstore', function () {
       .pipe(gulp.dest('assets/icons/dest'));
 });
 
-// Generate & Inline Critical-path CSS
-gulp.task('critical', function () {
-  return gulp
-    .src(path.html)
-    .pipe(critical({
-      base: './',
-      inline: true,
-      minify: true,
-      dimensions: [{
-        height: 1300,
-        width: 900
-      }]
-    }))
-    .pipe(gulp.dest(path.dist));
-});
-
-// Run a Google Page Speed Insight Test for mobile
-gulp.task('mobile', function () {
-    return psi(site, {
-        // key: key
-        nokey: 'true',
-        strategy: 'mobile',
-    }, function (err, data) {
-        console.log(data.score);
-        console.log(data.pageStats);
-    });
-});
-
-// Run a Google Page Speed Insight Test for desktop
-gulp.task('desktop', function () {
-    return psi(site, {
-        nokey: 'true',
-        // key: key,
-        strategy: 'desktop',
-    }, function (err, data) {
-        console.log(data.score);
-        console.log(data.pageStats);
-    });
-});
-
 gulp.task('default', ['sass','serve'], function () {});
 
 gulp.task('prod', ['sass-prod', 'js-prod', 'critical', 'img']);

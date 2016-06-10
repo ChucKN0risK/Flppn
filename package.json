@@ -16,12 +16,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "github.com/ChucKN0risK/LuchosFrontFramework.git"
+    "url": "github.com/ChucKN0risK/Flppn.git"
   },
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.3.1",
-    "critical": "^0.6.0",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.1.0",
     "gulp-cached": "^1.1.0",
@@ -40,7 +39,6 @@
     "gulp-uglify": "^1.1.0",
     "gulp-uncss": "^1.0.5",
     "imagemin-pngquant": "^4.0.0",
-    "sassdoc": "^2.1.15",
     "svg4everybody": "^2.0.3"
   }
 }
