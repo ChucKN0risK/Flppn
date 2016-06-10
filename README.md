@@ -5,11 +5,11 @@ You'll be able to find here a guide to understand the extension's architecture.
 
 ## Extension Features
 * Allow the user to save a page URL in his account.
-    * How ? => By clicking on a created element on the page.
-    * What does it imply ? => We need to interact with the page the user loads (as opposed to pages that are included in the extension). Then our extension must include a `contentscript`. It's best to not think of content scripts as part of your extension but as part of the content they are interracting with. Also content scripts can't call functions defined by your extension (in your background script for example). [Since we want to save the URL of the page we need permission to access the tabs](https://developer.chrome.com/extensions/tabs#manifest). 
+    * **How ?** => By clicking on a created element on the page.
+    * **What does it imply ?** => We need to interact with the page the user loads (as opposed to pages that are included in the extension). Then our extension must include a `contentscript`. It's best to not think of content scripts as part of your extension but as part of the content they are interracting with. Also content scripts can't call functions defined by your extension (in your background script for example). [Since we want to save the URL of the page we need permission to access the tabs](https://developer.chrome.com/extensions/tabs#manifest). 
 * Allow the user to visit his Flppn account and to disconnect   
-    * How ? : When clicking on the extension icon in the browser actions a popup will appear with 2 links. One redirecting to the account and the other disconnecting the user.
-    * What does it imply ? => This feature is part of our extension main logic. So the file script we want to write in is `background.js`.
+    * **How ?** : When clicking on the extension icon in the browser actions a popup will appear with 2 links. One redirecting to the account and the other disconnecting the user.
+    * **What does it imply ?** => This feature is part of our extension main logic. So the file script we want to write in is `background.js`.
 
 This framework is built over several years of front-end development knowledge. It is as agnostic as possible. The only thing I focused on was to make the sass as modular and automated as possible helping you writing style over fixing/maintaining it.
 
