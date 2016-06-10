@@ -1,0 +1,43 @@
+// ----------------------
+// == Text Wrapper
+// ----------------------
+.text-wrapper {
+  margin-bottom: 2rem;
+  max-width: 35rem;
+  
+  p + p {
+    margin-top: 1rem;
+  }
+
+  p + .text-subtitle {
+    margin-top: 1.5rem;
+  }
+
+  .text-subtitle + p {
+    margin-top: initial;
+  }
+
+  ul {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-section__body & {
+    margin-right: auto;
+  }
+}
+
+.text-subtitle {
+  margin-bottom: .5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: $grey;
+
+  &--medium {
+    font-size: 1.5rem;
+  }
+
+  &--big {
+    font-size: 2rem;
+  }
+}
