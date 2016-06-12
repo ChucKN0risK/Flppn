@@ -11,6 +11,17 @@ You'll be able to find here a guide to understand the extension's architecture.
     * **How ?** : When clicking on the extension icon in the browser actions a popup will appear with 2 links. One redirecting to the account and the other disconnecting the user.
     * **What does it imply ?** => This feature is part of our extension main logic. So the file script we want to write in is `background.js`.
 
+## Architecture Logic
+We define the user journey we want to provide and then we build our architecture based on this journey.
+1. The user installs the Flppn extension and gets redirected on the flppn website where he is invited to create his account.
+2. The user create an account.
+3. Later, the user visits his favourite porn website. When hovering a video a smartSaveButton appears on the video. 
+4. When clicking the smartSaveButton the video is saved to his account and the smartSaveMenu appears.
+5. Saved video can be attached to one or several collection. These collections are listed in the smartSaveMenu. If the user clicks on a collection then the video is linked to it, a confirmation message appears and the smartSaveMenu closes itself.
+5bis. If the user writes in the field the name of an unknown collection then typing on the "Enter" key will create the new collection, link the video to this newly created collection and the smartSaveMenu closes itself.
+
+Since we only want to display the smartSaveButton and the smartSaveMenu on certain website we will need to initialize these two classes only if the current tab has a valid URL. This validation concerns the main logic of our extension so it will be written in our `background.js`. However our two classes : smartSaveButton and smartSaveMenu will respectively by written in `smartSaveButton/scripts/smartSaveButton.js` and `smartSaveMenu/scripts/smartSaveMenu.js`.
+
 This framework is built over several years of front-end development knowledge. It is as agnostic as possible. The only thing I focused on was to make the sass as modular and automated as possible helping you writing style over fixing/maintaining it.
 
 You can drop me a line on [@chuckn0risK](www.twitter.com/chuckn0risk)

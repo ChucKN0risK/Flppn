@@ -7,8 +7,8 @@
 
   "browser_action": {
     "default_title": "Flppn",
-    "default_icon": "assets/img/icons/icon_19.png",
-    "default_popup": "popup.html"
+    "default_icon": "dev/assets/img/icons/icon_19.png",
+    "default_popup": "dev/popup/popup.html"
   },
   "permissions": [
     "http://*/*",
@@ -18,20 +18,21 @@
     "tabs"
   ],
   "icons": {
-    "19": "assets/img/icons/icon_19.png",
-    "128": "assets/img/icons/icon_128.png"
+    "19": "dev/assets/img/icons/icon_19.png",
+    "128": "dev/assets/img/icons/icon_128.png"
   },
   "background": {
-    "scripts": ["assets/js/background.js"]
+    "scripts": ["dev/background/background.js"]
   },
-  "options_page": "options.html",
+  "options_page": "dev/options.html",
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["assets/js/smartSaver.js"],
+      "js": ["dev/smartSaverButton/smartSaverButton.js", "dev/smartSaverMenu/smartSaverMenu.js"],
+      "css": ["dev/smartSaverButton/styles/main.css", "dev/smartSaverMenu/styles/main.css"],
       "run_at": "document_end"
     }
   ],
   "incognito": "spanning",
-  "devtools_page": "devtools.html"
+  "devtools_page": "dev/devtools.html"
 }

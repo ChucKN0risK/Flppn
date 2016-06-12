@@ -145,5 +145,5 @@ gulp.task('svgstore', function () {
 
 gulp.task('default', ['sass','serve'], function () {});
 
-gulp.task('prod', ['sass-prod', 'js-prod', 'critical', 'img']);
+gulp.task('prod', ['sass-prod', 'js-prod', 'img']);
 
