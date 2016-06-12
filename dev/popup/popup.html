@@ -8,14 +8,15 @@
   <head>
     <title>Flppn</title>
     <link rel="stylesheet" type="text/css" href="dev/assets/css/style.css">
-    <script src="js/popup.js"></script>
+    <script src="popup/popup.js"></script>
   </head>
   <body>
     <div class="popup">
-      <h1>Flppn</h1>
-      <a href="#">Go to my Flppn account</a>
-      <a href="#">Disconnect</a>
-      <button>Options</button>
+      <form class="popup-form">
+        <input class="popup-input" type="text" placeholder="Username">
+        <input class="popup-input" type="password" placeholder="Password">
+        <button class="popup-btn" type="submit">Sign in</button>
+      </form>
     </div>
   </body>
 </html>

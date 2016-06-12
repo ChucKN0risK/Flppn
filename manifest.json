@@ -10,6 +10,7 @@
     "default_icon": "dev/assets/img/icons/icon_19.png",
     "default_popup": "dev/popup/popup.html"
   },
+  "web_accessible_resources": ["dev/smartSaveButton/smartSaveButton.html", "dev/smartSaveButton/smartSaveButton.html", "dev/smartSaveButton/styles/main.css", "dev/smartSaveMenu/styles/main.css"],
   "permissions": [
     "http://*/*",
     "https://*/*",
@@ -22,14 +23,15 @@
     "128": "dev/assets/img/icons/icon_128.png"
   },
   "background": {
-    "scripts": ["dev/background/background.js", "dev/background/request.js", "dev/popup/popup.js"]
+    "scripts": ["dev/background/background.js", "dev/background/request.js", "dev/popup/popup.js"],
+    "persistent": false
   },
   "options_page": "dev/options.html",
   "content_scripts": [
     {
-      "matches": ["*://*.pornhub.com/*", "*://*.youporn.com/*"],
-      "js": ["dev/smartSaverButton/smartSaverButton.js", "dev/smartSaverMenu/smartSaverMenu.js"],
-      "css": ["dev/smartSaverButton/styles/main.css", "dev/smartSaverMenu/styles/main.css"],
+      "matches": ["*://*.pornhub.com/*", "*://*.youporn.com/*", "*://*.chrome.com/*"],
+      "js": ["dev/smartSaveButton/scripts/smartSaveButton.js", "dev/smartSaveMenu/scripts/smartSaveMenu.js", "dev/background/onAvailablePage.js"],
+      "css": ["dev/smartSaveButton/styles/main.css", "dev/smartSaveMenu/styles/main.css"],
       "run_at": "document_end"
     }
   ],

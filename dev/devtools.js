@@ -1,7 +1,7 @@
 chrome.devtools.panels.create(
     "Flppn", 
     "icon_19.png", 
-    "dropdown/dropdown.html",
+    "popup/popup.html",
     function() {
       console.log('Flppn');
     }
