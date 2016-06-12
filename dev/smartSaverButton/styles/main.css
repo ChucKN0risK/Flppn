@@ -1,0 +1,72 @@
+:root {
+  --white: #fff;
+  --black: #171717;
+  --btnHeight: 35px;
+  --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+* { box-sizing: border-box; }
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.smartSaveButton {
+  height: var(--btnHeight);
+  width: 6rem;
+  background-color: var(--white);
+  border-radius: 2px;
+  border-color: transparent;
+  padding: 0;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1), 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.smartSaveButton-part {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  transition: var(--transition);
+  will-change: opacity;
+}
+
+.smartSaveButton-logo {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='69' height='10' viewBox='0 0 69 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.58 1.1V0H0v10h1.183V5.714h4.835v-1.1H1.183V1.1H6.58zm9.088 7.814V0h-1.183v10h5.722V8.914h-4.54zM28.29 0v10h1.183V6.843h2.706c2.557 0 4.035-1.272 4.035-3.486C36.215 1.23 34.737 0 32.18 0h-3.89zm1.183 1.1h2.66c1.864 0 2.944.77 2.944 2.286 0 1.557-1.08 2.357-2.943 2.357h-2.66V1.1zM44.343 0v10h1.182V6.843h2.706c2.56 0 4.038-1.272 4.038-3.486C52.267 1.23 50.788 0 48.23 0h-3.888zm1.182 1.1h2.662c1.863 0 2.942.77 2.942 2.286 0 1.557-1.08 2.357-2.943 2.357h-2.662V1.1zM69 10V0h-1.168v8.043L61.622 0h-1.227v10h1.183V1.97l6.21 8.03H69z' fill='%23000' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 1;
+}
+
+.smartSaveButton-save {
+  opacity: 0;
+  visibilty: hidden;
+  color: var(--black);
+  font-family: 'Open Sans';
+  line-height: var(--btnHeight);
+}
+
+.smartSaveButton:hover .smartSaveButton-part {
+  transform: translateY(-100%);
+}
+
+.smartSaveButton:hover .smartSaveButton-logo {
+  opacity: 0;
+}
+
+.smartSaveButton:hover .smartSaveButton-save {
+  opacity: 1;
+  visibility: visible;
+}

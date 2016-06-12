@@ -2,8 +2,67 @@
 <html>
 <head>
   <title>SmartSaverMenu</title>
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
+  
+  <div class="smartSaveMenu" id="smartSaveMenu">
+    <header class="smartSaveMenu-part smartSaveMenu-currentLink">
+      <div class="currentLink-website">
+        <div class="website-favicon"></div>
+        <p class="website-name">Pornhub</p>
+      </div>
+      <p class="currentLink-videoTitle">Sex on the beach doggy style - Pornhub.com</p>
+    </header>
+    
+    <ul class="smartSaveMenu-part smartSaveMenu-collections">
+      <li class="smartSaveMenu-collection">
+        <div class="collection-cover"></div>
+        <div class="collection-content">
+          <p class="collection-name">Prison</p>
+          <p class="collection-infos">12 videos</p>
+        </div>
+      </li>
+      <li class="smartSaveMenu-collection">
+        <div class="collection-cover"></div>
+        <div class="collection-content">
+          <p class="collection-name">School</p>
+          <p class="collection-infos">2 videos</p>
+        </div>
+      </li>
+      <li class="smartSaveMenu-collection">
+        <div class="collection-cover"></div>
+        <div class="collection-content">
+          <p class="collection-name">Church</p>
+          <p class="collection-infos">28 videos</p>
+        </div>
+      </li>
+      <li class="smartSaveMenu-collection">
+        <div class="collection-cover"></div>
+        <div class="collection-content">
+          <p class="collection-name">Home</p>
+          <p class="collection-infos">17 videos</p>
+        </div>
+      </li>
+      <li class="smartSaveMenu-collection">
+        <div class="collection-cover"></div>
+        <div class="collection-content">
+          <p class="collection-name">Trailer park</p>
+          <p class="collection-infos">2 videos</p>
+        </div>
+      </li>
+    </ul>
+    
+    <form class="smartSaveMenu-part smartSaveMenu-createCollection">
+      <div class="smartSaveMenu-createCollectionIcon">
+        <svg width="15" height="16" viewBox="0 0 15 16" xmlns="http://www.w3.org/2000/svg"><defs><path d="M12 28.002c0-.553.45-1.002 1.007-1.002h12.986c.556 0 1.007.456 1.007 1.002v9.996C27 38.55 26.55 39 25.993 39H13.007C12.45 39 12 38.544 12 37.998v-9.996zM14 25h11v1H14v-1zm2-2h7v1h-7v-1z" id="a"/><mask id="b" x="0" y="0" width="15" height="16" fill="#fff"><use xlink:href="#a"/></mask></defs><use mask="url(#b)" xlink:href="#a" transform="translate(-12 -23)" stroke="#AAAAB1" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+      </div>
+      <input class="createCollection-field" type="text" placeholder="Create new collection"/>
+      <p class="smartSaveMenu-createCollectionText">press enter to save</p>
+    </form>
+  </div>
 
+  <script type="text/javascript" src="scripts/smartSaveMenu.js"></script>
 </body>
 </html>

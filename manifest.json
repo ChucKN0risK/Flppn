@@ -27,7 +27,7 @@
   "options_page": "dev/options.html",
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*"],
+      "matches": ["*://*.pornhub.com/*", "*://*.youporn.com/*"],
       "js": ["dev/smartSaverButton/smartSaverButton.js", "dev/smartSaverMenu/smartSaverMenu.js"],
       "css": ["dev/smartSaverButton/styles/main.css", "dev/smartSaverMenu/styles/main.css"],
       "run_at": "document_end"
