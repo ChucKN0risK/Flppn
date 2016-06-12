@@ -22,7 +22,7 @@
     "128": "dev/assets/img/icons/icon_128.png"
   },
   "background": {
-    "scripts": ["dev/background/background.js"]
+    "scripts": ["dev/background/background.js", "dev/background/request.js", "dev/popup/popup.js"]
   },
   "options_page": "dev/options.html",
   "content_scripts": [
