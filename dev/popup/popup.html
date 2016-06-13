@@ -7,16 +7,17 @@
 <html>
   <head>
     <title>Flppn</title>
-    <link rel="stylesheet" type="text/css" href="dev/assets/css/style.css">
-    <script src="popup/popup.js"></script>
+    <link rel="stylesheet" type="text/css" href="chrome-extension://bnhkidiekcgbhkmbecmeoomecpbbgfnb/dev/assets/css/style.css">
   </head>
   <body>
     <div class="popup">
       <form class="popup-form">
-        <input class="popup-input" type="text" placeholder="Username">
-        <input class="popup-input" type="password" placeholder="Password">
-        <button class="popup-btn" type="submit">Sign in</button>
+        <input class="popup-input" id="connectPseudo" type="text" placeholder="Username">
+        <input class="popup-input" id="connectPassword" type="password" placeholder="Password">
+        <button class="popup-btn" type="submit" id="connectForm">Sign in</button>
       </form>
     </div>
+    <script src="popup.js"></script>
+    <script src="request.js"></script>
   </body>
 </html>

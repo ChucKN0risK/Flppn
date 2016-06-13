@@ -16,21 +16,22 @@
     "https://*/*",
     "activeTab",
     "background",
-    "tabs"
+    "tabs",
+    "storage"
   ],
   "icons": {
     "19": "dev/assets/img/icons/icon_19.png",
     "128": "dev/assets/img/icons/icon_128.png"
   },
   "background": {
-    "scripts": ["dev/background/background.js", "dev/background/request.js", "dev/popup/popup.js"],
+    "scripts": ["dev/background/background.js"],
     "persistent": false
   },
   "options_page": "dev/options.html",
   "content_scripts": [
     {
       "matches": ["*://*.pornhub.com/*", "*://*.youporn.com/*", "*://*.chrome.com/*"],
-      "js": ["dev/smartSaveButton/scripts/smartSaveButton.js", "dev/smartSaveMenu/scripts/smartSaveMenu.js", "dev/background/onAvailablePage.js"],
+      "js": ["dev/smartSaveButton/scripts/smartSaveButton.js", "dev/smartSaveMenu/scripts/smartSaveMenu.js", "dev/popup/request.js"],
       "css": ["dev/smartSaveButton/styles/main.css", "dev/smartSaveMenu/styles/main.css"],
       "run_at": "document_end"
     }

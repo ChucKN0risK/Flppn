@@ -2,6 +2,25 @@
 // request background.js
 // Methods : init / saveVideo / openSmartSaveMenu
 
+var token;
+
+console.log(token);
+
+chrome.storage.sync.get(function(localstorage) {
+  token = localstorage.token;
+  var videoWrapper = document.querySelector('#player');
+  if (videoWrapper) {
+    smartSaveButton(videoWrapper);
+  }
+});
+
+chrome.storage.onChanged.addListener(function(changes) {
+  // If the token stored in the localstorage has changed
+  // then its new value is cached in our global token variable.
+  token = changes.token;
+  console.log(token);
+});
+
 var smartSaveButton = function(videoWrapper) {
   this.$wrapper = videoWrapper;
   SmartSaveButton.init(videoWrapper);
@@ -18,7 +37,6 @@ var SmartSaveButton = {
     smartSaveMenu.init();
   },
   showElement: function() {
-    console.log('showElement');
     var host = document.querySelector('#smartSaveButtonHost').createShadowRoot();
     var template = document.querySelector('#smartSaveButtonTemplate');
     var clone = document.importNode(template.content, true)
@@ -38,6 +56,5 @@ var SmartSaveButton = {
         SmartSaveButton.showElement();
     };
     xhr.send();
-    
   }
 };

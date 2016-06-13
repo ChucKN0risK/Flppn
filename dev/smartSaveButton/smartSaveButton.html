@@ -9,13 +9,4 @@
     <div class="smartSaveButton-part smartSaveButton-logo"></div>
     <div class="smartSaveButton-part smartSaveButton-save">Save</div>
   </button>
-  <script type="text/javascript">
-    (function () = {
-      var host = document.querySelector('#smartSaveButtonHost').createShadowRoot();
-      var template = document.querySelector('#smartSaveButtonTemplate');
-      var clone = document.importNode(template.content, true)
-      host.appendChild(clone);
-      console.log('frite');
-    })();
-  </script>
 </template>
