@@ -10,7 +10,7 @@
     "default_icon": "dev/assets/img/icons/icon_19.png",
     "default_popup": "dev/popup/popup.html"
   },
-  "web_accessible_resources": ["dev/smartSaveButton/smartSaveButton.html", "dev/smartSaveButton/smartSaveButton.html", "dev/smartSaveButton/styles/main.css", "dev/smartSaveMenu/styles/main.css"],
+  "web_accessible_resources": ["dev/smartSaveButton/smartSaveButton.html", "dev/smartSaveMenu/smartSaveMenu.html", "dev/smartSaveButton/styles/main.css", "dev/smartSaveMenu/styles/main.css"],
   "permissions": [
     "http://*/*",
     "https://*/*",

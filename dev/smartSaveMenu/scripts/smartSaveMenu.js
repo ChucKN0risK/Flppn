@@ -6,6 +6,8 @@ var smartSaveMenu = function() {
   this.$el = document.querySelector('#smartSaveMenu');
   this.$toggle = document.querySelector('#smartSaveButton');
   this.isShown = false;
+  this.toggle();
+  this.events();
 
   return smartSaveMenu;
 };
@@ -60,61 +62,23 @@ smartSaveMenu.prototype = {
   },
 }
 
-// var Book = function($el) {
-//     this.$el = $el;
-//     this.$booksThumbsWrapper = $('.books-thumbs-wrapper');
-//     this.$wrapper = $('.js-books-wrapper');
-//     this.$toggler = this.$el.find('.js-book-toggler');
-//     this.$slider = this.$el.find('.js-book-slider');
-//     this.$title = this.$el.find('js-book-title');
-//     this.isShown = false;
-//     this.toggle();
-//     this.events();
 
-//     return Book;
-// };
+// Here we get our smartSaveButton DOM from a file in the project 
+// doing a xhr request.
+var xhr = new XMLHttpRequest();
+xhr.open('GET', chrome.extension.getURL('dev/smartSaveMenu/smartSaveMenu.html'), true);
+xhr.onload = function() {
+    var smartSaveMenuHook = document.createElement('div');
+    smartSaveMenuHook.style.zIndex = '858575959';
+    smartSaveMenuHook.style.position = 'fixed';
+    smartSaveMenuHook.style.right = '10px';
+    smartSaveMenuHook.style.bottom = '10px';
+    smartSaveMenuHook.innerHTML = this.responseText;
+    document.body.appendChild(smartSaveMenuHook);
 
-// Book.prototype = {
-//     events: function() {
-//         var _this = this;
-
-//         $('.js-books-thumbs-toggler, .js-home-link').on('click', function() {
-//             _this.close();
-//             _this.$booksThumbsWrapper.removeClass('u-hide');
-//         });
-//     },
-//     toggle: function() {
-//         if (this.isShown) {
-//             this.close();
-//         } else {
-//             this.open();
-//         }
-//     },
-//     open: function(transition) {
-//         $('body').addClass('book-selected');
-//         this.$booksThumbsWrapper.addClass('u-hide');
-//         this.$wrapper.removeClass('u-hide');
-//         this.$el.siblings().addClass('u-hide');
-//         this.$title.text('');
-//         this.initSlider();
-//         this.isShown = true;
-//         console.log('open');
-//     },
-//     close: function(transition) {
-//         $('body').removeClass('book-selected');
-//         this.$booksThumbsWrapper.removeClass('u-hide');
-//         this.$wrapper.addClass('u-hide');
-//         this.$el.siblings().removeClass('u-hide');
-//         $('.js-book-author').addClass('u-hide');
-//         this.isShown = false;
-//         console.log('close');
-//     },
-//     initSlider: function() {
-//         this.$slider.glide({
-//             type: "carousel",
-//             hoverpause: "true",
-//             keyboard: "true",
-//             autoplay: "4000"
-//         });
-//     }
-// };
+    var sSMhost = document.querySelector('#smartSaveMenuHost').createShadowRoot();
+    var sSMtemplate = document.querySelector('#smartSaveMenuTemplate');
+    var clone = document.importNode(sSMtemplate.content, true)
+    sSMhost.appendChild(clone);
+};
+xhr.send();

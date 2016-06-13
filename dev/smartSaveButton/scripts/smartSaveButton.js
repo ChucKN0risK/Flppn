@@ -5,9 +5,11 @@
 var token;
 
 console.log(token);
+// console.log(smartSaveMenu);
 
 chrome.storage.sync.get(function(localstorage) {
   token = localstorage.token;
+  console.log('token :', localstorage);
   var videoWrapper = document.querySelector('#player');
   if (videoWrapper) {
     smartSaveButton(videoWrapper);
@@ -21,26 +23,41 @@ chrome.storage.onChanged.addListener(function(changes) {
   console.log(token);
 });
 
-var smartSaveButton = function(videoWrapper) {
+var smartSaveButton = function(videoWrapper, smartSaveMenu) {
   this.$wrapper = videoWrapper;
   SmartSaveButton.init(videoWrapper);
-  console.log(videoWrapper);
+  SmartSaveButton.events();
+  // smartSaveMenu.init();
+  // this.events();
 
   return smartSaveButton;
 }
 
 var SmartSaveButton = {
+  events: function() {
+    console.log('events');
+  },
   saveVideo: function() {
     console.log('video saved');
   },
-  openSmartSaveMenu: function() {
-    smartSaveMenu.init();
+  openSmartSaveMenu: function(smartSaveMenu) {
+    console.log('open smartSaveMenu');
+    smartSaveMenu.toggle();
   },
   showElement: function() {
+    _this = this;
     var host = document.querySelector('#smartSaveButtonHost').createShadowRoot();
     var template = document.querySelector('#smartSaveButtonTemplate');
     var clone = document.importNode(template.content, true)
     host.appendChild(clone);
+
+    var button = host.firstChild.nextSibling.nextSibling.nextSibling;
+    button.addEventListener('click', function() {
+      console.log(_this);
+      _this.openSmartSaveMenu();
+    });
+
+    return host;
   },
   init: function(videoWrapper) {
     // Here we get our smartSaveButton DOM from a file in the project 
