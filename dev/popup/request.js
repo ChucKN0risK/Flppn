@@ -1,5 +1,4 @@
   var urlAPI = "http://api.flppn.com:8080";
-  var token;
   var request = function (verb, url, options, cb) {
 
     var xhr = new XMLHttpRequest();
@@ -21,11 +20,14 @@
     xhr.send(JSON.stringify(options.data));
   };
 
-  var getCollections = function (cb) {
+  var getCollections = function (token, cb) {
 
     var options ={
       token:token
     };
+
+        console.log(options);
+
     request("GET", urlAPI+"/collections", options, function (err, result) {
 
       if(err){
@@ -49,9 +51,6 @@
       if(err){
         return cb(err)
       }
-      //TO DELETE
-      token = result.token;
-
 
       cb(null, result);
     })

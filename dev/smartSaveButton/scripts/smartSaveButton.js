@@ -2,21 +2,14 @@
 // request background.js
 // Methods : init / saveVideo / openSmartSaveMenu
 
-var token;
-
-console.log(token);
-// console.log(smartSaveMenu);
 
 chrome.storage.sync.get(function(localstorage) {
   token = localstorage.token;
-  console.log('token :', localstorage);
   var videoWrapper = document.querySelector('#player');
   if (videoWrapper) {
     smartSaveButton(videoWrapper);
   }
 });
-
-
 
 chrome.storage.onChanged.addListener(function(changes) {
   // If the token stored in the localstorage has changed
@@ -43,6 +36,7 @@ var SmartSaveButton = {
     console.log('video saved');
   },
   openSmartSaveMenu: function() {
+    menu.getUserCollections();
     menu.toggle();
   },
   showElement: function() {
