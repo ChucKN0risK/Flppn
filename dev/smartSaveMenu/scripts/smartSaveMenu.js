@@ -2,14 +2,12 @@
 // request : smartSaveButton.js
 // Methods : init / open / close / getCollections / createCollections / assignCollections
 
-var smartSaveMenu = function() {
-  this.$el = document.querySelector('#smartSaveMenu');
-  this.$toggle = document.querySelector('#smartSaveButton');
+var menu;
+var smartSaveMenu = function(elm) {
+  this.$el = elm.firstChild.nextSibling.nextSibling.nextSibling;
+  this.$toggle = elm;
   this.isShown = false;
-  this.toggle();
   this.events();
-
-  return smartSaveMenu;
 };
 
 smartSaveMenu.prototype = {
@@ -21,9 +19,10 @@ smartSaveMenu.prototype = {
     });
 
     // Close smartSaveMenu if user clicks outside
-    document.addEventListener('click', function(e) {
-      if (!(e.target).closest('#smartSaveButton').length && _this.isOpened) _this.toggle();
-    });
+    // document.addEventListener('click', function(e) {
+    //   console.log(e);
+    //   if (!(e.target).closest(_this.$el).length && _this.isOpened) _this.toggle();
+    // });
 
     // Close smartSaveMenu when user hits ESC key
     document.onkeydown = function(evt) {
@@ -42,12 +41,13 @@ smartSaveMenu.prototype = {
     }
   },
   open: function() {
-    this.classList.add('is-active')
+    console.log('this', this.$el);
+    this.$el.classList.add('is-open')
     this.isShown = true
     console.log('open')
   },
   close: function() {
-    this.classList.remove('is-active')
+    this.$el.classList.remove('is-open')
     this.isShown = false
     console.log('close')
   },
@@ -61,7 +61,6 @@ smartSaveMenu.prototype = {
     console.log('createCollections');
   },
 }
-
 
 // Here we get our smartSaveButton DOM from a file in the project 
 // doing a xhr request.
@@ -80,5 +79,6 @@ xhr.onload = function() {
     var sSMtemplate = document.querySelector('#smartSaveMenuTemplate');
     var clone = document.importNode(sSMtemplate.content, true)
     sSMhost.appendChild(clone);
+    menu = new smartSaveMenu(sSMhost);
 };
 xhr.send();

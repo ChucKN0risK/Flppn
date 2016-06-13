@@ -16,6 +16,8 @@ chrome.storage.sync.get(function(localstorage) {
   }
 });
 
+
+
 chrome.storage.onChanged.addListener(function(changes) {
   // If the token stored in the localstorage has changed
   // then its new value is cached in our global token variable.
@@ -23,7 +25,7 @@ chrome.storage.onChanged.addListener(function(changes) {
   console.log(token);
 });
 
-var smartSaveButton = function(videoWrapper, smartSaveMenu) {
+var smartSaveButton = function(videoWrapper) {
   this.$wrapper = videoWrapper;
   SmartSaveButton.init(videoWrapper);
   SmartSaveButton.events();
@@ -40,9 +42,8 @@ var SmartSaveButton = {
   saveVideo: function() {
     console.log('video saved');
   },
-  openSmartSaveMenu: function(smartSaveMenu) {
-    console.log('open smartSaveMenu');
-    smartSaveMenu.toggle();
+  openSmartSaveMenu: function() {
+    menu.toggle();
   },
   showElement: function() {
     _this = this;
@@ -53,7 +54,6 @@ var SmartSaveButton = {
 
     var button = host.firstChild.nextSibling.nextSibling.nextSibling;
     button.addEventListener('click', function() {
-      console.log(_this);
       _this.openSmartSaveMenu();
     });
 
