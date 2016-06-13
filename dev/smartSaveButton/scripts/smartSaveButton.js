@@ -4,25 +4,40 @@
 
 var smartSaveButton = function(videoWrapper) {
   this.$wrapper = videoWrapper;
-  secondSmartSaveButton.init(videoWrapper);
+  SmartSaveButton.init(videoWrapper);
   console.log(videoWrapper);
 
   return smartSaveButton;
 }
 
-var secondSmartSaveButton = {
+var SmartSaveButton = {
   saveVideo: function() {
     console.log('video saved');
   },
   openSmartSaveMenu: function() {
     smartSaveMenu.init();
   },
+  showElement: function() {
+    console.log('showElement');
+    var host = document.querySelector('#smartSaveButtonHost').createShadowRoot();
+    var template = document.querySelector('#smartSaveButtonTemplate');
+    var clone = document.importNode(template.content, true)
+    host.appendChild(clone);
+  },
   init: function(videoWrapper) {
+    // Here we get our smartSaveButton DOM from a file in the project 
+    // doing a xhr request.
     var xhr = new XMLHttpRequest();
     xhr.open('GET', chrome.extension.getURL('dev/smartSaveButton/smartSaveButton.html'), true);
     xhr.onload = function() {
-        videoWrapper.innerHTML = this.responseText;
+        var z = document.createElement('div');
+        z.style.zIndex = '858575959';
+        z.style.position = 'absolute';
+        z.innerHTML = this.responseText;
+        videoWrapper.insertBefore(z, videoWrapper.firstChild);
+        SmartSaveButton.showElement();
     };
     xhr.send();
+    
   }
 };

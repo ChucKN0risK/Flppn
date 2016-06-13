@@ -1,17 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>SmartSaverMenu</title>
-  <link rel="stylesheet" type="text/css" href="chrome-extension://bnhkidiekcgbhkmbecmeoomecpbbgfnb/dev/smartSaveButton/styles/main.css">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-</head>
-<body class="flppn">
+<div id="smartSaveButtonHost"></div>
 
+<template id="smartSaveButtonTemplate">
+  <style>
+    @import url(chrome-extension://bnhkidiekcgbhkmbecmeoomecpbbgfnb/dev/smartSaveButton/styles/main.css);
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+  </style>
   <button class="smartSaveButton" id="smartSaveButton">
     <div class="smartSaveButton-part smartSaveButton-logo"></div>
     <div class="smartSaveButton-part smartSaveButton-save">Save</div>
   </button>
-  
-  <script type="text/javascript" src="scripts/smartSaveButton.js"></script>
-</body>
-</html>
+  <script type="text/javascript">
+    (function () = {
+      var host = document.querySelector('#smartSaveButtonHost').createShadowRoot();
+      var template = document.querySelector('#smartSaveButtonTemplate');
+      var clone = document.importNode(template.content, true)
+      host.appendChild(clone);
+      console.log('frite');
+    })();
+  </script>
+</template>

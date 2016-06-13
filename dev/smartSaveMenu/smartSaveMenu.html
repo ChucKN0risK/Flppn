@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>SmartSaverMenu</title>
-  <link rel="stylesheet" type="text/css" href="styles/main.css">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-</head>
-<body class="flppn">
-  
+<div id="smartSaveMenuHost"></div>
+
+<template id="smartSaveMenuTemplate">
+  <style>
+    @import url(chrome-extension://bnhkidiekcgbhkmbecmeoomecpbbgfnb/dev/smartSaveMenu/styles/main.css);
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+  </style>
   <div class="smartSaveMenu" id="smartSaveMenu">
     <header class="smartSaveMenu-part smartSaveMenu-currentLink">
       <div class="currentLink-website">
@@ -62,7 +60,4 @@
       <p class="smartSaveMenu-createCollectionText">press enter to save</p>
     </form>
   </div>
-
-  <script type="text/javascript" src="scripts/smartSaveMenu.js"></script>
-</body>
-</html>
+</template>
