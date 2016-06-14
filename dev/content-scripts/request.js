@@ -69,26 +69,28 @@
   };
 
 
-  var createCollection = function(title, cb) {
+  var createCollectionRequest = function(title, cb) {
+      getToken(function(token) {
 
-      var options = {
-          token: token,
-          data: {
-              "title": title
-          }
-      };
+          var options = {
+              token: token,
+              data: {
+                  "title": title
+              }
+          };
 
-      request("POST", urlAPI + "/collection", options, function(err, result) {
+          request("POST", urlAPI + "/collection", options, function(err, result) {
 
-          if (err) {
-              return cb(err)
-          }
+              if (err) {
+                  return cb(err)
+              }
 
-          cb(null, result);
+              cb(null, result);
+          })
       })
   };
 
-  var addVideo = function(url, cb) {
+  var addVideoRequest = function(url, collectionID, cb) {
 
       var options = {
           token: token,
@@ -96,6 +98,10 @@
               "url": url
           }
       };
+
+      if(collectionID){
+        options.data.collection = collectionID;
+      }
 
       request("POST", urlAPI + "/video", options, function(err, result) {
 

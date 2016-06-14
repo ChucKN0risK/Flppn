@@ -2,10 +2,12 @@
 // request : smartSaveButton.js
 // Methods : init / open / close / getCollections / createCollections / assignCollections
 
-var menu, userCollections;
+var userCollections;
 var smartSaveMenu = function() {
     this.$host = smartSaveMenuHost;
     this.$el = this.$host.shadowRoot.querySelector("#smartSaveMenu");
+    this.createCollectionInput = this.$el.querySelector('#createCollectionText');
+    this.categoriesList = this.$el.getElementsByTagName('ul')[0];
     this.isShown = false;
     this.events();
 };
@@ -14,18 +16,9 @@ smartSaveMenu.prototype = {
     events: function() {
         var _this = this;
 
-        console.log(_this)
-        console.log(_this.$el)
-         
-        // _this.$host.shadowRoot.querySelector('#createCollectionText').onkeypress = function(evt){
-        //     evt = evt || window.event;
-        //     if (evt.keyCode == 13) {
-        //       console.log(_this.createCollectionInput.value);
-        //     }
-        // }
-        // _this.$toggle.addEventListener('click', function() {
-        //     _this.toggle()
-        // });
+        _this.createCollectionInput.onkeypress = function(evt) {
+          _this.createCollection(evt);
+        }
 
         // Close smartSaveMenu if user clicks outside
         // document.addEventListener('click', function(e) {
@@ -56,7 +49,6 @@ smartSaveMenu.prototype = {
     close: function() {
         this.$el.classList.remove('is-open')
         this.isShown = false
-        console.log('close')
     },
     getUserCollections: function() {
         var _this = this;
@@ -65,24 +57,53 @@ smartSaveMenu.prototype = {
         }
         getCollections(function(err, result) {
             userCollections = result;
-            var categoriesList = _this.$el.getElementsByTagName('ul')[0];
             for (var i = 0; i < result.length; i++) {
-                categoriesList.appendChild(_this.constructCategories(result[i].title, result[i].videoNumber, result[i].img));
+                _this.categoriesList.appendChild(_this.constructCategories(result[i]));
             }
         })
     },
     assignCollections: function() {
         console.log('assignCollections');
     },
-    createCollections: function() {
-        console.log('createCollections');
+    createCollection: function(evt) {
+        var _this = this;
+        evt = evt || window.event;
+        if (evt.keyCode == 13) {
+            evt.preventDefault();
+            smartSaveMenu.toggle();
+            createCollectionRequest(_this.createCollectionInput.value, function(err, result) {
+
+                if (err) {
+                    return console.log('errrrror', err);
+                }
+                result.success.numberVideo = result.success.videos.length;
+                userCollections.push(result.success);
+                _this.createCollectionInput.value = '';
+                _this.categoriesList.appendChild(_this.constructCategories(result.success));
+                _this.saveVideo(result.success._id);
+            })
+        }
     },
-    constructCategories: function(title, videos, img) {
+    saveVideo: function(e){
+      var _this = this;
+      var collectionID = (typeof e === 'string') ? e : e.currentTarget.dataset.collectionid;
+      
+      _this.toggle();
+
+      addVideoRequest(window.location.href, null, function(err, result){
+        if(err){
+          return console.log('error save video', err);
+        }
+        console.log('success', result);
+      })
+    },
+    constructCategories: function(video) {
         var cat = document.createElement('li');
         cat.classList.add('smartSaveMenu-collection');
+        cat.setAttribute('data-collectionID',video._id)
         var div = document.createElement('div');
         div.classList.add('collection-cover');
-        div.style.backgroundImage = "url(" + img + ")";
+        div.style.backgroundImage = "url(" + video.img + ")";
         var div2 = document.createElement('div');
         div2.classList.add('collection-content');
         var p = document.createElement('p');
@@ -92,9 +113,10 @@ smartSaveMenu.prototype = {
         cat.appendChild(div);
         cat.appendChild(div2);
         div2.appendChild(p);
-        p.appendChild(document.createTextNode(title));
+        p.appendChild(document.createTextNode(video.title));
         div2.appendChild(p2);
-        p2.appendChild(document.createTextNode(videos + ' videos'));
+        p2.appendChild(document.createTextNode(video.videoNumber + ' videos'));
+        cat.addEventListener('click', this.saveVideo);
         return cat;
     }
 }

@@ -31,9 +31,6 @@ var SmartSaveButton = {
   events: function() {
     console.log('events');
   },
-  saveVideo: function() {
-    console.log('video saved');
-  },
   openSmartSaveMenu: function() {
     getToken(function(){ 
       smartSaveMenu.getUserCollections();
@@ -63,6 +60,8 @@ var SmartSaveButton = {
         var z = document.createElement('div');
         z.style.zIndex = '858575959';
         z.style.position = 'absolute';
+        z.style.top = '10px';
+        z.style.left = '10px';
         z.innerHTML = this.responseText;
         videoWrapper.insertBefore(z, videoWrapper.firstChild);
         SmartSaveButton.showElement();
