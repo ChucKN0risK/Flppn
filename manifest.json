@@ -10,7 +10,14 @@
     "default_icon": "dev/assets/img/icons/icon_19.png",
     "default_popup": "dev/popup/popup.html"
   },
-  "web_accessible_resources": ["dev/smartSaveButton/smartSaveButton.html", "dev/smartSaveMenu/smartSaveMenu.html", "dev/smartSaveButton/styles/main.css", "dev/smartSaveMenu/styles/main.css"],
+  "web_accessible_resources": [
+    "dev/smartSaveButton/smartSaveButton.html", 
+    "dev/smartSaveButton/styles/main.css", 
+    "dev/smartSaveMenu/smartSaveMenu.html", 
+    "dev/smartSaveMenu/styles/main.css",
+    "dev/smartLogin/smartLogin.html", 
+    "dev/smartLogin/styles/main.css"
+  ],
   "permissions": [
     "http://*/*",
     "https://*/*",
@@ -30,9 +37,22 @@
   "options_page": "dev/options.html",
   "content_scripts": [
     {
-      "matches": ["*://*.pornhub.com/*", "*://*.youporn.com/*", "*://*.chrome.com/*"],
-      "js": ["dev/popup/request.js", "dev/smartSaveMenu/scripts/smartSaveMenu.js","dev/smartSaveButton/scripts/smartSaveButton.js"],
-      "css": ["dev/smartSaveButton/styles/main.css", "dev/smartSaveMenu/styles/main.css"],
+      "matches": [
+        "*://*.pornhub.com/*", 
+        "*://*.youporn.com/*", 
+        "*://*.chrome.com/*"
+      ],
+      "js": [
+        "dev/popup/request.js",
+        "dev/smartSaveMenu/scripts/smartSaveMenu.js",
+        "dev/smartSaveButton/scripts/smartSaveButton.js",
+        "dev/smartLogin/scripts/smartLogin.js"
+      ],
+      "css": [
+        "dev/smartSaveButton/styles/main.css",
+        "dev/smartSaveMenu/styles/main.css",
+        "dev/smartLogin/styles/main.css"
+      ],
       "run_at": "document_end"
     }
   ],

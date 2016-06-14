@@ -64,7 +64,8 @@ smartSaveMenu.prototype = {
                 userCollections= result;
                 var categoriesList = _this.$el.getElementsByTagName('ul')[0];
                 for(var i = 0; i < result.length; i++){
-                  categoriesList.appendChild(_this.constructCategories(result[i].title, result[i].videos));
+                  console.log(result[i]);
+                  categoriesList.appendChild(_this.constructCategories(result[i].title, result[i].videos, result[i].img));
                 }
             })
         })
@@ -75,11 +76,13 @@ smartSaveMenu.prototype = {
     createCollections: function() {
         console.log('createCollections');
     },
-    constructCategories: function(title, videos){
+    constructCategories: function(title, videos, img){
       var cat = document.createElement('li');
       cat.classList.add('smartSaveMenu-collection');
       var div = document.createElement('div');
       div.classList.add('collection-cover');
+      console.log('img>>>>>>',div);
+      div.style.backgroundImage = "url("+img+")";
       var div2 = document.createElement('div');
       div2.classList.add('collection-content');
       var p = document.createElement('p');

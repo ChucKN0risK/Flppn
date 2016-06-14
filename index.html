@@ -1,0 +1,1585 @@
+<!doctype html>
+<html lang="fr" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Extoplus Styleguide</title>
+    <meta name="description" content="">
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styleguide.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+    <nav class="nav--fullscreen u-hide" id="portal-nav-fullscreen">
+        <ul class="nav--fullscreen__list">
+            <li class="nav--fullscreen__item close-nav">
+                <button class="btn--close" id="nav-fullscreen-closebtn">
+                </button>
+            </li>
+            <li class="nav--fullscreen__item is-active">
+                <a href="homepage-portail.html" class="nav--fullscreen__item__link">Accueil</a>
+            </li>
+            <li class="nav--fullscreen__item">
+                <a href="presentation-portail.html" class="nav--fullscreen__item__link">Présentation</a>
+            </li>
+            <li class="nav--fullscreen__item">
+                <a href="iconfont.html" class="nav--fullscreen__item__link">Icon Font</a>
+            </li>
+            <li class="nav--fullscreen__item">
+                <a href="#" class="nav--fullscreen__item__link">Equipes</a>
+            </li>
+            <li class="nav--fullscreen__item">
+                <a href="#" class="nav--fullscreen__item__link">Offres</a>
+            </li>
+            <li class="nav--fullscreen__item">
+                <a href="#" class="nav--fullscreen__item__link">Aide &amp; Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="modal-wrapper js-modal-wrapper is-active u-hide" id="modal-wrapper">
+        <div class="modal js-modal modal--devis u-hide">
+            <main class="modal__content">
+                <h2>Me connecter</h2>
+
+                <p class="modal__text">Afin de pouvoir faire une demande de devis en ligne <br> ou d'accéder à votre espace personnel, <br>il est nécessaire de vous connecter.</p>
+
+                <form action="#" class="modal__form form--login">
+                    <div class="input-wrapper">
+                        <label for="input-text-example">Adresse email</label>
+                        <input title="Renseignez votre adresse email" type="text" id="input-text-example" placeholder="Adresse email">
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="input-password-example">Mot de passe</label>
+                        <input title="Renseignez votre mot de passe" type="password" id="input-password-example" placeholder="Mot de passe">
+                    </div>
+
+                    <p class="error"></p>
+
+                    <button type="submit" class="btn btn--medium btn--full">
+                        <span class="btn__content">
+                            <span class="btn__text">Se connecter</span>
+                            <svg class="icon btn__icon">
+                                <use xlink:href="assets/icons/dest/icons.svg#arrow" />
+                            </svg>
+                        </span>
+                    </button>
+
+                    <a href="http://extoplus.fr/mot-de-passe-oublie/" class="password-forgotten">Mot de passe oublié ?</a>
+                </form>
+
+                <p class="no-account-text">Vous n'avez pas de compte ? <a href="http://extoplus.fr/creation-de-compte/">Créez votre univers</a></p>
+            </main>
+        </div>
+        <div class="modal js-modal modal--delete-kit u-hide">
+            <main class="modal__content">
+
+                <p class="modal__text">Confirmez-vous la suppression de cette configuration ?</p>
+
+                <div class="btn-wrapper">
+                    <button class="btn btn--medium btn--border btn--border-red js-modal-close">
+                       <span class="btn__content">
+                            <span class="btn__text">Annuler la suppression</span>
+                        </span> 
+                    </button>
+
+                    <button class="btn btn--medium btn--full js-delete-kit-btn">
+                        <span class="btn__content">
+                            <span class="btn__text">Supprimer cette configuration</span>
+                            <svg class="icon btn__icon">
+                                <use xlink:href="assets/icons/dest/icons.svg#delete-white" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+
+            </main>
+        </div>
+        <div class="modal js-modal modal--help modal--help--pignons">
+            <button class="modal__close-btn js-modal-close">
+                <svg class="icon btn__icon">
+                    <use xlink:href="assets/icons/dest/icons.svg#close" />
+                </svg>
+            </button>
+
+            <main class="modal__content">
+                <h2>Nombre de pignons</h2>
+
+                <div class="modal__img">
+                    <img src="assets/img/etape-6.png" alt="Image aide">
+                </div>
+
+                <p class="modal__text modal__text--toiture">Le pignon reçoit la plus simple des charpentes : les poutres horizontales, les pannes, qui supportent les poutres de plus faible section posées dans la ligne de pente, les chevrons.</p>
+                
+                <p class="modal__text modal__text--pignons">Le pignon reçoit la plus simple des charpentes : les poutres horizontales, les pannes, qui supportent les poutres de plus faible section posées dans la ligne de pente, les chevrons.</p>
+
+                <p class="modal__text modal__text--pureau">Le pignon reçoit la plus simple des charpentes : les poutres horizontales, les pannes, qui supportent les poutres de plus faible section posées dans la ligne de pente, les chevrons.</p>
+
+                <p class="modal__text modal__text--rive-droite">La rive de toit est l’extrémité du toit côté pignon ; elle suit en général la ligne de plus grande pente et est alors qualifiée de rive droite. Une rive qui n’est pas droite est appelée rive biaise ; si elle n’est pas en saillie, elle présente une avancée plus importante en haut qu’en bas, selon la région et l’architecture ; si au contraire elle est en saillie, elle peut être soit sortante (cas le plus fréquent), soit rentrante.</p>
+
+                <p class="modal__text modal__text--rive-gauche">La rive de toit est l’extrémité du toit côté pignon ; elle suit en général la ligne de plus grande pente et est alors qualifiée de rive droite. Une rive qui n’est pas droite est appelée rive biaise ; si elle n’est pas en saillie, elle présente une avancée plus importante en haut qu’en bas, selon la région et l’architecture ; si au contraire elle est en saillie, elle peut être soit sortante (cas le plus fréquent), soit rentrante.</p>
+
+                <p class="modal__text modal__text--versant">Partie d’un toit généralement de surface plane triangulaire, carrée, rectangulaire, trapézoïdale, limitée au minimum sur trois cotés, souvent quatre et parfois davantage, par une ou plusieurs lignes de couverture : égout, rive latérale, rive de tête, faîtage, arêtier, noue. Le nombre de versants définit différentes formes de toits : toit à un, deux, trois, quatre versants, etc. couverture.</p>
+            </main>
+        </div>
+    </div>
+
+    <div class="headnav">
+
+        <header class="header-main" data-ui-component="Header" id="header-main">
+
+            <button class="header-main__toggle js-mobile-nav-toggle" title="navigation menu" aria-label="navigation menu" role="button" aria-controls="navigation" aria-expanded="false">
+                <div class="header-main__toggle__content">
+                    <div class="header-main__toggle__close"></div>
+                    <div class="header-main__toggle__open">menu</div>
+                </div>
+            </button>
+
+            <a href="#" class="logo logo--header"></a>
+            
+            <nav class="header-main__nav">
+                <ul class="header-main__menu u-list-reset">
+                    <li class="header-main__menu__item">
+                        <a href="#" class="header-main__link">Le système</a>
+                    </li>
+                    <li class="header-main__menu__item">
+                        <a href="#" class="header-main__link">La mise en oeuvre</a>
+                    </li>
+                    <li class="header-main__menu__item">
+                        <a href="#" class="header-main__link">Centres de formation</a>
+                    </li>
+                    <li class="header-main__menu__item">
+                        <a href="#" class="header-main__link" id="open-header-main-dropdown">Contact</a>
+                    </li>
+                    <li class="header-main__menu__item">
+                        <a href="#" class="header-main__link" id="header-main-user-login-toggle">Mon compte</a>
+                    </li>
+                </ul>
+
+                <div class="header-main__actions btn-wrapper">
+                    <a href="#" class="btn btn--medium btn--red">
+                        <span class="btn__content">
+                            <svg class="icon icon--left btn__icon">
+                                <use xlink:href="assets/icons/dest/icons.svg#modularite" />
+                            </svg>
+                            <span class="btn__text">Devis en ligne</span>
+                        </span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        
+        <nav class="header-main__mobile-nav js-mobile-nav" role="navigation">
+            <ul class="mobile-nav__list">
+                <li class="mobile-nav__item">
+                    <a href="#" class="mobile-nav__item__link">Le système</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="#" class="mobile-nav__item__link">La mise en oeuvre</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="#" class="mobile-nav__item__link">Les centres de formation</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="#" class="mobile-nav__item__link">Contact</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="#" class="mobile-nav__item__link">Mon compte</a>
+                </li>
+            </ul>
+        </nav> 
+    </div>
+
+    <main class="styleguide">
+        <h1 class="styleguide__title">Styleguide</h1>
+        
+        <!-- USER AVATAR -->
+        <section class="styleguide__section">
+            <h2 class="styleguide__section__title">User / Team Avatar</h2>
+
+            <div class="styleguide__section__item styleguide__section__item--spaced">
+                <div class="avatar--small">
+                    <img src="assets/img/avatar.jpg" alt="user avatar">
+                </div>
+
+                <div class="avatar--medium">
+                    <img src="assets/img/avatar.jpg" alt="user avatar">
+                </div>
+
+                <div class="avatar--large">
+                    <img src="assets/img/avatar.jpg" alt="user avatar">
+                </div>
+
+                <div class="avatar--big">
+                    <img src="assets/img/avatar.jpg" alt="user avatar">
+                </div>
+            </div>
+        </section>
+        
+        <!-- BUTTONS -->
+        <section class="styleguide__section">
+            <h2 class="styleguide__section__title">Buttons</h2>
+
+            <div class="styleguide__section__item styleguide__section__item--buttons">
+                <button class="btn btn--skew btn--medium btn--red">
+                    <span class="btn__content">
+                        <svg class="icon icon--left btn__icon">
+                            <use xlink:href="assets/icons/dest/icons.svg#commander" />
+                        </svg>
+                        <span class="btn__text">Panier</span>
+                    </span>
+                </button>
+
+                <a href="#" class="btn btn--skew btn--medium btn--grey">
+                    <span class="btn__content">
+                        <svg class="icon icon--left btn__icon">
+                            <use xlink:href="assets/icons/dest/icons.svg#modularite" />
+                        </svg>
+                        <span class="btn__text">Chiffrer</span>
+                    </span>
+                </a>
+
+                <a href="#" class="btn btn--medium btn--full">
+                    <span class="btn__content">
+                        <span class="btn__text">Commander</span>
+                        <svg class="icon btn__icon">
+                            <use xlink:href="assets/icons/dest/icons.svg#commander" />
+                        </svg>
+                    </span>
+                </a>
+
+                <button class="btn btn--medium btn--full">
+                    <span class="btn__content">
+                        <span class="btn__text">Commander</span>
+                        <svg class="icon btn__icon">
+                            <use xlink:href="assets/icons/dest/icons.svg#commander" />
+                        </svg>
+                    </span>
+                </button>
+                
+                <a href="#" class="btn btn--medium btn--full">
+                    <span class="btn__content">
+                        <span class="btn__text">En savoir plus</span>
+                        <svg class="icon btn__icon">
+                            <use xlink:href="assets/icons/dest/icons.svg#arrow" />
+                        </svg>
+                    </span>
+                </a>
+
+                <button class="btn btn--medium btn--border btn--border-red">
+                   <span class="btn__content">
+                        <svg class="icon icon--left btn__icon">
+                            <use xlink:href="assets/icons/dest/icons.svg#add" />
+                        </svg>
+                        <span class="btn__text">Ajouter une autre rive</span>
+                    </span> 
+                </button>
+
+                <button class="btn btn--medium">
+                   <span class="btn__content">
+                        <svg class="icon icon--left btn__icon">
+                            <use xlink:href="assets/icons/dest/icons.svg#add" />
+                        </svg>
+                        <span class="btn__text">Ajouter une autre rive</span>
+                    </span> 
+                </button>
+            </div>
+        </section>
+        
+        <!-- ICONS -->
+        <section class="styleguide__section">
+            <h2 class="styleguide__section__title">Icons</h2>
+
+            <div class="styleguide__section__item styleguide__section__item--spaced styleguide__section__item--icons">
+                <div class="icon-wrapper" title="esthetisme">
+                    <svg class="icon">
+                        <use xlink:href="assets/icons/dest/icons.svg#slide-down" />
+                    </svg>
+                </div>
+                <div class="icon-wrapper" title="adaptable">
+                    <svg class="icon">
+                        <use xlink:href="assets/icons/dest/icons.svg#adaptable" />
+                    </svg>
+                </div>
+                <div class="icon-wrapper" title="intuitif">
+                    <svg class="icon">
+                        <use xlink:href="assets/icons/dest/icons.svg#intuitif" />
+                    </svg>
+                </div>
+                <div class="icon-wrapper icon-wrapper--squared" title="esthetisme">
+                    <svg class="icon">
+                        <use xlink:href="assets/icons/dest/icons.svg#esthetisme" />
+                    </svg>
+                </div>
+                <div class="icon-wrapper icon-wrapper--squared" title="adaptable">
+                    <svg class="icon">
+                        <use xlink:href="assets/icons/dest/icons.svg#adaptable" />
+                    </svg>
+                </div>
+                <div class="icon-wrapper icon-wrapper--squared" title="intuitif">
+                    <svg class="icon">
+                        <use xlink:href="assets/icons/dest/icons.svg#intuitif" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+        
+        <!-- TYPOGRAPHY -->
+        <section class="styleguide__section">
+            <h2 class="styleguide__section__title">Typography</h2>
+
+            <div class="styleguide__section__item styleguide__section__item--typography">
+                <div class="headings u-hide">
+                    <h1>h1 - Gérez comme un pro votre équipe de sport amateur</h1>
+                    <h2>h2 - Coachs gagnez du temps</h2>
+                    <h3>h3 - Coachs gagnez du temps</h3>
+                    <h4>h4 - Coachs gagnez du temps</h4>
+                    <h5>h5 - Coachs gagnez du temps</h5>
+                </div>
+
+                <div class="text-wrapper">
+                    <h1>Gérez comme un pro votre équipe de sport amateur</h1>
+                    <p class="text-subtitle">Gérez comme un pro votre équipe de sport amateur</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adip<span style="color: red;">i</span>sicing elit. Ip<span style="color: red;">s</span>am dicta dignissimos tempora aperiam assumenda? Voluptatum accusamus voluptate expedita optio, libero porro praesentium numquam iusto, sit repellendus eaque est assumenda illo delectus nobis vero! Quibusdam nam at temporibus quidem est, consequatur laudantium, delectus culpa dolorum, nemo deserunt et dolorem iure quisquam. Aspernatur obcaecati magni labore sunt laboriosam molestiae dolor animi error quae eius, voluptas assumenda cupiditate, facere reprehenderit, doloremque corporis mollitia.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint odio dolores explicabo optio excepturi, eveniet dolorum beatae, doloribus similique a, nobis fugit consectetur! Veniam nemo, itaque incidunt consequatur. Quisquam ratione odit repellendus temporibus sed ducimus cumque incidunt nam impedit maxime voluptates laboriosam nesciunt rerum, vero ipsam ipsa, et repellat, ad.</p>
+                </div>
+
+                <div class="text-wrapper">
+                    <h2>Gérez comme un pro votre équipe de sport amateur</h2>
+                    <p class="text-subtitle">Gérez comme un pro votre équipe de sport amateur</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dicta dignissimos tempora aperiam assumenda? Voluptatum accusamus voluptate expedita optio, libero porro praesentium numquam iusto, sit repellendus eaque est assumenda illo delectus nobis vero! Quibusdam nam at temporibus quidem est, consequatur laudantium, delectus culpa dolorum, nemo deserunt et dolorem iure quisquam. Aspernatur obcaecati magni labore sunt laboriosam molestiae dolor animi error quae eius, voluptas assumenda cupiditate, facere reprehenderit, doloremque corporis mollitia.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint odio dolores explicabo optio excepturi, eveniet dolorum beatae, doloribus similique a, nobis fugit consectetur! Veniam nemo, itaque incidunt consequatur. Quisquam ratione odit repellendus temporibus sed ducimus cumque incidunt nam impedit maxime voluptates laboriosam nesciunt rerum, vero ipsam ipsa, et repellat, ad.</p>
+                </div>
+
+                <div class="text-wrapper">
+                    <h3>Gérez comme un pro votre équipe de sport amateur</h3>
+                    <p class="text-subtitle">Gérez comme un pro votre équipe de sport amateur</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dicta dignissimos tempora aperiam assumenda? Voluptatum accusamus voluptate expedita optio, libero porro praesentium numquam iusto, sit repellendus eaque est assumenda illo delectus nobis vero! Quibusdam nam at temporibus quidem est, consequatur laudantium, delectus culpa dolorum, nemo deserunt et dolorem iure quisquam. Aspernatur obcaecati magni labore sunt laboriosam molestiae dolor animi error quae eius, voluptas assumenda cupiditate, facere reprehenderit, doloremque corporis mollitia.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint odio dolores explicabo optio excepturi, eveniet dolorum beatae, doloribus similique a, nobis fugit consectetur! Veniam nemo, itaque incidunt consequatur. Quisquam ratione odit repellendus temporibus sed ducimus cumque incidunt nam impedit maxime voluptates laboriosam nesciunt rerum, vero ipsam ipsa, et repellat, ad.</p>
+                </div>
+
+                <div class="text-wrapper">
+                    <h4>Gérez comme un pro votre équipe de sport amateur</h4>
+                    <p class="text-subtitle">Gérez comme un pro votre équipe de sport amateur</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dicta dignissimos tempora aperiam assumenda? Voluptatum accusamus voluptate expedita optio, libero porro praesentium numquam iusto, sit repellendus eaque est assumenda illo delectus nobis vero! Quibusdam nam at temporibus quidem est, consequatur laudantium, delectus culpa dolorum, nemo deserunt et dolorem iure quisquam. Aspernatur obcaecati magni labore sunt laboriosam molestiae dolor animi error quae eius, voluptas assumenda cupiditate, facere reprehenderit, doloremque corporis mollitia.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint odio dolores explicabo optio excepturi, eveniet dolorum beatae, doloribus similique a, nobis fugit consectetur! Veniam nemo, itaque incidunt consequatur. Quisquam ratione odit repellendus temporibus sed ducimus cumque incidunt nam impedit maxime voluptates laboriosam nesciunt rerum, vero ipsam ipsa, et repellat, ad.</p>
+                </div>
+
+                <div class="text-wrapper text-wrapper--thin">
+                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <p class="text-subtitle">Gérez comme un pro votre équipe de sport amateur</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam et culpa id perferendis non illo vero quasi, eius minima quidem natus nemo sed voluptatum deleniti laudantium eveniet debitis, laborum dicta unde enim. Quasi sit blanditiis, maiores, adipisci qui at rem.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos distinctio, quo. Molestiae delectus minus at odio ullam perferendis dignissimos esse.</p>
+                </div>
+
+                <div class="lists">
+                    <div class="list-wrapper">
+                        <h5 class="text-subtitle">Default List</h5>
+                        <ul class="u-list-default">
+                            <li>My Item</li>
+                            <li>My Item</li>
+                            <li>My Item</li>
+                            <li>My Item</li>
+                        </ul>
+                    </div>
+                    <div class="list-wrapper">
+                        <h5 class="text-subtitle">Reset List</h5>
+                        <ul class="u-list-reset">
+                            <li>My Item</li>
+                            <li>My Item</li>
+                            <li>My Item</li>
+                            <li>My Item</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="links">
+                    <h5 class="text-subtitle">Links</h5>
+
+                    <a href="#">Inscrire son équipe</a>
+
+                    <a href="#" class="link--icon">
+                        <svg class="icon">
+                            <use xlink:href="assets/icons/dest/icons.svg#telephone" />
+                        </svg>
+                        0164707787
+                    </a>
+
+                    <a href="#" class="link--icon">
+                        <svg class="icon">
+                            <use xlink:href="assets/icons/dest/icons.svg#email" />
+                        </svg>
+                        extoplus@gmail.com
+                    </a>
+
+                    <a href="#" class="link--icon-rtl">
+                        Découvrir cette équipe
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MEDIA OBJECTS -->
+        <section class="styleguide__section">
+            <h2 class="styleguide__section__title">Media objects</h2>
+
+            <div class="styleguide__section__item styleguide__section__item--media">
+                <div class="service-pros content-section__body--three-items">
+                    <div class="media media--icon">
+                        <svg class="icon icon--black">
+                            <use xlink:href="assets/icons/dest/icons.svg#respect" />
+                        </svg>
+                        <div class="media__body">
+                            <h4 class="media__title">Respect des maisons "Patrimoine de France"</h4>
+                            <p class="media__text">Isoler une maison n'a jamais été aussi simple : EXTOPLUS est une solution invisible, étanche et économique.</p>
+                        </div>
+                    </div>
+                    <div class="media media--icon">
+                        <svg class="icon icon--black">
+                            <use xlink:href="assets/icons/dest/icons.svg#brut" />
+                        </svg>
+                        <div class="media__body">
+                            <h4 class="media__title">Matériaux bruts</h4>
+                            <p class="media__text">Le système EXTOPLUS est composé de matériaux bruts et recyclables.</p>
+                        </div>
+                    </div>
+                    <div class="media media--icon">
+                        <svg class="icon icon--black">
+                            <use xlink:href="assets/icons/dest/icons.svg#economique" />
+                        </svg>
+                        <div class="media__body">
+                            <h4 class="media__title">Une solution économique</h4>
+                            <p class="media__text">Gain de temps et d'argent, le système EXTOPLUS reste le système le plus rentable.</p>
+                        </div>
+                    </div>
+                    <div class="media media--icon">
+                        <svg class="icon icon--black">
+                            <use xlink:href="assets/icons/dest/icons.svg#delai" />
+                        </svg>
+                        <div class="media__body">
+                            <h4 class="media__title">Délai de 14 jours</h4>
+                            <p class="media__text">Il vous est possible de renoncer à votre commande sous les 14 jours suivant votre achat (hormis le paiement par chèque).</p>
+                        </div>
+                    </div>
+                    <div class="media media--icon">
+                        <svg class="icon icon--black">
+                            <use xlink:href="assets/icons/dest/icons.svg#made" />
+                        </svg>
+                        <div class="media__body">
+                            <h4 class="media__title">Made in France</h4>
+                            <p class="media__text">Le système EXTOPLUS met en avant l'incroyable savoir faire made in France.</p>
+                        </div>
+                    </div>
+                    <div class="media media--icon">
+                        <svg class="icon icon--black">
+                            <use xlink:href="assets/icons/dest/icons.svg#qualite" />
+                        </svg>
+                        <div class="media__body">
+                            <h4 class="media__title">Un système de qualité</h4>
+                            <p class="media__text">Le système EXTOPLUS est composé d'une visserie en inox et d'une étanchéité assurée.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="installation-steps content-section__body--three-items">
+                    <div class="media media--installation-step">
+                        <div class="media__body">
+                            <p class="media__step">01 étape</p>
+                            <h4 class="media__title">Détuilage des versants</h4>
+                        </div>
+                        <div class="media__figure">
+                            <img src="assets/img/image_styleguide.jpeg">
+                        </div>
+                    </div>
+                    <div class="media media--installation-step">
+                        <div class="media__body">
+                            <p class="media__step">02 étape</p>
+                            <h4 class="media__title">Pose des éléments de faitages</h4>
+                        </div>
+                        <div class="media__figure">
+                            <img src="assets/img/image_styleguide.jpeg">
+                        </div>
+                    </div>
+                    <div class="media media--installation-step">
+                        <div class="media__body">
+                            <p class="media__step">03 étape</p>
+                            <h4 class="media__title">Pose des éléments intermédiaires et de terminaison</h4>
+                        </div>
+                        <div class="media__figure">
+                            <img src="assets/img/image_styleguide.jpeg">
+                        </div>
+                    </div>
+                    <div class="media media--installation-step">
+                        <div class="media__body">
+                            <p class="media__step">04 étape</p>
+                            <h4 class="media__title">Pose des jonctions de raccordements</h4>
+                        </div>
+                        <div class="media__figure">
+                            <img src="assets/img/image_styleguide.jpeg">
+                        </div>
+                    </div>
+                    <div class="media media--installation-step">
+                        <div class="media__body">
+                            <p class="media__step">05 étape</p>
+                            <h4 class="media__title">Étanchéité</h4>
+                        </div>
+                        <div class="media__figure">
+                            <img src="assets/img/image_styleguide.jpeg">
+                        </div>
+                    </div>
+                    <div class="media media--installation-step">
+                        <div class="media__body">
+                            <p class="media__step">06 étape</p>
+                            <h4 class="media__title">Pose des liteaux en aboutage</h4>
+                        </div>
+                        <div class="media__figure">
+                            <img src="assets/img/image_styleguide.jpeg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-steps">
+                    <div class="media media--order-step">
+                        <div class="media__body">
+                            <span class="media__step-number">1</span>
+                            <h4 class="media__title">Chiffrage</h4>
+                            <p class="media__text">Personnalisez votre commande, selon vos besoins et ajoutez la facilement à votre panier.</p>
+                        </div>
+                    </div>
+                    <div class="media media--order-step">
+                        <div class="media__body">
+                            <span class="media__step-number">2</span>
+                            <h4 class="media__title">Commande</h4>
+                            <p class="media__text">Par carte bancaire, virement ou chèque, réglez votre commande comme vous le souhaitez.</p>
+                        </div>
+                    </div>
+                    <div class="media media--order-step">
+                        <div class="media__body">
+                            <span class="media__step-number">3</span>
+                            <h4 class="media__title">Livraison</h4>
+                            <p class="media__text">Une fois votre commande validée, votre système EXTOPLUS sera envoyé dans les plus brefs délais.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- TESTIMONIES -->
+        <section class="styleguide__section">
+            <h2 class="styleguide__section__title">Testimonies</h2>
+
+            <div class="styleguide__section__item styleguide__section__item--spaced">
+                <div class="testimonies-wrapper">
+                    <div class="media media--testimony">
+                        <div class="media__figure">
+                            <div class="avatar--large">
+                                <img src="assets/img/avatar.jpg" alt="user_image">
+                            </div>
+                        </div>
+                        <div class="media__body">
+                            <blockquote class="user__testimony">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia libero, sunt eveniet suscipit consequuntur cupiditate! Mollitia, quidem, labore.</blockquote>
+                            <p class="user__name">Jérémie Moritz</p>
+                        </div>
+                    </div>
+                    <div class="media media--testimony">
+                        <div class="media__figure">
+                            <div class="avatar--large">
+                                <img src="assets/img/avatar.jpg" alt="user_image">
+                            </div>
+                        </div>
+                        <div class="media__body">
+                            <blockquote class="user__testimony">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia libero, sunt eveniet suscipit consequuntur cupiditate! Mollitia, quidem, labore.</blockquote>
+                            <p class="user__name">Jérémie Moritz</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glide u-hide" id="user-tesmimonies">
+                    <div class="glide__arrows">
+                        <span class="glide__arrow prev" data-glide-dir="<">
+                        <span class="glide__arrow next" datspan>
+                    </div>
+
+                    <div class="glide__wrapper">
+                        <ul class="glide__track">
+                            <li class="glide__slide">
+                                <div class="media media--testimony">
+                                    <div class="media__figure">
+                                        <div class="avatar--medium">
+                                            <img src="assets/img/avatar.jpg" alt="user_image">
+                                        </div>
+                                    </div>
+                                    <div class="media__body">
+                                        <p class="user__name">Jérémie Moritz</p>
+                                        <blockquote class="user__testimony">SportEasy me fait gagner au moins 2 heures par semaine, entre les envois de mails automatiques pour savoir si mes gars sont dispos et la convocation en 1 clic. Et puis, le site est hyper intuitif. Bravo !</blockquote>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="media media--testimony">
+                                    <div class="media__figure">
+                                        <div class="avatar--medium">
+                                            <img src="assets/img/avatar.jpg" alt="user_image">
+                                        </div>
+                                    </div>
+                                    <div class="media__body">
+                                        <p class="user__name">Clément Laurent</p>
+                                        <blockquote class="user__testimony">C'est génial de pouvoir garder une trace de nos buteurs et voter pour l'homme du match. Et depuis qu'il y a l'appli mobile, on vote directement depuis le vestiaire ! Idéal pour la gestion d'une équipe de foot...</blockquote>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="media media--testimony">
+                                    <div class="media__figure">
+                                        <div class="avatar--medium">
+                                            <img src="assets/img/avatar.jpg" alt="user_image">
+                                        </div>
+                                    </div>
+                                    <div class="media__body">
+                                        <p class="user__name">François Scheefer</p>
+                                        <blockquote class="user__testimony">Ça me permet de suivre toutes les stats de mes joueuses: buts, passes décisives, cartons... Dans 10 ans, on aura les stats sur plusieurs générations.</blockquote>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <ul class="glide__bullets"></ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FORMS -->
+        <section class="styleguide__section">
+            <h2 class="styleguide__section__title">Forms</h2>
+
+            <div class="styleguide__section__item styleguide__section__item--form">
+                <form action="#" class="form">
+                    <div class="input-wrapper">
+                        <label for="input-text-example">Nom</label>
+                        <input type="text" id="input-text-example" placeholder="Nom">
+                    </div>
+
+                    <div class="input-wrapper disabled">
+                        <label for="input-text-example">Input désactivé</label>
+                        <input type="text" id="input-text-example" disabled placeholder="Champ désactivé">
+                    </div>
+                    
+                    <div class="input-wrapper">
+                        <label class="is-mandatory" for="input-mail-example">Email</label>
+                        <input type="email" id="input-mail-example" placeholder="adresse@mail.com">
+                    </div>
+
+                    <div class="input-wrapper has-error">
+                        <div class="label-tooltip-wrapper">
+                            <label for="input-error-example">Email</label>
+                            <div class="tooltip-wrapper">
+                                <button class="tooltip--right" data-tooltip="Grâce à votre numéro de téléphone nous pourrons vous observer et vous filmer sous la douche.">
+                                    <svg class="icon btn__icon">
+                                        <use xlink:href="assets/icons/dest/icons.svg#help" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <input type="email" id="input-error-example" placeholder="adresse@mail.com">
+                        <span class="input-error-msg">
+                            Cette adresse email n'est pas valide. Veuillez réessayer.
+                        </span>
+                    </div>
+                    
+                    <div class="input-wrapper">
+                        <label for="input-password-example">Mot de passe</label>
+                        <input type="password" id="input-password-example" placeholder="Mot de passe">
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="input-phone-example">Téléphone</label>
+                        <input type="tel" id="input-phone-example" placeholder="+33 6 23 45 67 89">
+                    </div>
+
+                    <div class="input-inline-group">
+                        <div class="input-wrapper">
+                            <label for="input-postal-example">Code Postal</label>
+                            <input type="text" id="input-postal-example" placeholder="ex: 93100">
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="input-city-example">Ville</label>
+                            <input type="text" id="input-city-example" placeholder="ex: Montreuil">
+                        </div>
+                    </div>
+
+                    
+                    <div class="input-wrapper">
+                        <label for="input-phone-example">Least</label>
+                        <select>
+                            <option value="Option 1">Volay</option>
+                            <option value="Option 2">Shemale Bady</option>
+                            <option value="Option 3">Le petit Gregory</option>
+                            <option value="Option 4">Cédric Floutard</option>
+                            <option value="Option 5">Tim Berners-Lee</option>
+                        </select>
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="checkbox-example">
+                        <label for="checkbox-example" class="checkbox-label">
+                            En m'inscrivant via email ou via Facebook j'accepte les conditions générales d'utilisation.
+                        </label>
+                    </div>
+
+                    <div class="radio-wrapper">
+                        <input type="radio" name="radio-example" id="radio-example1">
+                        <label for="radio-example1" class="radio-label">Choix 1</label>
+                    </div>
+                    <div class="radio-wrapper">
+                        <input type="radio" name="radio-example" id="radio-example2">
+                        <label for="radio-example2" class="radio-label">Choix 2</label>
+                    </div>
+                    <div class="radio-wrapper">
+                        <input type="radio" name="radio-example" id="radio-example3">
+                        <label for="radio-example3" class="radio-label">Choix 3</label>
+                    </div>
+
+                    <div class="searchbar">
+                        <input type="text" class="searchbar__input">
+                        <button class="searchbar__submit btn--red">
+                        </button>
+                    </div>
+
+                    <div class="fake-input">
+                        <p class="fake-input__label">Nom</p>
+                        <p class="fake-input__text">Mastro</p>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+        
+        <!-- TABLES -->
+        <section class="styleguide__section u-hide">
+            <h2 class="styleguide__section__title">Tables</h2>
+
+            <div class="styleguide__section__item">
+                
+                <div class="table-wrapper">
+                    <table class="table">
+                        <thead class="table__head">
+                            <tr class="table__products">
+                                <th class="table__product">&nbsp;</th>
+                                <th class="table__product table__product--standard">Standard</th>
+                                <th class="table__product table__product--premium">Premium</th>
+                                <th class="table__product table__product--club">Club</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table__products-description">
+                                <td class="table__product-feature">
+                                    Fonctionnalités
+                                </td>
+                                <td class="table__product-description table__product-description--standard">
+                                    <p class="table__product-description__text"><span>Gratuit</span><br>à vie</p>
+                                </td>
+                                <td class="table__product-description table__product-description--premium">
+                                    <p class="table__product-description__text"><span>6€/mois</span><br>par équipe</p>
+                                    <ul class="table__product-description__details">
+                                        <li>Avec 1 mois gratuit.</li>
+                                        <li>50€ si vous payez à l'année.</li>
+                                    </ul>
+                                </td>
+                                <td class="table__product-description table__product-description--club"></td>
+                            </tr>
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Site aux couleurs de l'équipe
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <ul class="product-feature__infos__content u-list-default">
+                                            <li>Personnaliser les couleurs de l'équipe</li>
+                                            <li>Ajouter votre logo</li>
+                                            <li>Mettre une photo de présentation de l'équipe</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Appli iPhone / Android gratuite
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p class="product-feature__infos__content">Retrouvez les fonctionnalités principales sur vos applis mobiles.</p>
+                                    </div>
+                                </td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Gestion détaillée de l'effectif
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p class="product-feature__infos__content">Vous pouvez gérer vos coachs, vos joueurs ou bien même des joueurs occasionnels ou encore des amis de l'équipe. Saison par saison.</p>
+                                    </div>
+                                </td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Calendrier de l'équipe
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p>Organisez vos événements comme vous l'entendez :</p>
+                                        <ul class="product-feature__infos__content u-list-default">
+                                            <li>Calendrier détaillé de tous vos événements : en vue agenda ou liste.</li>
+                                            <li>Gestion des compétitions, championnat ou coupe.</li>
+                                            <li>Gestion d'événements ponctuels : matchs amicaux, tournois... ou soirées.</li>
+                                            <li>Gestion d'événements récurrents (ex. : "entraînement tous les mardis").</li>
+                                            <li>Gestion des reports et annulations de matchs.</li>
+                                            <li>Gestion des "matchs entre vous" : composez 2 équipes parmi vos joueurs !</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Gestion des stades et adversaires
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p class="product-feature__infos__content">Enregistrez toutes les infos sur les lieux et les adversaires contre qui vous jouez.</p>
+                                    </div>
+                                </td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Feuilles de match
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p class="product-feature__infos__content">Retrouvez toutes les infos du match ou de l'entrainement: lieu, date, heure, rendez-vous, score, résultats, buteurs...</p>
+                                    </div>
+                                </td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Convocations et relances
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p class="product-feature__infos__content">Vous pouvez convoquer vos joueurs manuellement ou automatiquement. Vous pouvez aussi relancer les joueurs qui ne répondent pas (manuellement ou automatiquement, bien-sûr).</p>
+                                    </div>
+                                </td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Disponibilité des joueurs
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p class="product-feature__infos__content">Les joueurs peuvent répondre par 'OUI' ou par 'NON' via email ou notification mobile. Et vous avez un suivi en temps réel des disponibilités de vos joueurs.</p>
+                                    </div>
+                                </td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Forum du match
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p class="product-feature__infos__content">Vous pouvez communiquer facilement avec vos joueurs sur le forum du match. Pour motiver vos joueurs avant le match et refaire le match ensuite.</p>
+                                    </div>
+                                </td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Compte-rendu de match
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p class="product-feature__infos__content">Vous pouvez poster un compe-rendu de match.</p>
+                                    </div>
+                                </td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Homme du match &amp; notes
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p class="product-feature__infos__content">Note du match de 1 à 6 étoiles, notes des joueurs de 1 à 10. Vous pouvez paramétrer "qui peut noter" et "qui peut voir les notes".</p>
+                                    </div>
+                                </td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Score &amp; stats du match
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p class="product-feature__infos__content">Rentrez le résultat du match ainsi que les stats de joueurs que vous voulez suivre: buteurs, passeurs, cartons... selon votre sport.</p>
+                                    </div>
+                                </td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Messages groupés
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p class="product-feature__infos__content">Envoyez un message groupé à une partie ou à l'ensemble de vos joueurs ou des autres coachs.</p>
+                                    </div>
+                                </td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Tactiques &amp; compos d'équipe
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <ul class="product-feature__infos__content u-list-default">
+                                            <li>Faites vos compos d'équipe comme dans un jeu vidéo :</li>
+                                            <li>Choix des titulaires et remplaçants.</li>
+                                            <li>Sélection de schémas tactiques pour tous les sports.</li>
+                                            <li>"Glisser-déposer" des photos des joueurs à chaque poste sur le terrain.</li>
+                                            <li>Partage de la composition entre coachs uniquement, ou avec tous les joueurs.</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Calendrier de championnat
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p class="product-feature__infos__content">Vous pouvez mettre en place l'ensemble du calendrier de votre championnat avec les matchs de tous les participants</p>
+                                    </div>
+                                </td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Historique des saisons passées
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p class="product-feature__infos__content">Vous avez accès à l'ensemble de vos feuilles de match sur toutes les saisons.</p>
+                                    </div>
+                                </td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Fiches-profils personnalisables
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p class="product-feature__infos__content">Vous pouvez créer des champs personnalisables pour mettre les infos que vous voulez sur vos joueurs.</p>
+                                    </div>
+                                </td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Classement de championnat
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p class="product-feature__infos__content">Classement de championnat mis à jour automatiquement.</p>
+                                    </div>
+                                </td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Pas de publicité
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p class="product-feature__infos__content">On n'aime pas la publicité pour la publicité donc on va essayer de trouver des pubs intéressantes pour vous.</p>
+                                    </div>
+                                </td>
+                                <td class="icon-cancel table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Bilan des matchs sur la saison courante
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <ul class="product-feature__infos__content u-list-default">
+                                            <li>Nombre et pourcentage de victoires, nuls, défaites.</li>
+                                            <li>Buts marqués/encaissés (ou points, essai selon le sport).</li>
+                                            <li>Score moyen.</li>
+                                            <li>Nombre de matchs selon l'écart de score ("On a gagné 3 matchs par 1 but d'écart").</li>
+                                            <li>Les 10 derniers matchs.</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td class="icon-cancel table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Meilleures et pires séries
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p class="product-feature__infos__content">Série de victoires, matchs sans défaite, défaites ou matchs sans victoire.</p>
+                                    </div>
+                                </td>
+                                <td class="icon-cancel table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Statistiques des joueurs
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p class="product-feature__infos__content">Nombre de matchs, buts (foot), essais (rugby)...</p>
+                                    </div>
+                                </td>
+                                <td class="icon-cancel table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Classement des joueurs
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p class="product-feature__infos__content">Classement des buteurs, marqueurs d'essais (rugby), joueurs les mieux notés...</p>
+                                    </div>
+                                </td>
+                                <td class="icon-cancel table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="table__products-feature">
+                                <td class="table__product-feature js-table-tab">
+                                    <a href="#" class="product-feature__title js-table-tab-toggle">
+                                        Bilan sur toutes les saisons
+                                    </a>
+                                    <div class="table__product-feature__infos">
+                                        <p class="product-feature__infos__content">Statistiques des matchs ou des joueurs sur une, plusieurs ou toutes les saisons.</p>
+                                    </div>
+                                </td>
+                                <td class="icon-cancel table__product-availability"></td>
+                                <td class="icon-check table__product-availability"></td>
+                                <td></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- PAGINATION -->
+        <section class="styleguide__section">
+            <h2 class="styleguide__section__title">Pagination</h2>
+
+            <div class="styleguide__section__item">
+                <div class="pagination">
+                    <a href="#" class="pagination__prev btn--secondary btn--small btn--icon">
+                        <span class="btn__text">Précédent</span>
+                    </a>
+                    <a href="#" class="pagination__next btn--secondary btn--small btn--icon-rtl">
+                        <span class="btn__text">Suivant</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- LINK DRAWER -->
+        <section class="styleguide__section">
+            <h2 class="styleguide__section__title">Link Drawer</h2>
+
+            <div class="styleguide__section__item styleguide__section__item--link-drawer">
+                <div class="link-drawer">
+                    <a href="#" class="link-drawer__link">
+                        <span class="icon-wrapper icon-wrapper--squared link-drawer__link-icon">
+                            <svg class="icon">
+                                <use xlink:href="assets/icons/dest/icons.svg#telephone" />
+                            </svg>
+                        </span>
+                        <span class="link-drawer__link-text" title="01 64 70 77 87">Appelez nous</span>
+                    </a>
+                    <a href="#" class="link-drawer__link">
+                        <span class="icon-wrapper icon-wrapper--squared link-drawer__link-icon">
+                            <svg class="icon">
+                                <use xlink:href="assets/icons/dest/icons.svg#email" />
+                            </svg>
+                        </span>
+                        <span class="link-drawer__link-text" title="extoplus@gmail.com">Ecrivez nous</span>
+                    </a>
+                    <a href="#" class="link-drawer__link">
+                        <span class="icon-wrapper icon-wrapper--squared link-drawer__link-icon">
+                            <svg class="icon">
+                                <use xlink:href="assets/icons/dest/icons.svg#documentation" />
+                            </svg>
+                        </span>
+                        <span class="link-drawer__link-text">Documentation</span>
+                    </a>
+                    <a href="#" class="link-drawer__link">
+                        <span class="icon-wrapper icon-wrapper--squared link-drawer__link-icon">
+                            <svg class="icon">
+                                <use xlink:href="assets/icons/dest/icons.svg#youtube" />
+                            </svg>
+                        </span>
+                        <span class="link-drawer__link-text">Video Youtube</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ALERT BOXES -->
+        <section class="styleguide__section">
+            <h2 class="styleguide__section__title">Alert Boxes</h2>
+
+            <div class="styleguide__section__item styleguide__section__item--alert">
+                <div class="alert">
+                    <p class="alert__text">[Alert Normale] Cliquez ici pour agrandir votre Monneypenny.</p>
+                    <button class="alert__close-btn">
+                    </button>
+                </div>
+                <div class="alert--success">
+                    <p class="alert__text">[Alert Success] Cliquez ici pour agrandir votre Monneypenny.</p>
+                    <button class="alert__close-btn">
+                    </button>
+                </div>
+                <div class="alert--error">
+                    <p class="alert__text">[Alert Error] Cliquez ici pour agrandir votre Monneypenny.</p>
+                    <button class="alert__close-btn">
+                    </button>
+                </div>
+                <div class="alert--error2">
+                    <p class="alert__text">[Alert Error2] Cliquez ici pour agrandir votre Monneypenny.</p>
+                    <button class="alert__close-btn">
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SKEWED IMAGES -->
+        <section class="styleguide__section">
+            <h2 class="styleguide__section__title">Skewed Images</h2>
+            
+            <div class="styleguide__section__item styleguide__section__item--image">
+                <div class="img-skewed-wrapper">
+                    <figure class="figure--skewed">
+                        <div class="img-skewed">
+                            <img src="assets/img/image_styleguide.jpeg">
+                        </div>
+                        <figcaption>Avec Extoplus</figcaption>
+                    </figure>
+                    <figure class="figure--skewed">
+                        <div class="img-skewed">
+                            <img src="assets/img/image_styleguide.jpeg">
+                        </div>
+                        <figcaption>Sans Extoplus</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CONTENT HEADER -->
+        <section class="styleguide__section">
+            <h2 class="styleguide__section__title">Content Header</h2>
+
+            <div class="styleguide__section__item">
+                <header class="content-header">
+                    <div class="content-header__body">
+                        <h3 class="content-header__title">Le système Extoplus</h3>
+                        <h4 class="content-header__subtitle">Caractéristiques techniques</h4>
+                    </div>
+                </header>
+
+                <header class="content-header content-header--centered">
+                    <div class="content-header__body">
+                        <h3 class="content-header__title">Mise en oeuvre</h3>
+                        <p class="content-header__text">Appliquez votre kit facilement et rapidement en suivant les différentes étapes de notre tutoriel via <a href="#">la vidéo YouTube</a> ou en lisant les instructions ci-dessous.</p>
+                        <a href="#" class="link--icon link--icon-wrapped">
+                            <div class="icon-wrapper icon-wrapper--tiny icon-wrapper--black">
+                                <svg class="icon">
+                                    <use xlink:href="assets/icons/dest/icons.svg#download" />
+                                </svg>
+                            </div>
+                            Télécharger le kit
+                        </a>
+                        <div class="btn-wrapper">
+                            <a href="#" class="btn btn--medium btn--full">
+                                <span class="btn__content">
+                                    <span class="btn__text">Télécharger le kit</span>
+                                    <svg class="icon btn__icon">
+                                        <use xlink:href="assets/icons/dest/icons.svg#download" />
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="#" class="btn btn--medium btn--full">
+                                <span class="btn__content">
+                                    <span class="btn__text">Vidéo YouTube</span>
+                                    <svg class="icon btn__icon">
+                                        <use xlink:href="assets/icons/dest/icons.svg#arrow" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </section>
+
+        <!-- KIT CARD -->
+        <section class="styleguide__section">
+            <h2 class="styleguide__section__title">Kit Card</h2>
+
+            <div class="styleguide__section__item">
+                <form class="kit-wrapper js-kit-wrapper" action="#">
+                    <div class="kit js-kit">
+                        <header class="kit__header js-kit-header">
+                            <p class="kit__title">Configuration de système n°<span class="kit__number">1</span></p>
+                            <div class="kit__system-amount">
+                                <p class="kit__system-amount__text">Quantité de systèmes ayant la même configuration : </p>
+                                <div class="kit__system-amount__selector numeric-spinner">
+                                    <input type="button" class="numeric-spinner__btn qtyminus" value="-"  field="quantity" />
+                                    <input type="number" class="numeric-spinner__number qty" min="1" name="quantity" value="1" />
+                                    <input type="button" class="numeric-spinner__btn qtyplus" value="+" field="quantity" />
+                                </div>
+                            </div>
+                            <button href="#" class="kit__delete-text js-kit-delete">Supprimer</button>
+                            <p class="kit__total-price">2430 € H.T.</p>
+                            <button class="kit__delete-btn js-kit-delete" title="Supprimer cette configuration">
+                                <svg class="icon btn__icon">
+                                    <use xlink:href="assets/icons/dest/icons.svg#delete" />
+                                </svg>
+                            </button>
+                            <button class="kit__expander js-kit-expand" title="Voir les détails de ce kit">
+                                <svg class="icon btn__icon">
+                                    <use xlink:href="assets/icons/dest/icons.svg#slide-down" />
+                                </svg>
+                            </button>
+                        </header>
+                        <main class="kit__body js-kit-body">
+                            <div class="kit__body__part kit__config-form">
+                                <p class="kit__title">Formulaire de configuration</p>
+                                <div class="input-wrapper kit__site-name bottom-sep">
+                                    <label for="input-text-example">Nom de chantier</label>
+                                    <input type="text" id="input-text-example" placeholder="Nom de chantier">
+                                </div>
+                                <div class="input-wrapper">
+                                    <label>Type de toiture</label>
+                                    <select>
+                                        <option value="Option 1">Tuiles et ardoises posées sur liteaux</option>
+                                        <option value="Option 2">Tuiles et ardoises posées sur liteaux</option>
+                                        <option value="Option 3">Tuiles et ardoises posées sur liteaux</option>
+                                        <option value="Option 4">Tuiles et ardoises posées sur liteaux</option>
+                                    </select>
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="input-number">Pureau (cm)</label>
+                                    <input type="number" id="input-number" placeholder="ex : 15cm" min="0">
+                                </div>
+                                <div class="input-wrapper">
+                                    <label>Largeur de l'extension de toiture</label>
+                                    <select>
+                                        <option value="Option 1">140mm</option>
+                                        <option value="Option 2">140mm</option>
+                                        <option value="Option 3">140mm</option>
+                                        <option value="Option 4">140mm</option>
+                                    </select>
+                                </div>
+                                <div class="input-wrapper input-wrapper--rive">
+                                    <label for="input-number">Rives (mètres)</label>
+                                    <div class="rive-wrapper">
+                                        <div class="rive-side">
+                                            <span class="input-pre-text">1 Rive</span>
+                                            <div class="radio-wrapper">
+                                                <input type="radio" name="radio-side" value="droite" id="radio-right" checked>
+                                                <label for="radio-right" class="radio-label">Droite</label>
+                                            </div>
+                                            <div class="radio-wrapper">
+                                                <input type="radio" name="radio-side" value="gauche" id="radio-left">
+                                                <label for="radio-left" class="radio-label">Gauche</label>
+                                            </div>
+                                        </div>
+                                        <div class="rive-length">
+                                            <span class="input-pre-text">de</span>
+                                            <div class="numeric-spinner">
+                                                <input type="button" class="numeric-spinner__btn qtyminus" value="-"  field="quantity" />
+                                                <input type="number" class="numeric-spinner__number qty" name="quantity" value="0" />
+                                                <input type="button" class="numeric-spinner__btn qtyplus" value="+" field="quantity" />
+                                            </div>
+                                            <span class="input-pre-text">mètre(s)</span>
+                                        </div>
+                                    </div>
+                                    <div class="rive-wrapper">
+                                        <div class="rive-side">
+                                            <span class="input-pre-text">1 Rive</span>
+                                            <div class="radio-wrapper">
+                                                <input type="radio" name="radio-side-2" value="droite" id="radio-right-2">
+                                                <label for="radio-right-2" class="radio-label">Droite</label>
+                                            </div>
+                                            <div class="radio-wrapper">
+                                                <input type="radio" name="radio-side-2" value="gauche" id="radio-left-2" checked>
+                                                <label for="radio-left-2" class="radio-label">Gauche</label>
+                                            </div>
+                                        </div>
+                                        <div class="rive-length">
+                                            <span class="input-pre-text">de</span>
+                                            <div class="numeric-spinner">
+                                                <input type="button" class="numeric-spinner__btn qtyminus" value="-"  field="quantity" />
+                                                <input type="number" class="numeric-spinner__number qty" name="quantity" value="0" />
+                                                <input type="button" class="numeric-spinner__btn qtyplus" value="+" field="quantity" />
+                                            </div>
+                                            <span class="input-pre-text">mètre(s)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn--medium btn--border btn--border-red">
+                                   <span class="btn__content">
+                                        <svg class="icon icon--left btn__icon">
+                                            <use xlink:href="assets/icons/dest/icons.svg#add" />
+                                        </svg>
+                                        <span class="btn__text">Ajouter une autre rive</span>
+                                    </span> 
+                                </button>
+                            </div>
+                            <div class="kit__body__part kit-details">
+                                <p class="kit__title">Détails de la configuration</p>
+                                <table class="kit-details__table">
+                                    <thead>
+                                        <tr>
+                                            <th class="kit-details__title-designation">Désignation</th>
+                                            <th class="kit-details__title-quatity">Quantité</th>
+                                            <th class="kit-details__title-price-nt">P.U.H.T</th>
+                                            <th class="kit-details__title-price-wt">P.T.H.T</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="kit-details__designation">Faitage</td>
+                                            <td class="kit-details__quatity">20</td>
+                                            <td class="kit-details__price-nt">11,02€</td>
+                                            <td class="kit-details__price-wt">220,40€</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="kit-details__designation">Intermédiaire</td>
+                                            <td class="kit-details__quatity">50</td>
+                                            <td class="kit-details__price-nt">10,12€</td>
+                                            <td class="kit-details__price-wt">505,10€</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="kit-details__designation">
+                                               <div class="checkbox-wrapper">
+                                                    <input type="checkbox" id="checkbox-sikaflex">
+                                                    <label for="checkbox-sikaflex" class="checkbox-label">
+                                                        Sikaflex Pro-11 FC 300Ml
+                                                    </label>
+                                                </div> 
+                                            </td>
+                                            <td class="kit-details__quatity">50</td>
+                                            <td class="kit-details__price-nt">10,12€</td>
+                                            <td class="kit-details__price-wt">505,10€</td>
+                                        </tr>
+                                    </tbody>  
+                                    <tfoot>
+                                        <tr class="kit-details__final-price">
+                                            <td class="kit-details__final-price__text" rowspan="2">Prix de la configuration</td>
+                                            <td class="kit-details__final-price__quantity">/</td>
+                                            <td class="kit-details__final-price__price-nt">456,76€</td>
+                                            <td class="kit-details__final-price__price-wt">505,10€</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </main>
+                    </div>
+                    <button class="btn btn--medium add-system">
+                        <span class="btn__content">
+                            <svg class="icon icon--left btn__icon">
+                                <use xlink:href="assets/icons/dest/icons.svg#add-white" />
+                            </svg>
+                            <span class="btn__text">Ajouter un autre système</span>
+                        </span> 
+                    </button>
+                    <div class="kit-price-section">
+                        <div class="input-wrapper bottom-sep discount-block">
+                            <label for="input-text-reduction">Utiliser un code de réduction</label>
+                            <input type="text" id="input-text-reduction" placeholder="ex : EXTO25GHIU">
+                        </div>
+                        <div class="price-section">
+                            <p class="price-section__text">Prix total H.T</p>
+                            <span class="price-section__price">0,00€</span>
+                        </div>
+                        <div class="price-section">
+                            <p class="price-section__text">Frais de livraison</p>
+                            <span class="price-section__price">0,00€</span>
+                        </div>
+                        <div class="price-section">
+                            <p class="price-section__text">Code de réduction</p>
+                            <span class="price-section__price">0,00€</span>
+                        </div>
+                        <div class="price-section">
+                            <p class="price-section__text">T.V.A</p>
+                            <span class="price-section__price">0,00€</span>
+                        </div>
+                        <div class="price-section">
+                            <p class="price-section__text">Prix total T.T.C</p>
+                            <span class="price-section__price">0,00€</span>
+                        </div>
+                        <div class="btn-wrapper">
+                            <button class="btn btn--medium btn--full">
+                                <span class="btn__content">
+                                    <span class="btn__text">Télécharger le devis</span>
+                                    <svg class="icon btn__icon">
+                                        <use xlink:href="assets/icons/dest/icons.svg#download" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <a href="#" class="btn btn--medium btn--full">
+                                <span class="btn__content">
+                                    <span class="btn__text">Commander <span>la configuration</span></span>
+                                    <svg class="icon btn__icon">
+                                        <use xlink:href="assets/icons/dest/icons.svg#commander" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- CONTENT HEADER -->
+        <section class="styleguide__section">
+            <h2 class="styleguide__section__title">Content Header</h2>
+
+            <div class="styleguide__section__item styleguide__section__item--spaced">
+                <div class="step-wrapper">
+                    <a href="#" class="step is-active">
+                        <div class="step__number">1</div>
+                        <div class="step__text">Paiement</div>
+                        <div class="step__next">
+                            <svg class="icon">
+                                <use xlink:href="assets/icons/dest/icons.svg#slide-right" />
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="#" class="step">
+                        <div class="step__number">2</div>
+                        <div class="step__text">Récapitulatif</div>
+                        <div class="step__next">
+                            <svg class="icon">
+                                <use xlink:href="assets/icons/dest/icons.svg#slide-right" />
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="#" class="step">
+                        <div class="step__number">3</div>
+                        <div class="step__text">Validation</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="assets/js/vendor/typerendering-1.1.0.min.js" defer></script>
+    <script src="assets/js/vendor/jquery-2.1.0.min.js"></script>
+    <script src="assets/bower_components/glidejs/dist/glide.min.js" defer></script>
+    <script src="assets/bower_components/hideshowpassword/hideshowpassword.min.js" defer></script>
+    <script src="assets/bower_components/svg4everybody/dist/svg4everybody.js"></script>
+    <script src="assets/bower_components/velocity/velocity.min.js"></script>
+    <script src="assets/bower_components/velocity/velocity.ui.min.js"></script>
+    <script src="assets/js/build/all.js"></script>
+    <script>svg4everybody();</script>
+</body>
+
+</html>
