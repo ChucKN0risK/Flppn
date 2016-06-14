@@ -157,6 +157,7 @@ p.error {
   font-size: 1rem;
   font-family: inherit;
   cursor: pointer;
+  outline: none;
 }
 
 .modal__outer-text {

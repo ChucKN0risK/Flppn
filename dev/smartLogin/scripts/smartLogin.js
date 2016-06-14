@@ -2,7 +2,7 @@
 // request : smartLogin.js
 // Methods : init / open / close / getCollections / createCollections / assignCollections
 
-var smartLogin = function(elm) {
+var smartLogin = function() {
     this.$body = document.body;
     this.$host = smartLoginHost;
     this.$el = this.$host.shadowRoot.querySelector('#modalWrapper');
@@ -34,19 +34,8 @@ smartLogin.prototype = {
             e.preventDefault();
             _this.login();
         });
-
-        // Close smartSaveMenu when user hits ESC key
-        document.onkeydown = function(evt) {
-            console.log(_this.isShown);
-            evt = evt || window.event;
-            if (evt.keyCode == 27 && _this.isShown) {
-                _this.close()
-                console.log('close w/ ESC')
-            }
-        };
     },
     toggle: function() {
-        console.log('login toggle', login)
         if (this.isShown) {
             this.close();
         } else {
@@ -76,8 +65,9 @@ smartLogin.prototype = {
                 _this.$errorWrapper.style.opacity = '1'
                 return console.log('error : ', err)
             }
-            console.log('login ok')
+
             chrome.storage.sync.set({token: result.token})
+            _this.close();
         });
     }
 }
@@ -99,7 +89,7 @@ xhr.onload = function() {
     var smartLoginTemplate = document.querySelector('#smartLoginTemplate');
     var clone = document.importNode(smartLoginTemplate.content, true)
     smartLoginHost.appendChild(clone);
-    login = new smartLogin(smartLoginHost);
+    login = new smartLogin();
 };
 xhr.send();
 
