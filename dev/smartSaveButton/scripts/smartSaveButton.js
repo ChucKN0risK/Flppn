@@ -2,6 +2,17 @@
 // request background.js
 // Methods : init / saveVideo / openSmartSaveMenu
 
+var getToken = function(cb) {
+    chrome.storage.sync.get('token', function(token) {
+      console.log('>>>>>>', token);
+      console.log('>>>>>>', login);
+      if(token.token){
+        return cb(token.token);
+      }
+      
+      login.toggle();
+    });
+}
 
 chrome.storage.sync.get(function(localstorage) {
   token = localstorage.token;
@@ -36,8 +47,11 @@ var SmartSaveButton = {
     console.log('video saved');
   },
   openSmartSaveMenu: function() {
-    menu.getUserCollections();
-    menu.toggle();
+    console.log(getToken)
+    getToken(function(token){ 
+      menu.getUserCollections();
+      menu.toggle();  
+    })
   },
   showElement: function() {
     _this = this;

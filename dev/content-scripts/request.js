@@ -26,8 +26,6 @@
       token:token
     };
 
-        console.log(options);
-
     request("GET", urlAPI+"/collections", options, function (err, result) {
 
       if(err){

@@ -5,7 +5,7 @@
 var menu, userCollections;
 var smartSaveMenu = function(elm) {
     this.$el = elm.firstChild.nextSibling.nextSibling.nextSibling;
-    this.$toggle = elm;
+    // this.$toggle = elm;
     this.isShown = false;
     this.events();
 };
@@ -14,9 +14,9 @@ smartSaveMenu.prototype = {
     events: function() {
         var _this = this;
 
-        _this.$toggle.addEventListener('click', function() {
-            _this.toggle()
-        });
+        // _this.$toggle.addEventListener('click', function() {
+        //     _this.toggle()
+        // });
 
         // Close smartSaveMenu if user clicks outside
         // document.addEventListener('click', function(e) {
@@ -26,8 +26,10 @@ smartSaveMenu.prototype = {
 
         // Close smartSaveMenu when user hits ESC key
         document.onkeydown = function(evt) {
+            console.log(_this.isShown);
+            console.log('ESC');
             evt = evt || window.event;
-            if (evt.keyCode == 27) {
+            if (evt.keyCode == 27 && this.isShown) {
                 _this.close()
                 console.log('close w/ ESC')
             }
@@ -54,20 +56,13 @@ smartSaveMenu.prototype = {
         if(Array.isArray(userCollections)){
           return;
         }
-        getToken(function(err, token){
-
-            if(err){
-              return console.log('user_not_connected');
+        getCollections(token, function(err, result) {
+            userCollections= result;
+            var categoriesList = _this.$el.getElementsByTagName('ul')[0];
+            for(var i = 0; i < result.length; i++){
+              console.log(result[i]);
+              categoriesList.appendChild(_this.constructCategories(result[i].title, result[i].numberVideo, result[i].img));
             }
-
-            getCollections(token, function(err, result) {
-                userCollections= result;
-                var categoriesList = _this.$el.getElementsByTagName('ul')[0];
-                for(var i = 0; i < result.length; i++){
-                  console.log(result[i]);
-                  categoriesList.appendChild(_this.constructCategories(result[i].title, result[i].videos, result[i].img));
-                }
-            })
         })
     },
     assignCollections: function() {
@@ -99,19 +94,8 @@ smartSaveMenu.prototype = {
     }
 }
 
-
-var getToken = function(cb) {
-        chrome.storage.sync.get('token', function(token) {
-
-          if(token.token){
-            return cb(null, token.token);
-          }
-
-          cb('user_not_connected');
-        });
-    }
-    // Here we get our smartSaveButton DOM from a file in the project 
-    // doing a xhr request.
+// Here we get our smartSaveButton DOM from a file in the project 
+// doing a xhr request.
 var xhr = new XMLHttpRequest();
 xhr.open('GET', chrome.extension.getURL('dev/smartSaveMenu/smartSaveMenu.html'), true);
 xhr.onload = function() {

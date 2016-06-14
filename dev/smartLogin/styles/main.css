@@ -3,6 +3,7 @@
   --black: #171717;
   --lightgrey: #fbfbfb;
   --grey: #aaaab1;
+  --red: #e65c5c;
   --border-color: #f4f4f5;
   --border-radius: 2px;
   --transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -21,6 +22,12 @@ a {
   color: #f55180;
 }
 
+p.error {
+  color: var(--red);
+  opacity: 0;
+  transition: var(--transition);
+}
+
 .modal-wrapper {
   display: none;
   position: fixed;
@@ -32,6 +39,7 @@ a {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
   font-family: 'Open Sans';
+  font-size: 1rem;
   z-index: 40;
 }
 
@@ -152,7 +160,7 @@ a {
 }
 
 .modal__outer-text {
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: var(--white);
   transition: var(--transition);
   will-change: opacity;

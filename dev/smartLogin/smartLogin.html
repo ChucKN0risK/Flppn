@@ -2,10 +2,10 @@
 
 <template id="smartLoginTemplate">
   <style>
-    @import url(chrome-extension://bnhkidiekcgbhkmbecmeoomecpbbgfnb/dev/smartSaveMenu/styles/main.css);
+    @import url(chrome-extension://bnhkidiekcgbhkmbecmeoomecpbbgfnb/dev/smartLogin/styles/main.css);
     @import url(https://fonts.googleapis.com/css?family=Open+Sans);
   </style>
-  <div class="modal-wrapper is-active" id="modal-wrapper">
+  <div class="modal-wrapper" id="modalWrapper">
     <div class="modal js-modal">
       <header class="modal__header">
         <svg class="modal__header__logo" width="69" height="10" viewBox="0 0 69 10" xmlns="http://www.w3.org/2000/svg">
@@ -18,13 +18,13 @@
         </button>
       </header>
       <main class="modal__content">
-        <form action="#" class="page__form modal__form">
-          <input class="modal__form__input" type="text" placeholder="Username">
-          <input class="modal__form__input" type="password" placeholder="Password">
+        <form action="#" class="page__form modal__form" id="smartLoginForm">
+          <input class="modal__form__input" id="smartLoginUsername" type="text" placeholder="Username">
+          <input class="modal__form__input" id="smartLoginPassword" type="password" placeholder="Password">
 
-          <p class="error"></p>
+          <p class="error" id="errorWrapper">Username or password incorrect :(</p>
 
-          <button class="modal__form__submit" type="submit">Connect</button>
+          <button class="modal__form__submit" id="smartLoginSubmit" type="submit">Connect</button>
         </form>
       </main>
     </div>
