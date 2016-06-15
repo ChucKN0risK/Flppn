@@ -8,7 +8,7 @@
 $audio-canvas-video: false; // True | False
 
 // Fonts
-$font1: 'Roboto', Arial, sans-serif;
+$font1: 'Open Sans', Arial, sans-serif;
 $font2: 'Miso', serif;
 
 // = General Styles
@@ -18,7 +18,7 @@ $font2: 'Miso', serif;
 }
 
 @mixin transition {
-  transition: all cubic-bezier(0.22, 0.61, 0.36, 1) .3s;
+  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 @mixin box-shadow {

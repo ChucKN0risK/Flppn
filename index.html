@@ -15,35 +15,8 @@
 
 <body>
 
-    <nav class="nav--fullscreen u-hide" id="portal-nav-fullscreen">
-        <ul class="nav--fullscreen__list">
-            <li class="nav--fullscreen__item close-nav">
-                <button class="btn--close" id="nav-fullscreen-closebtn">
-                </button>
-            </li>
-            <li class="nav--fullscreen__item is-active">
-                <a href="homepage-portail.html" class="nav--fullscreen__item__link">Accueil</a>
-            </li>
-            <li class="nav--fullscreen__item">
-                <a href="presentation-portail.html" class="nav--fullscreen__item__link">Présentation</a>
-            </li>
-            <li class="nav--fullscreen__item">
-                <a href="iconfont.html" class="nav--fullscreen__item__link">Icon Font</a>
-            </li>
-            <li class="nav--fullscreen__item">
-                <a href="#" class="nav--fullscreen__item__link">Equipes</a>
-            </li>
-            <li class="nav--fullscreen__item">
-                <a href="#" class="nav--fullscreen__item__link">Offres</a>
-            </li>
-            <li class="nav--fullscreen__item">
-                <a href="#" class="nav--fullscreen__item__link">Aide &amp; Contact</a>
-            </li>
-        </ul>
-    </nav>
-
-    <div class="modal-wrapper" id="modalWrapper">
-        <div class="modal js-modal">
+    <div class="modal-wrapper is-active" id="modalWrapper">
+        <div class="modal js-modal u-hide">
           <header class="modal__header">
             <svg class="modal__header__logo" width="69" height="10" viewBox="0 0 69 10" xmlns="http://www.w3.org/2000/svg">
               <path d="M6.58 1.1V0H0v10h1.183V5.714h4.835v-1.1H1.183V1.1H6.58zm9.088 7.814V0h-1.183v10h5.722V8.914h-4.54zM28.29 0v10h1.183V6.843h2.706c2.557 0 4.035-1.272 4.035-3.486C36.215 1.23 34.737 0 32.18 0h-3.89zm1.183 1.1h2.66c1.864 0 2.944.77 2.944 2.286 0 1.557-1.08 2.357-2.943 2.357h-2.66V1.1zM44.343 0v10h1.182V6.843h2.706c2.56 0 4.038-1.272 4.038-3.486C52.267 1.23 50.788 0 48.23 0h-3.888zm1.182 1.1h2.662c1.863 0 2.942.77 2.942 2.286 0 1.557-1.08 2.357-2.943 2.357h-2.662V1.1zM69 10V0h-1.168v8.043L61.622 0h-1.227v10h1.183V1.97l6.21 8.03H69z" fill="#000" fill-rule="evenodd"/>
@@ -65,10 +38,10 @@
             </form>
           </main>
         </div>
-        <p class="modal__outer-text">Don't have an account ? <a href="http://flppn.com/register">Get started</a></p>
+        <p class="modal__outer-text u-hide">Don't have an account ? <a href="http://flppn.com/register">Get started</a></p>
     </div>
 
-    <div class="headnav">
+    <div class="headnav u-hide">
         <header class="header-main" data-ui-component="Header" id="header-main">
 
             <button class="header-main__toggle js-mobile-nav-toggle" title="navigation menu" aria-label="navigation menu" role="button" aria-controls="navigation" aria-expanded="false">
@@ -133,7 +106,7 @@
         </nav> 
     </div>
 
-    <main class="styleguide">
+    <main class="styleguide u-hide">
         <h1 class="styleguide__title">Styleguide</h1>
         
         <!-- USER AVATAR -->
@@ -1509,14 +1482,8 @@
     </main>
     
     <script src="assets/js/vendor/typerendering-1.1.0.min.js" defer></script>
-    <script src="assets/js/vendor/jquery-2.1.0.min.js"></script>
-    <script src="assets/bower_components/glidejs/dist/glide.min.js" defer></script>
     <script src="assets/bower_components/hideshowpassword/hideshowpassword.min.js" defer></script>
-    <script src="assets/bower_components/svg4everybody/dist/svg4everybody.js"></script>
-    <script src="assets/bower_components/velocity/velocity.min.js"></script>
-    <script src="assets/bower_components/velocity/velocity.ui.min.js"></script>
     <script src="assets/js/build/all.js"></script>
-    <script>svg4everybody();</script>
 </body>
 
 </html>

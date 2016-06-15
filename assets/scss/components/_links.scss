@@ -3,11 +3,11 @@
    ======================= */
 
 %link {
-  color: $blue;
+  color: $pink;
   @include transition();
   &:hover {
     text-decoration: none;
-    color: shade($blue, 20%);
+    color: shade($pink, 20%);
   }
 }
 
@@ -21,32 +21,11 @@ a {
   display: flex;
   justify-content: flex-start;
   text-decoration: none;
-  // & > i {
-  //   margin-right: .3rem;
-  // }
-  // @include mq($from: mobile) {
-  //   & > i {
-  //     @include size(100%);
-  //   }
-  // }
-  // @include mq($from: tablet) {
-  //   & > i {
-  //   }
-  // }
 }
 
 .link--icon-rtl {
   @extend %link;
   display: flex;
   text-decoration: none;
-  // & > i {
-  //     @include transition();
-  //     margin-left: .3rem;
-  // }
-  // &:hover {
-  //     & > i {
-  //         transform: translateX(.3rem);
-  //     }
-  // }
 }
 
