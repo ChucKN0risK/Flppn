@@ -10,20 +10,20 @@
     <script src="assets/js/vendor/modernizr-2.8.3.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/styleguide.css">
-    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 
-    <div class="modal-wrapper" id="modalWrapper">
+    <div class="modal-wrapper is-active" id="modalWrapper">
         <div class="modal js-modal u-hide">
           <header class="modal__header">
             <svg class="modal__header__logo" width="69" height="10" viewBox="0 0 69 10" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.58 1.1V0H0v10h1.183V5.714h4.835v-1.1H1.183V1.1H6.58zm9.088 7.814V0h-1.183v10h5.722V8.914h-4.54zM28.29 0v10h1.183V6.843h2.706c2.557 0 4.035-1.272 4.035-3.486C36.215 1.23 34.737 0 32.18 0h-3.89zm1.183 1.1h2.66c1.864 0 2.944.77 2.944 2.286 0 1.557-1.08 2.357-2.943 2.357h-2.66V1.1zM44.343 0v10h1.182V6.843h2.706c2.56 0 4.038-1.272 4.038-3.486C52.267 1.23 50.788 0 48.23 0h-3.888zm1.182 1.1h2.662c1.863 0 2.942.77 2.942 2.286 0 1.557-1.08 2.357-2.943 2.357h-2.662V1.1zM69 10V0h-1.168v8.043L61.622 0h-1.227v10h1.183V1.97l6.21 8.03H69z" fill="#000" fill-rule="evenodd"/>
+              <path d="M6.58 1.1V0H0v10h1.183V5.714h4.835v-1.1H1.183V1.1H6.58zm9.088 7.814V0h-1.183v10h5.722V8.914h-4.54zM28.29 0v10h1.183V6.843h2.706c2.557 0 4.035-1.272 4.035-3.486C36.215 1.23 34.737 0 32.18 0h-3.89zm1.183 1.1h2.66c1.864 0 2.944.77 2.944 2.286 0 1.557-1.08 2.357-2.943 2.357h-2.66V1.1zM44.343 0v10h1.182V6.843h2.706c2.56 0 4.038-1.272 4.038-3.486C52.267 1.23 50.788 0 48.23 0h-3.888zm1.182 1.1h2.662c1.863 0 2.942.77 2.942 2.286 0 1.557-1.08 2.357-2.943 2.357h-2.662V1.1zM69 10V0h-1.168v8.043L61.622 0h-1.227v10h1.183V1.97l6.21 8.03H69z"/>
             </svg>
             <button class="modal__header__btn modal__close-btn js-modal-close">
               <svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z" fill="#AAAAB1" fill-rule="evenodd"/>
+                <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z"/>
               </svg>
             </button>
           </header>
@@ -38,26 +38,79 @@
             </form>
           </main>
         </div>
-        <div class="modal js-modal u-hide">
+        <!-- Modal Delete Collection Confirmation -->
+        <div class="modal modal--choice js-modal-collection-delete js-modal u-hide">
           <header class="modal__header">
-            <svg class="modal__header__logo" width="69" height="10" viewBox="0 0 69 10" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.58 1.1V0H0v10h1.183V5.714h4.835v-1.1H1.183V1.1H6.58zm9.088 7.814V0h-1.183v10h5.722V8.914h-4.54zM28.29 0v10h1.183V6.843h2.706c2.557 0 4.035-1.272 4.035-3.486C36.215 1.23 34.737 0 32.18 0h-3.89zm1.183 1.1h2.66c1.864 0 2.944.77 2.944 2.286 0 1.557-1.08 2.357-2.943 2.357h-2.66V1.1zM44.343 0v10h1.182V6.843h2.706c2.56 0 4.038-1.272 4.038-3.486C52.267 1.23 50.788 0 48.23 0h-3.888zm1.182 1.1h2.662c1.863 0 2.942.77 2.942 2.286 0 1.557-1.08 2.357-2.943 2.357h-2.662V1.1zM69 10V0h-1.168v8.043L61.622 0h-1.227v10h1.183V1.97l6.21 8.03H69z" fill="#000" fill-rule="evenodd"/>
-            </svg>
+            <div class="modal__header__content">
+              <p class="modal__header__title">Do you really want to delete this collection?</p>
+              <p class="modal__header__subtitle">All the videos in this collection will be deleted.</p>
+            </div>
             <button class="modal__header__btn modal__close-btn js-modal-close">
               <svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z" fill="#AAAAB1" fill-rule="evenodd"/>
+                <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z"/>
               </svg>
             </button>
           </header>
           <main class="modal__content">
-            <form action="#" class="page__form modal__form" id="smartLoginForm">
-              <input class="modal__form__input" id="smartLoginUsername" type="text" placeholder="Username">
-              <input class="modal__form__input" id="smartLoginPassword" type="password" placeholder="Password">
-
-              <p class="error" id="errorWrapper">Username or password incorrect :(</p>
-
-              <button class="modal__form__submit" id="smartLoginSubmit" type="submit">Connect</button>
+            <div class="modal__choices">
+              <button class="modal__choice modal__choice--yes">Yes</button>
+              <button class="modal__choice">No</button>
+            </div>
+          </main>
+        </div>
+        <!-- Modal Add Video Link -->
+        <div class="modal modal--url js-modal u-hide">
+          <header class="modal__header">
+            <div class="modal__header__content">
+              <p class="modal__header__title">Add a new video in your collections?</p>
+            </div>
+            <button class="modal__header__btn modal__close-btn js-modal-close">
+              <svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z"/>
+              </svg>
+            </button>
+          </header>
+          <main class="modal__content">
+            <input type="url" class="modal__url" placeholder="http://..." required>
+            <button class="btn btn--secondary modal__url-submit">Next</button>
+          </main>
+        </div>
+        <!-- Modal New Collection -->
+        <div class="modal modal--new-collection js-modal u-hide">
+          <header class="modal__header">
+            <div class="modal__header__content">
+              <p class="modal__header__title">Create a new collection</p>
+            </div>
+            <button class="modal__header__btn modal__close-btn js-modal-close">
+              <svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z"/>
+              </svg>
+            </button>
+          </header>
+          <main class="modal__content">
+            <form action="#" class="page__form modal__form" id="newCollectionModalForm">
+              <input class="modal__form__input" id="newCollectionModalInput" type="text" placeholder="Name of your collection" required>
+              <button class="btn modal__form__submit" id="newCollectionModalSubmit" type="submit">Create this collection</button>
             </form>
+          </main>
+        </div>
+        <!-- Modal Delete Video Confirmation -->
+        <div class="modal modal--choice js-modal-video-delete js-modal">
+          <header class="modal__header">
+            <div class="modal__header__content">
+              <p class="modal__header__title">Do you really want to delete this video?</p>
+            </div>
+            <button class="modal__header__btn modal__close-btn js-modal-close">
+              <svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z"/>
+              </svg>
+            </button>
+          </header>
+          <main class="modal__content">
+            <div class="modal__choices">
+              <button class="modal__choice modal__choice--yes">Yes</button>
+              <button class="modal__choice">No</button>
+            </div>
           </main>
         </div>
         <p class="modal__outer-text u-hide">Don't have an account ? <a href="http://flppn.com/register">Get started</a></p>

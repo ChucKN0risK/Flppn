@@ -5,7 +5,8 @@
 $modal-padding: .75rem;
 
 .modal-wrapper {
-  display: none;
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
@@ -17,11 +18,14 @@ $modal-padding: .75rem;
   font-family: 'Open Sans';
   font-size: 1rem;
   z-index: 40;
+  opacity: 0;
+  visibility: hidden;
+  will-change: opacity, visibility;
 }
 
 .modal-wrapper.is-active {
-  display: flex;
-  flex-direction: column;
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal-wrapper.is-active .modal {
@@ -46,9 +50,53 @@ $modal-padding: .75rem;
   font-family: inherit;
   overflow: hidden;
   @include transition;
+  transition-delay: .1s;
   will-change: transform;
   transform: translateY(1rem);
   opacity: 0;
+}
+
+.modal--choice {
+  .modal__header {
+    height: auto;
+  }
+  .modal__content {
+    padding: initial;
+  }
+}
+
+.modal--url {
+  .modal__content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.modal--new-collection {
+  .modal__form {
+    width: 100%;
+  }
+  .modal__form__input {
+    width: 100%;
+    &:invalid {
+      border-color: $error;
+      & + .modal__form__submit {
+        cursor: not-allowed;
+        pointer-events: none;
+        background-color: $lightgrey;
+        background-image: none;
+        color: $grey;
+      }
+    } 
+    &:valid {
+      & + .modal__form__submit {
+        pointer-events: auto;
+        background-color: $pink;
+        color: $white;
+      }
+    }
+  }
 }
 
 .modal__header {
@@ -60,17 +108,34 @@ $modal-padding: .75rem;
   border-bottom: 1px solid $border-color;
 }
 
-.modal__header__logo {
-  transform: scale(1.5);
+.modal__header__content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+  text-align: left;
 }
 
-.modal__header__text {
+.modal__header__logo {
+  transform: scale(1.5);
+
+  svg {
+    fill: $black;
+  }
+}
+
+.modal__header__title {
   display: flex;
   align-items: center;
-  flex-grow: 1;
   color: $black;
   text-align: left;
-  font-weight: 700;
+  font-weight: 600;
+}
+
+.modal__header__subtitle {
+  color: $grey;
 }
 
 .modal__header__btn {
@@ -87,10 +152,14 @@ $modal-padding: .75rem;
   @include transition;
   will-change: transform;
   cursor: pointer;
+  outline: none;
 }
 
-.modal__header__btn:hover {
-  transform: rotate(90deg);
+.modal__close-btn {
+  svg { fill: $grey; }
+  &:hover {
+    transform: rotate(90deg);
+  }
 }
 
 .modal__content {
@@ -99,6 +168,7 @@ $modal-padding: .75rem;
   align-items: center;
   flex-direction: column;
   padding: 2rem;
+  border-top: 1px solid $lightgrey;
 }
 
 .modal__form {
@@ -133,7 +203,7 @@ $modal-padding: .75rem;
 
 .modal__form__submit {
   height: 3rem;
-  width: 10rem;
+  min-width: 10rem;
   border-radius: 3rem;
   border: none;
   background-image: linear-gradient(to bottom, $pink, #f55180);
@@ -143,6 +213,67 @@ $modal-padding: .75rem;
   font-family: inherit;
   cursor: pointer;
   outline: none;
+}
+
+.modal__choices {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.modal__choice {
+  @include flex-absolute-center;
+  padding: 1rem;
+  width: 50%;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.03));
+  @include transition;
+  will-change: background-color, color;
+  outline: none;
+
+  &:first-child {
+    border-right: 1px solid $lightgrey;
+  }
+  &:focus {
+    background-color: $lightgrey;
+  }
+}
+
+.modal__choice--yes {
+  color: $pink;
+
+  &:focus {
+    background-color: $pink;
+    color: $white;
+  }
+}
+
+.modal__url {
+  &:invalid {
+    border-color: $error;
+    & + .modal__url-submit {
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  } 
+  &:valid {
+    & + .modal__url-submit {
+      pointer-events: auto;
+      background-color: $pink;
+      color: $white;
+    }
+  }
+}
+
+.modal__url-submit {
+  margin-left: 1rem;
+  padding: 0 2rem;
+  background-color: $lightgrey;
+  color: $grey;
+
+  .btn__icon {
+    fill: $grey;
+  }
 }
 
 .modal__outer-text {
