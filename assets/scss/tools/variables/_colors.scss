@@ -25,18 +25,5 @@ $gold-darker: #ffa939;
 $color1: $blue;
 $error: $red;
 $success: $green;
-// Using Sass Maps as explained here : https://jonsuh.com/blog/sass-maps/
-$social-colors: (facebook: #3b5998, twitter: #43bfe1, dribbble: #ea4c89, github: #171515, google: #db4437, youtube: #c4302b);
-.social-link {
-  color: $white;
-}
 
-@each $social-network,
-$social-color in $social-colors {
-  .icon-#{$social-network}-with-circle {
-    color: $social-color;
-  }
-}
-
-// Example : <a class="social-link social-link--dribbble">Dribbble</a>
 

@@ -33,6 +33,38 @@
   }
 }
 
+.btn-wrapper--page-actions {
+  position: fixed;
+  flex-direction: column-reverse;
+
+  .btn {
+    &:not(:last-child) {
+      margin: 1rem 0 0 0;
+    }
+  }
+}
+
+.btn-wrapper--bottom-right {
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.btn-wrapper--bottom-left {
+  bottom: 2rem;
+  left: 2rem;
+}
+
+.btn-wrapper--top-right {
+  top: 2rem;
+  right: 2rem;
+}
+
+.btn-wrapper--top-left {
+  top: 2rem;
+  left: 2rem;
+}
+
+
 // If you wonder when to use %extend and when to use mixin read this : http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/
 // This module is supposed to be applied on a <a> or a >button> element.
 %button {
@@ -68,6 +100,10 @@
   background-image: linear-gradient(to bottom, $pink, $pink2);
   color: $white;
   will-change: background-image;
+
+  .btn__icon {
+    fill: $white;
+  }
 
   &:hover {
     background-image: linear-gradient(to bottom, $pink2, $pink3);
@@ -120,7 +156,6 @@
 .btn--circled {
   @extend %button;
   @extend %circled;
-  @extend %full;
 }
 
 .btn--full {
