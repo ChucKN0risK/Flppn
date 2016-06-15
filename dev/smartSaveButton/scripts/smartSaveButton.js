@@ -25,27 +25,27 @@ var smartSaveButton = function(videoWrapper) {
   // this.events();
 
   return smartSaveButton;
-}
+};
 
 var SmartSaveButton = {
   events: function() {
-    console.log('events');
+
   },
   openSmartSaveMenu: function() {
     getToken(function(){ 
       smartSaveMenu.getUserCollections();
-      smartSaveMenu.toggle();  
+      smartSaveMenu.toggle();
     })
   },
   showElement: function() {
     _this = this;
     var host = document.querySelector('#smartSaveButtonHost').createShadowRoot();
     var template = document.querySelector('#smartSaveButtonTemplate');
-    var clone = document.importNode(template.content, true)
+    var clone = document.importNode(template.content, true);
     host.appendChild(clone);
 
     var button = host.firstChild.nextSibling.nextSibling.nextSibling;
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function(e) {
       _this.openSmartSaveMenu();
     });
 

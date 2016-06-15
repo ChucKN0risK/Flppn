@@ -3,7 +3,6 @@
 // Methods : init / open / close / getCollections / createCollections / assignCollections
 
 var smartLogin = function() {
-    this.$body = document.body;
     this.$host = smartLoginHost;
     this.$el = this.$host.shadowRoot.querySelector('#modalWrapper');
     this.$form = this.$el.querySelector('#smartLoginForm');
@@ -26,6 +25,8 @@ smartLogin.prototype = {
         //   if (!(e.target).closest(_this.$el).length && _this.isOpened) _this.toggle();
         // });
 
+
+
         _this.$closeButton.addEventListener('click', function() {
             _this.close();
         });
@@ -43,18 +44,16 @@ smartLogin.prototype = {
         }
     },
     open: function() {
-        this.$el.classList.add('is-active')
-        this.isShown = true
-        // console.log(this.$body)
-        // this.$body.style.overflow = 'hidden !important'
-        // this.$body.classList.add = 'putain'
+        this.$el.classList.add('is-active');
+        this.isShown = true;
+        this.$el.style.visibility = 'visible';
     },
     close: function() {
-        this.$el.classList.remove('is-active')
-        this.isShown = false
+        this.$el.classList.remove('is-active');
+        this.isShown = false;
         // console.log('close')
     },
-    login: function(username, password) {
+    login: function() {
         var _this = this;
 
         var connectPseudo = _this.$username.value;
@@ -62,15 +61,15 @@ smartLogin.prototype = {
 
         signin(connectPseudo, connectPassword, function(err, result) {
             if (err) {
-                _this.$errorWrapper.style.opacity = '1'
+                _this.$errorWrapper.style.opacity = '1';
                 return console.log('error : ', err)
             }
-
-            chrome.storage.sync.set({token: result.token})
             _this.close();
+            smartSaveMenu.getUserCollections();
+            smartSaveMenu.toggle();
         });
     }
-}
+};
 
 // Here we get our smartSaveButton DOM from a file in the project 
 // doing a xhr request.
