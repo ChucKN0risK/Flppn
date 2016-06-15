@@ -46,7 +46,8 @@
         "dev/content-scripts/request.js",
         "dev/smartSaveButton/scripts/smartSaveButton.js",
         "dev/smartSaveMenu/scripts/smartSaveMenu.js",
-        "dev/smartLogin/scripts/smartLogin.js"
+        "dev/smartLogin/scripts/smartLogin.js",
+        "dev/content-scripts/panicButton.js"
       ],
       "css": [
         "dev/smartSaveButton/styles/main.css",

@@ -30,7 +30,7 @@
 
           login.toggle();
       });
-  }
+  };
 
 
   var getCollections = function(cb) {
@@ -60,9 +60,12 @@
       };
 
       request("POST", urlAPI + "/signin", options, function(err, result) {
+
           if (err) {
               return cb(err)
           }
+
+          chrome.storage.sync.set({token: result.token});
 
           cb(null, result);
       })
@@ -92,23 +95,26 @@
 
   var addVideoRequest = function(url, collectionID, cb) {
 
-      var options = {
-          token: token,
-          data: {
-              "url": url
-          }
-      };
+      getToken(function(token) {
 
-      if(collectionID){
-        options.data.collection = collectionID;
-      }
+          var options = {
+              token: token,
+              data: {
+                  "url": url
+              }
+          };
 
-      request("POST", urlAPI + "/video", options, function(err, result) {
-
-          if (err) {
-              return cb(err)
+          if (collectionID) {
+              options.data.collection = collectionID;
           }
 
-          cb(null, result);
+          request("POST", urlAPI + "/video", options, function (err, result) {
+
+              if (err) {
+                  return cb(err)
+              }
+
+              cb(null, result);
+          })
       })
   };
