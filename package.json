@@ -40,5 +40,9 @@
     "gulp-uncss": "^1.0.5",
     "imagemin-pngquant": "^4.0.0",
     "svg4everybody": "^2.0.3"
+  },
+  "dependencies": {
+    "critical": "^0.7.3",
+    "sassdoc": "^2.1.20"
   }
 }

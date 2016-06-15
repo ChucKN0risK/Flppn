@@ -30,3 +30,9 @@ npm-debug.log
 
 # Local Development Configuration
 localconfig.json
+/config.rb
+/.scss-lint.yml
+/assets/
+/gulpfile.js
+/index.html
+/package.json
