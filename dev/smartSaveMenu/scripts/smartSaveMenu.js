@@ -18,8 +18,11 @@ smartSaveMenu.prototype = {
 
         _this.createCollectionInput.onkeypress = function(evt) {
           _this.createCollection(evt);
-        }
+        };
 
+        
+        var elm =_this.$el.querySelector('.website-favicon');
+        elm.style.backgroundImage = "url("+test+")";
         // Close smartSaveMenu if user clicks outside
         // document.addEventListener('click', function(e) {
         //   console.log(e);
@@ -119,7 +122,21 @@ smartSaveMenu.prototype = {
         cat.addEventListener('click', this.saveVideo);
         return cat;
     }
-}
+};
+
+var getFavicon = function(){
+    var favicon = undefined;
+    var nodeList = document.getElementsByTagName("link");
+    for (var i = 0; i < nodeList.length; i++)
+    {
+        if((nodeList[i].getAttribute("rel") == "icon")||(nodeList[i].getAttribute("rel") == "shortcut icon"))
+        {
+            favicon = nodeList[i].getAttribute("href");
+        }
+    }
+    return favicon;
+};
+
 
 // Here we get our smartSaveButton DOM from a file in the project 
 // doing a xhr request.
