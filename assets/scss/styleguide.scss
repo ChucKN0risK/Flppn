@@ -61,8 +61,7 @@
     &--typography,
     &--buttons {
         @include flex-vertical-center();
-        .btn--primary,
-        .btn--secondary {
+        .btn {
             margin-bottom: 1rem;
         }
     }

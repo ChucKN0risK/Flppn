@@ -11,6 +11,7 @@ input[type="tel"],
 textarea,
 select {
   display: flex;
+  width: 100%;
   @include rms(0);
   font-weight: 300;
   color: $black;
@@ -18,10 +19,11 @@ select {
   padding: .5em;
   border: 1px solid $lightgrey2;
   @include border-radius();
-  background-color: #f7f7f7;
-  @include placeholder(rgba($black, 0.4));
+  background-color: $lightgrey;
+  @include placeholder($grey);
+  outline: none;
   &:focus {
-    border-color: $blue;
+    border-color: $pink;
   }
 }
 

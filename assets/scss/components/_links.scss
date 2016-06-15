@@ -6,14 +6,12 @@
   color: $pink;
   @include transition();
   &:hover {
-    text-decoration: none;
     color: shade($pink, 20%);
   }
 }
 
 a {
   @extend %link;
-  text-decoration: underline;
 }
 
 .link--icon {

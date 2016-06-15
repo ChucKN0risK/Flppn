@@ -15,7 +15,29 @@
 
 <body>
 
-    <div class="modal-wrapper is-active" id="modalWrapper">
+    <div class="modal-wrapper" id="modalWrapper">
+        <div class="modal js-modal u-hide">
+          <header class="modal__header">
+            <svg class="modal__header__logo" width="69" height="10" viewBox="0 0 69 10" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.58 1.1V0H0v10h1.183V5.714h4.835v-1.1H1.183V1.1H6.58zm9.088 7.814V0h-1.183v10h5.722V8.914h-4.54zM28.29 0v10h1.183V6.843h2.706c2.557 0 4.035-1.272 4.035-3.486C36.215 1.23 34.737 0 32.18 0h-3.89zm1.183 1.1h2.66c1.864 0 2.944.77 2.944 2.286 0 1.557-1.08 2.357-2.943 2.357h-2.66V1.1zM44.343 0v10h1.182V6.843h2.706c2.56 0 4.038-1.272 4.038-3.486C52.267 1.23 50.788 0 48.23 0h-3.888zm1.182 1.1h2.662c1.863 0 2.942.77 2.942 2.286 0 1.557-1.08 2.357-2.943 2.357h-2.662V1.1zM69 10V0h-1.168v8.043L61.622 0h-1.227v10h1.183V1.97l6.21 8.03H69z" fill="#000" fill-rule="evenodd"/>
+            </svg>
+            <button class="modal__header__btn modal__close-btn js-modal-close">
+              <svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z" fill="#AAAAB1" fill-rule="evenodd"/>
+              </svg>
+            </button>
+          </header>
+          <main class="modal__content">
+            <form action="#" class="page__form modal__form" id="smartLoginForm">
+              <input class="modal__form__input" id="smartLoginUsername" type="text" placeholder="Username">
+              <input class="modal__form__input" id="smartLoginPassword" type="password" placeholder="Password">
+
+              <p class="error" id="errorWrapper">Username or password incorrect :(</p>
+
+              <button class="modal__form__submit" id="smartLoginSubmit" type="submit">Connect</button>
+            </form>
+          </main>
+        </div>
         <div class="modal js-modal u-hide">
           <header class="modal__header">
             <svg class="modal__header__logo" width="69" height="10" viewBox="0 0 69 10" xmlns="http://www.w3.org/2000/svg">
@@ -41,76 +63,24 @@
         <p class="modal__outer-text u-hide">Don't have an account ? <a href="http://flppn.com/register">Get started</a></p>
     </div>
 
-    <div class="headnav u-hide">
+    <div class="headnav">
         <header class="header-main" data-ui-component="Header" id="header-main">
-
-            <button class="header-main__toggle js-mobile-nav-toggle" title="navigation menu" aria-label="navigation menu" role="button" aria-controls="navigation" aria-expanded="false">
-                <div class="header-main__toggle__content">
-                    <div class="header-main__toggle__close"></div>
-                    <div class="header-main__toggle__open">menu</div>
-                </div>
-            </button>
 
             <a href="#" class="logo logo--header"></a>
             
-            <nav class="header-main__nav">
-                <ul class="header-main__menu u-list-reset">
-                    <li class="header-main__menu__item">
-                        <a href="#" class="header-main__link">Le système</a>
-                    </li>
-                    <li class="header-main__menu__item">
-                        <a href="#" class="header-main__link">La mise en oeuvre</a>
-                    </li>
-                    <li class="header-main__menu__item">
-                        <a href="#" class="header-main__link">Centres de formation</a>
-                    </li>
-                    <li class="header-main__menu__item">
-                        <a href="#" class="header-main__link" id="open-header-main-dropdown">Contact</a>
-                    </li>
-                    <li class="header-main__menu__item">
-                        <a href="#" class="header-main__link" id="header-main-user-login-toggle">Mon compte</a>
-                    </li>
-                </ul>
+            <form class="header-main__search">
+                <input type="text" name="header-searchbar" placeholder="Search">
+            </form>
 
-                <div class="header-main__actions btn-wrapper">
-                    <a href="#" class="btn btn--medium btn--red">
-                        <span class="btn__content">
-                            <svg class="icon icon--left btn__icon">
-                                <use xlink:href="assets/icons/dest/icons.svg#modularite" />
-                            </svg>
-                            <span class="btn__text">Devis en ligne</span>
-                        </span>
-                    </a>
-                </div>
-            </nav>
+            <button class="header-main__toggle-user-menu">Concombre malicieux</button>
         </header>
-        
-        <nav class="header-main__mobile-nav js-mobile-nav" role="navigation">
-            <ul class="mobile-nav__list">
-                <li class="mobile-nav__item">
-                    <a href="#" class="mobile-nav__item__link">Le système</a>
-                </li>
-                <li class="mobile-nav__item">
-                    <a href="#" class="mobile-nav__item__link">La mise en oeuvre</a>
-                </li>
-                <li class="mobile-nav__item">
-                    <a href="#" class="mobile-nav__item__link">Les centres de formation</a>
-                </li>
-                <li class="mobile-nav__item">
-                    <a href="#" class="mobile-nav__item__link">Contact</a>
-                </li>
-                <li class="mobile-nav__item">
-                    <a href="#" class="mobile-nav__item__link">Mon compte</a>
-                </li>
-            </ul>
-        </nav> 
     </div>
 
-    <main class="styleguide u-hide">
+    <main class="styleguide">
         <h1 class="styleguide__title">Styleguide</h1>
         
         <!-- USER AVATAR -->
-        <section class="styleguide__section">
+        <section class="styleguide__section u-hide">
             <h2 class="styleguide__section__title">User / Team Avatar</h2>
 
             <div class="styleguide__section__item styleguide__section__item--spaced">
@@ -137,73 +107,41 @@
             <h2 class="styleguide__section__title">Buttons</h2>
 
             <div class="styleguide__section__item styleguide__section__item--buttons">
-                <button class="btn btn--skew btn--medium btn--red">
-                    <span class="btn__content">
-                        <svg class="icon icon--left btn__icon">
-                            <use xlink:href="assets/icons/dest/icons.svg#commander" />
-                        </svg>
-                        <span class="btn__text">Panier</span>
-                    </span>
+                <a href="#0" class="btn btn--light">Create this collection</a>
+
+                <button class="btn btn--light">
+                  <span class="btn__content">
+                    <svg class="icon icon--left btn__icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M16.89 10.168l1.174-1.155.437-.428c.416-.408.773-.898 1.012-1.425.28-.615.442-1.238.48-1.912.034-.58-.05-1.185-.232-1.737-.404-1.226-1.275-2.285-2.432-2.902-1.128-.602-2.454-.758-3.7-.463-.934.22-1.77.728-2.447 1.39L8.6 4.074l-1.11 1.09c-.635.623-1.11 1.35-1.38 2.195-.32.997-.298 2.144.068 3.126.106.286.23.57.384.836.154.27.347.512.543.752.397.483.92.89 1.475 1.18.488.258 1.104.118 1.387-.364.27-.46.117-1.106-.37-1.363-.197-.103-.383-.22-.56-.35.07.05.138.102.206.154-.288-.22-.546-.47-.77-.752l.162.205c-.22-.283-.403-.59-.543-.92l.105.248c-.138-.33-.232-.676-.28-1.03l.035.264c-.044-.353-.043-.708.004-1.06l-.036.255c.05-.345.14-.68.276-1.003l-.1.236c.135-.32.31-.618.522-.894l-.157.202c.26-.332.58-.62.88-.915l1.435-1.41 1.405-1.38c.293-.287.578-.592.905-.843l-.207.16c.287-.218.6-.397.935-.535l-.252.103c.34-.136.69-.228 1.052-.275l-.27.034c.36-.044.72-.042 1.08.004l-.26-.035c.35.05.69.14 1.02.27l-.24-.097c.324.133.628.305.91.514-.07-.052-.14-.103-.208-.155.288.217.546.468.77.75l-.163-.205c.222.283.404.59.544.92l-.105-.248c.138.33.23.676.28 1.03-.013-.087-.025-.176-.036-.264.044.352.043.708-.004 1.06l.036-.256c-.05.345-.14.68-.275 1.002l.1-.235c-.135.318-.31.618-.522.893l.157-.203c-.302.387-.68.72-1.03 1.065l-.95.932c-.39.384-.384 1.03.008 1.41.395.384 1.045.378 1.436-.006zM3.11 9.832l-1.174 1.155-.437.428c-.416.408-.773.898-1.012 1.425-.28.615-.442 1.238-.48 1.912-.034.58.05 1.185.232 1.737.404 1.226 1.275 2.285 2.433 2.902 1.127.602 2.453.758 3.698.463.936-.22 1.773-.728 2.45-1.39l2.58-2.538 1.11-1.09c.635-.623 1.11-1.35 1.38-2.195.32-.997.298-2.144-.068-3.126-.106-.286-.23-.57-.384-.836-.154-.27-.347-.512-.543-.752-.397-.483-.92-.89-1.475-1.18-.488-.258-1.104-.118-1.387.364-.27.46-.117 1.106.37 1.363.197.103.383.22.56.35-.07-.05-.137-.102-.206-.154.288.22.546.47.77.752l-.162-.205c.22.283.403.59.543.92l-.105-.248c.138.33.232.676.28 1.03l-.035-.264c.044.353.043.708-.004 1.06l.036-.255c-.05.345-.14.68-.276 1.003l.1-.236c-.135.32-.31.618-.522.894l.157-.202c-.26.332-.58.62-.88.915l-1.435 1.41-1.404 1.38c-.293.287-.578.592-.905.843l.208-.16c-.288.218-.6.397-.936.534l.252-.103c-.34.136-.69.228-1.052.275l.27-.034c-.36.044-.72.042-1.08-.004l.26.035c-.35-.05-.69-.14-1.02-.27l.24.097c-.324-.133-.628-.305-.91-.514.07.052.14.103.208.155-.288-.217-.546-.468-.77-.75l.163.205c-.222-.283-.404-.59-.544-.92l.105.248c-.137-.33-.23-.676-.28-1.03l.036.264c-.044-.352-.043-.708.004-1.06l-.036.256c.05-.345.14-.68.276-1.002l-.1.235c.135-.318.31-.617.522-.893l-.157.203c.302-.387.68-.72 1.03-1.065l.95-.932c.39-.384.384-1.03-.008-1.41-.395-.384-1.045-.378-1.436.006z"/></svg>
+                    <span class="btn__text">Ajouter un lien</span>
+                  </span>
                 </button>
 
-                <a href="#" class="btn btn--skew btn--medium btn--grey">
-                    <span class="btn__content">
-                        <svg class="icon icon--left btn__icon">
-                            <use xlink:href="assets/icons/dest/icons.svg#modularite" />
-                        </svg>
-                        <span class="btn__text">Chiffrer</span>
-                    </span>
-                </a>
+                <a href="#0" class="btn btn--full">Create my secret account</a>
 
-                <a href="#" class="btn btn--medium btn--full">
-                    <span class="btn__content">
-                        <span class="btn__text">Commander</span>
-                        <svg class="icon btn__icon">
-                            <use xlink:href="assets/icons/dest/icons.svg#commander" />
-                        </svg>
-                    </span>
-                </a>
-
-                <button class="btn btn--medium btn--full">
-                    <span class="btn__content">
-                        <span class="btn__text">Commander</span>
-                        <svg class="icon btn__icon">
-                            <use xlink:href="assets/icons/dest/icons.svg#commander" />
-                        </svg>
-                    </span>
-                </button>
-                
-                <a href="#" class="btn btn--medium btn--full">
-                    <span class="btn__content">
-                        <span class="btn__text">En savoir plus</span>
-                        <svg class="icon btn__icon">
-                            <use xlink:href="assets/icons/dest/icons.svg#arrow" />
-                        </svg>
-                    </span>
-                </a>
-
-                <button class="btn btn--medium btn--border btn--border-red">
-                   <span class="btn__content">
-                        <svg class="icon icon--left btn__icon">
-                            <use xlink:href="assets/icons/dest/icons.svg#add" />
-                        </svg>
-                        <span class="btn__text">Ajouter une autre rive</span>
-                    </span> 
+                <button class="btn btn--secondary">
+                  <span class="btn__content">
+                    <svg class="icon icon--left btn__icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M16.89 10.168l1.174-1.155.437-.428c.416-.408.773-.898 1.012-1.425.28-.615.442-1.238.48-1.912.034-.58-.05-1.185-.232-1.737-.404-1.226-1.275-2.285-2.432-2.902-1.128-.602-2.454-.758-3.7-.463-.934.22-1.77.728-2.447 1.39L8.6 4.074l-1.11 1.09c-.635.623-1.11 1.35-1.38 2.195-.32.997-.298 2.144.068 3.126.106.286.23.57.384.836.154.27.347.512.543.752.397.483.92.89 1.475 1.18.488.258 1.104.118 1.387-.364.27-.46.117-1.106-.37-1.363-.197-.103-.383-.22-.56-.35.07.05.138.102.206.154-.288-.22-.546-.47-.77-.752l.162.205c-.22-.283-.403-.59-.543-.92l.105.248c-.138-.33-.232-.676-.28-1.03l.035.264c-.044-.353-.043-.708.004-1.06l-.036.255c.05-.345.14-.68.276-1.003l-.1.236c.135-.32.31-.618.522-.894l-.157.202c.26-.332.58-.62.88-.915l1.435-1.41 1.405-1.38c.293-.287.578-.592.905-.843l-.207.16c.287-.218.6-.397.935-.535l-.252.103c.34-.136.69-.228 1.052-.275l-.27.034c.36-.044.72-.042 1.08.004l-.26-.035c.35.05.69.14 1.02.27l-.24-.097c.324.133.628.305.91.514-.07-.052-.14-.103-.208-.155.288.217.546.468.77.75l-.163-.205c.222.283.404.59.544.92l-.105-.248c.138.33.23.676.28 1.03-.013-.087-.025-.176-.036-.264.044.352.043.708-.004 1.06l.036-.256c-.05.345-.14.68-.275 1.002l.1-.235c-.135.318-.31.618-.522.893l.157-.203c-.302.387-.68.72-1.03 1.065l-.95.932c-.39.384-.384 1.03.008 1.41.395.384 1.045.378 1.436-.006zM3.11 9.832l-1.174 1.155-.437.428c-.416.408-.773.898-1.012 1.425-.28.615-.442 1.238-.48 1.912-.034.58.05 1.185.232 1.737.404 1.226 1.275 2.285 2.433 2.902 1.127.602 2.453.758 3.698.463.936-.22 1.773-.728 2.45-1.39l2.58-2.538 1.11-1.09c.635-.623 1.11-1.35 1.38-2.195.32-.997.298-2.144-.068-3.126-.106-.286-.23-.57-.384-.836-.154-.27-.347-.512-.543-.752-.397-.483-.92-.89-1.475-1.18-.488-.258-1.104-.118-1.387.364-.27.46-.117 1.106.37 1.363.197.103.383.22.56.35-.07-.05-.137-.102-.206-.154.288.22.546.47.77.752l-.162-.205c.22.283.403.59.543.92l-.105-.248c.138.33.232.676.28 1.03l-.035-.264c.044.353.043.708-.004 1.06l.036-.255c-.05.345-.14.68-.276 1.003l.1-.236c-.135.32-.31.618-.522.894l.157-.202c-.26.332-.58.62-.88.915l-1.435 1.41-1.404 1.38c-.293.287-.578.592-.905.843l.208-.16c-.288.218-.6.397-.936.534l.252-.103c-.34.136-.69.228-1.052.275l.27-.034c-.36.044-.72.042-1.08-.004l.26.035c-.35-.05-.69-.14-1.02-.27l.24.097c-.324-.133-.628-.305-.91-.514.07.052.14.103.208.155-.288-.217-.546-.468-.77-.75l.163.205c-.222-.283-.404-.59-.544-.92l.105.248c-.137-.33-.23-.676-.28-1.03l.036.264c-.044-.352-.043-.708.004-1.06l-.036.256c.05-.345.14-.68.276-1.002l-.1.235c.135-.318.31-.617.522-.893l-.157.203c.302-.387.68-.72 1.03-1.065l.95-.932c.39-.384.384-1.03-.008-1.41-.395-.384-1.045-.378-1.436.006z"/></svg>
+                    <span class="btn__text">Ajouter un lien</span>
+                  </span>
                 </button>
 
-                <button class="btn btn--medium">
-                   <span class="btn__content">
-                        <svg class="icon icon--left btn__icon">
-                            <use xlink:href="assets/icons/dest/icons.svg#add" />
-                        </svg>
-                        <span class="btn__text">Ajouter une autre rive</span>
-                    </span> 
+                <button class="btn btn--full">
+                  <span class="btn__content">
+                    <svg class="icon icon--left btn__icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M16.89 10.168l1.174-1.155.437-.428c.416-.408.773-.898 1.012-1.425.28-.615.442-1.238.48-1.912.034-.58-.05-1.185-.232-1.737-.404-1.226-1.275-2.285-2.432-2.902-1.128-.602-2.454-.758-3.7-.463-.934.22-1.77.728-2.447 1.39L8.6 4.074l-1.11 1.09c-.635.623-1.11 1.35-1.38 2.195-.32.997-.298 2.144.068 3.126.106.286.23.57.384.836.154.27.347.512.543.752.397.483.92.89 1.475 1.18.488.258 1.104.118 1.387-.364.27-.46.117-1.106-.37-1.363-.197-.103-.383-.22-.56-.35.07.05.138.102.206.154-.288-.22-.546-.47-.77-.752l.162.205c-.22-.283-.403-.59-.543-.92l.105.248c-.138-.33-.232-.676-.28-1.03l.035.264c-.044-.353-.043-.708.004-1.06l-.036.255c.05-.345.14-.68.276-1.003l-.1.236c.135-.32.31-.618.522-.894l-.157.202c.26-.332.58-.62.88-.915l1.435-1.41 1.405-1.38c.293-.287.578-.592.905-.843l-.207.16c.287-.218.6-.397.935-.535l-.252.103c.34-.136.69-.228 1.052-.275l-.27.034c.36-.044.72-.042 1.08.004l-.26-.035c.35.05.69.14 1.02.27l-.24-.097c.324.133.628.305.91.514-.07-.052-.14-.103-.208-.155.288.217.546.468.77.75l-.163-.205c.222.283.404.59.544.92l-.105-.248c.138.33.23.676.28 1.03-.013-.087-.025-.176-.036-.264.044.352.043.708-.004 1.06l.036-.256c-.05.345-.14.68-.275 1.002l.1-.235c-.135.318-.31.618-.522.893l.157-.203c-.302.387-.68.72-1.03 1.065l-.95.932c-.39.384-.384 1.03.008 1.41.395.384 1.045.378 1.436-.006zM3.11 9.832l-1.174 1.155-.437.428c-.416.408-.773.898-1.012 1.425-.28.615-.442 1.238-.48 1.912-.034.58.05 1.185.232 1.737.404 1.226 1.275 2.285 2.433 2.902 1.127.602 2.453.758 3.698.463.936-.22 1.773-.728 2.45-1.39l2.58-2.538 1.11-1.09c.635-.623 1.11-1.35 1.38-2.195.32-.997.298-2.144-.068-3.126-.106-.286-.23-.57-.384-.836-.154-.27-.347-.512-.543-.752-.397-.483-.92-.89-1.475-1.18-.488-.258-1.104-.118-1.387.364-.27.46-.117 1.106.37 1.363.197.103.383.22.56.35-.07-.05-.137-.102-.206-.154.288.22.546.47.77.752l-.162-.205c.22.283.403.59.543.92l-.105-.248c.138.33.232.676.28 1.03l-.035-.264c.044.353.043.708-.004 1.06l.036-.255c-.05.345-.14.68-.276 1.003l.1-.236c-.135.32-.31.618-.522.894l.157-.202c-.26.332-.58.62-.88.915l-1.435 1.41-1.404 1.38c-.293.287-.578.592-.905.843l.208-.16c-.288.218-.6.397-.936.534l.252-.103c-.34.136-.69.228-1.052.275l.27-.034c-.36.044-.72.042-1.08-.004l.26.035c-.35-.05-.69-.14-1.02-.27l.24.097c-.324-.133-.628-.305-.91-.514.07.052.14.103.208.155-.288-.217-.546-.468-.77-.75l.163.205c-.222-.283-.404-.59-.544-.92l.105.248c-.137-.33-.23-.676-.28-1.03l.036.264c-.044-.352-.043-.708.004-1.06l-.036.256c.05-.345.14-.68.276-1.002l-.1.235c.135-.318.31-.617.522-.893l-.157.203c.302-.387.68-.72 1.03-1.065l.95-.932c.39-.384.384-1.03-.008-1.41-.395-.384-1.045-.378-1.436.006z" fill="#FFF" fill-rule="evenodd"/></svg>
+                    <span class="btn__text">Ajouter un lien</span>
+                  </span>
+                </button>
+
+                <button class="btn btn--full btn--circled">
+                    <span class="btn__icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M16.89 10.168l1.174-1.155.437-.428c.416-.408.773-.898 1.012-1.425.28-.615.442-1.238.48-1.912.034-.58-.05-1.185-.232-1.737-.404-1.226-1.275-2.285-2.432-2.902-1.128-.602-2.454-.758-3.7-.463-.934.22-1.77.728-2.447 1.39L8.6 4.074l-1.11 1.09c-.635.623-1.11 1.35-1.38 2.195-.32.997-.298 2.144.068 3.126.106.286.23.57.384.836.154.27.347.512.543.752.397.483.92.89 1.475 1.18.488.258 1.104.118 1.387-.364.27-.46.117-1.106-.37-1.363-.197-.103-.383-.22-.56-.35.07.05.138.102.206.154-.288-.22-.546-.47-.77-.752l.162.205c-.22-.283-.403-.59-.543-.92l.105.248c-.138-.33-.232-.676-.28-1.03l.035.264c-.044-.353-.043-.708.004-1.06l-.036.255c.05-.345.14-.68.276-1.003l-.1.236c.135-.32.31-.618.522-.894l-.157.202c.26-.332.58-.62.88-.915l1.435-1.41 1.405-1.38c.293-.287.578-.592.905-.843l-.207.16c.287-.218.6-.397.935-.535l-.252.103c.34-.136.69-.228 1.052-.275l-.27.034c.36-.044.72-.042 1.08.004l-.26-.035c.35.05.69.14 1.02.27l-.24-.097c.324.133.628.305.91.514-.07-.052-.14-.103-.208-.155.288.217.546.468.77.75l-.163-.205c.222.283.404.59.544.92l-.105-.248c.138.33.23.676.28 1.03-.013-.087-.025-.176-.036-.264.044.352.043.708-.004 1.06l.036-.256c-.05.345-.14.68-.275 1.002l.1-.235c-.135.318-.31.618-.522.893l.157-.203c-.302.387-.68.72-1.03 1.065l-.95.932c-.39.384-.384 1.03.008 1.41.395.384 1.045.378 1.436-.006zM3.11 9.832l-1.174 1.155-.437.428c-.416.408-.773.898-1.012 1.425-.28.615-.442 1.238-.48 1.912-.034.58.05 1.185.232 1.737.404 1.226 1.275 2.285 2.433 2.902 1.127.602 2.453.758 3.698.463.936-.22 1.773-.728 2.45-1.39l2.58-2.538 1.11-1.09c.635-.623 1.11-1.35 1.38-2.195.32-.997.298-2.144-.068-3.126-.106-.286-.23-.57-.384-.836-.154-.27-.347-.512-.543-.752-.397-.483-.92-.89-1.475-1.18-.488-.258-1.104-.118-1.387.364-.27.46-.117 1.106.37 1.363.197.103.383.22.56.35-.07-.05-.137-.102-.206-.154.288.22.546.47.77.752l-.162-.205c.22.283.403.59.543.92l-.105-.248c.138.33.232.676.28 1.03l-.035-.264c.044.353.043.708-.004 1.06l.036-.255c-.05.345-.14.68-.276 1.003l.1-.236c-.135.32-.31.618-.522.894l.157-.202c-.26.332-.58.62-.88.915l-1.435 1.41-1.404 1.38c-.293.287-.578.592-.905.843l.208-.16c-.288.218-.6.397-.936.534l.252-.103c-.34.136-.69.228-1.052.275l.27-.034c-.36.044-.72.042-1.08-.004l.26.035c-.35-.05-.69-.14-1.02-.27l.24.097c-.324-.133-.628-.305-.91-.514.07.052.14.103.208.155-.288-.217-.546-.468-.77-.75l.163.205c-.222-.283-.404-.59-.544-.92l.105.248c-.137-.33-.23-.676-.28-1.03l.036.264c-.044-.352-.043-.708.004-1.06l-.036.256c.05-.345.14-.68.276-1.002l-.1.235c.135-.318.31-.617.522-.893l-.157.203c.302-.387.68-.72 1.03-1.065l.95-.932c.39-.384.384-1.03-.008-1.41-.395-.384-1.045-.378-1.436.006z" fill="#FFF" fill-rule="evenodd"/></svg>
+                    </span>
                 </button>
             </div>
         </section>
         
         <!-- ICONS -->
-        <section class="styleguide__section">
+        <section class="styleguide__section u-hide">
             <h2 class="styleguide__section__title">Icons</h2>
 
             <div class="styleguide__section__item styleguide__section__item--spaced styleguide__section__item--icons">
@@ -241,7 +179,7 @@
         </section>
         
         <!-- TYPOGRAPHY -->
-        <section class="styleguide__section">
+        <section class="styleguide__section u-hide">
             <h2 class="styleguide__section__title">Typography</h2>
 
             <div class="styleguide__section__item styleguide__section__item--typography">
@@ -336,7 +274,7 @@
         </section>
 
         <!-- MEDIA OBJECTS -->
-        <section class="styleguide__section">
+        <section class="styleguide__section u-hide">
             <h2 class="styleguide__section__title">Media objects</h2>
 
             <div class="styleguide__section__item styleguide__section__item--media">
@@ -481,7 +419,7 @@
         </section>
         
         <!-- TESTIMONIES -->
-        <section class="styleguide__section">
+        <section class="styleguide__section u-hide">
             <h2 class="styleguide__section__title">Testimonies</h2>
 
             <div class="styleguide__section__item styleguide__section__item--spaced">
@@ -566,7 +504,7 @@
         </section>
         
         <!-- FORMS -->
-        <section class="styleguide__section">
+        <section class="styleguide__section u-hide">
             <h2 class="styleguide__section__title">Forms</h2>
 
             <div class="styleguide__section__item styleguide__section__item--form">
@@ -672,424 +610,8 @@
             </div>
         </section>
         
-        <!-- TABLES -->
+        <!-- PAGE ACTIONS -->
         <section class="styleguide__section u-hide">
-            <h2 class="styleguide__section__title">Tables</h2>
-
-            <div class="styleguide__section__item">
-                
-                <div class="table-wrapper">
-                    <table class="table">
-                        <thead class="table__head">
-                            <tr class="table__products">
-                                <th class="table__product">&nbsp;</th>
-                                <th class="table__product table__product--standard">Standard</th>
-                                <th class="table__product table__product--premium">Premium</th>
-                                <th class="table__product table__product--club">Club</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="table__products-description">
-                                <td class="table__product-feature">
-                                    Fonctionnalités
-                                </td>
-                                <td class="table__product-description table__product-description--standard">
-                                    <p class="table__product-description__text"><span>Gratuit</span><br>à vie</p>
-                                </td>
-                                <td class="table__product-description table__product-description--premium">
-                                    <p class="table__product-description__text"><span>6€/mois</span><br>par équipe</p>
-                                    <ul class="table__product-description__details">
-                                        <li>Avec 1 mois gratuit.</li>
-                                        <li>50€ si vous payez à l'année.</li>
-                                    </ul>
-                                </td>
-                                <td class="table__product-description table__product-description--club"></td>
-                            </tr>
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Site aux couleurs de l'équipe
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <ul class="product-feature__infos__content u-list-default">
-                                            <li>Personnaliser les couleurs de l'équipe</li>
-                                            <li>Ajouter votre logo</li>
-                                            <li>Mettre une photo de présentation de l'équipe</li>
-                                        </ul>
-                                    </div>
-                                </td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Appli iPhone / Android gratuite
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p class="product-feature__infos__content">Retrouvez les fonctionnalités principales sur vos applis mobiles.</p>
-                                    </div>
-                                </td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Gestion détaillée de l'effectif
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p class="product-feature__infos__content">Vous pouvez gérer vos coachs, vos joueurs ou bien même des joueurs occasionnels ou encore des amis de l'équipe. Saison par saison.</p>
-                                    </div>
-                                </td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Calendrier de l'équipe
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p>Organisez vos événements comme vous l'entendez :</p>
-                                        <ul class="product-feature__infos__content u-list-default">
-                                            <li>Calendrier détaillé de tous vos événements : en vue agenda ou liste.</li>
-                                            <li>Gestion des compétitions, championnat ou coupe.</li>
-                                            <li>Gestion d'événements ponctuels : matchs amicaux, tournois... ou soirées.</li>
-                                            <li>Gestion d'événements récurrents (ex. : "entraînement tous les mardis").</li>
-                                            <li>Gestion des reports et annulations de matchs.</li>
-                                            <li>Gestion des "matchs entre vous" : composez 2 équipes parmi vos joueurs !</li>
-                                        </ul>
-                                    </div>
-                                </td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Gestion des stades et adversaires
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p class="product-feature__infos__content">Enregistrez toutes les infos sur les lieux et les adversaires contre qui vous jouez.</p>
-                                    </div>
-                                </td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Feuilles de match
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p class="product-feature__infos__content">Retrouvez toutes les infos du match ou de l'entrainement: lieu, date, heure, rendez-vous, score, résultats, buteurs...</p>
-                                    </div>
-                                </td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Convocations et relances
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p class="product-feature__infos__content">Vous pouvez convoquer vos joueurs manuellement ou automatiquement. Vous pouvez aussi relancer les joueurs qui ne répondent pas (manuellement ou automatiquement, bien-sûr).</p>
-                                    </div>
-                                </td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Disponibilité des joueurs
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p class="product-feature__infos__content">Les joueurs peuvent répondre par 'OUI' ou par 'NON' via email ou notification mobile. Et vous avez un suivi en temps réel des disponibilités de vos joueurs.</p>
-                                    </div>
-                                </td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Forum du match
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p class="product-feature__infos__content">Vous pouvez communiquer facilement avec vos joueurs sur le forum du match. Pour motiver vos joueurs avant le match et refaire le match ensuite.</p>
-                                    </div>
-                                </td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Compte-rendu de match
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p class="product-feature__infos__content">Vous pouvez poster un compe-rendu de match.</p>
-                                    </div>
-                                </td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Homme du match &amp; notes
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p class="product-feature__infos__content">Note du match de 1 à 6 étoiles, notes des joueurs de 1 à 10. Vous pouvez paramétrer "qui peut noter" et "qui peut voir les notes".</p>
-                                    </div>
-                                </td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Score &amp; stats du match
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p class="product-feature__infos__content">Rentrez le résultat du match ainsi que les stats de joueurs que vous voulez suivre: buteurs, passeurs, cartons... selon votre sport.</p>
-                                    </div>
-                                </td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Messages groupés
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p class="product-feature__infos__content">Envoyez un message groupé à une partie ou à l'ensemble de vos joueurs ou des autres coachs.</p>
-                                    </div>
-                                </td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Tactiques &amp; compos d'équipe
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <ul class="product-feature__infos__content u-list-default">
-                                            <li>Faites vos compos d'équipe comme dans un jeu vidéo :</li>
-                                            <li>Choix des titulaires et remplaçants.</li>
-                                            <li>Sélection de schémas tactiques pour tous les sports.</li>
-                                            <li>"Glisser-déposer" des photos des joueurs à chaque poste sur le terrain.</li>
-                                            <li>Partage de la composition entre coachs uniquement, ou avec tous les joueurs.</li>
-                                        </ul>
-                                    </div>
-                                </td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Calendrier de championnat
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p class="product-feature__infos__content">Vous pouvez mettre en place l'ensemble du calendrier de votre championnat avec les matchs de tous les participants</p>
-                                    </div>
-                                </td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Historique des saisons passées
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p class="product-feature__infos__content">Vous avez accès à l'ensemble de vos feuilles de match sur toutes les saisons.</p>
-                                    </div>
-                                </td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Fiches-profils personnalisables
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p class="product-feature__infos__content">Vous pouvez créer des champs personnalisables pour mettre les infos que vous voulez sur vos joueurs.</p>
-                                    </div>
-                                </td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Classement de championnat
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p class="product-feature__infos__content">Classement de championnat mis à jour automatiquement.</p>
-                                    </div>
-                                </td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Pas de publicité
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p class="product-feature__infos__content">On n'aime pas la publicité pour la publicité donc on va essayer de trouver des pubs intéressantes pour vous.</p>
-                                    </div>
-                                </td>
-                                <td class="icon-cancel table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Bilan des matchs sur la saison courante
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <ul class="product-feature__infos__content u-list-default">
-                                            <li>Nombre et pourcentage de victoires, nuls, défaites.</li>
-                                            <li>Buts marqués/encaissés (ou points, essai selon le sport).</li>
-                                            <li>Score moyen.</li>
-                                            <li>Nombre de matchs selon l'écart de score ("On a gagné 3 matchs par 1 but d'écart").</li>
-                                            <li>Les 10 derniers matchs.</li>
-                                        </ul>
-                                    </div>
-                                </td>
-                                <td class="icon-cancel table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Meilleures et pires séries
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p class="product-feature__infos__content">Série de victoires, matchs sans défaite, défaites ou matchs sans victoire.</p>
-                                    </div>
-                                </td>
-                                <td class="icon-cancel table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Statistiques des joueurs
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p class="product-feature__infos__content">Nombre de matchs, buts (foot), essais (rugby)...</p>
-                                    </div>
-                                </td>
-                                <td class="icon-cancel table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Classement des joueurs
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p class="product-feature__infos__content">Classement des buteurs, marqueurs d'essais (rugby), joueurs les mieux notés...</p>
-                                    </div>
-                                </td>
-                                <td class="icon-cancel table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                            <tr class="table__products-feature">
-                                <td class="table__product-feature js-table-tab">
-                                    <a href="#" class="product-feature__title js-table-tab-toggle">
-                                        Bilan sur toutes les saisons
-                                    </a>
-                                    <div class="table__product-feature__infos">
-                                        <p class="product-feature__infos__content">Statistiques des matchs ou des joueurs sur une, plusieurs ou toutes les saisons.</p>
-                                    </div>
-                                </td>
-                                <td class="icon-cancel table__product-availability"></td>
-                                <td class="icon-check table__product-availability"></td>
-                                <td></td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </div>
-
-            </div>
-        </section>
-        
-        <!-- PAGINATION -->
-        <section class="styleguide__section">
-            <h2 class="styleguide__section__title">Pagination</h2>
-
-            <div class="styleguide__section__item">
-                <div class="pagination">
-                    <a href="#" class="pagination__prev btn--secondary btn--small btn--icon">
-                        <span class="btn__text">Précédent</span>
-                    </a>
-                    <a href="#" class="pagination__next btn--secondary btn--small btn--icon-rtl">
-                        <span class="btn__text">Suivant</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-        
-        <!-- LINK DRAWER -->
-        <section class="styleguide__section">
             <h2 class="styleguide__section__title">Link Drawer</h2>
 
             <div class="styleguide__section__item styleguide__section__item--link-drawer">
@@ -1131,7 +653,7 @@
         </section>
         
         <!-- ALERT BOXES -->
-        <section class="styleguide__section">
+        <section class="styleguide__section u-hide">
             <h2 class="styleguide__section__title">Alert Boxes</h2>
 
             <div class="styleguide__section__item styleguide__section__item--alert">
@@ -1159,7 +681,7 @@
         </section>
         
         <!-- SKEWED IMAGES -->
-        <section class="styleguide__section">
+        <section class="styleguide__section u-hide">
             <h2 class="styleguide__section__title">Skewed Images</h2>
             
             <div class="styleguide__section__item styleguide__section__item--image">
@@ -1181,7 +703,7 @@
         </section>
         
         <!-- CONTENT HEADER -->
-        <section class="styleguide__section">
+        <section class="styleguide__section u-hide">
             <h2 class="styleguide__section__title">Content Header</h2>
 
             <div class="styleguide__section__item">
@@ -1228,7 +750,7 @@
         </section>
 
         <!-- KIT CARD -->
-        <section class="styleguide__section">
+        <section class="styleguide__section u-hide">
             <h2 class="styleguide__section__title">Kit Card</h2>
 
             <div class="styleguide__section__item">
@@ -1445,38 +967,6 @@
                         </div>
                     </div>
                 </form>
-            </div>
-        </section>
-
-        <!-- CONTENT HEADER -->
-        <section class="styleguide__section">
-            <h2 class="styleguide__section__title">Content Header</h2>
-
-            <div class="styleguide__section__item styleguide__section__item--spaced">
-                <div class="step-wrapper">
-                    <a href="#" class="step is-active">
-                        <div class="step__number">1</div>
-                        <div class="step__text">Paiement</div>
-                        <div class="step__next">
-                            <svg class="icon">
-                                <use xlink:href="assets/icons/dest/icons.svg#slide-right" />
-                            </svg>
-                        </div>
-                    </a>
-                    <a href="#" class="step">
-                        <div class="step__number">2</div>
-                        <div class="step__text">Récapitulatif</div>
-                        <div class="step__next">
-                            <svg class="icon">
-                                <use xlink:href="assets/icons/dest/icons.svg#slide-right" />
-                            </svg>
-                        </div>
-                    </a>
-                    <a href="#" class="step">
-                        <div class="step__number">3</div>
-                        <div class="step__text">Validation</div>
-                    </a>
-                </div>
             </div>
         </section>
     </main>

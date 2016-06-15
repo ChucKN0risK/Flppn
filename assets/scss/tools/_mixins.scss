@@ -334,9 +334,9 @@
 ///    background-image: none, url('#{$public_path}images/logo_sporteasy.svg');
 /// }
 @mixin vector-bg-with-fallback($name) {
-  background-image: url('#{$public_path}images/frontend/logos/#{$name}.png');
+  background-image: url('#{$public_path}img/#{$name}.png');
   background-image: none,
-  url('#{$public_path}images/frontend/logos/#{$name}.svg');
+  url('#{$public_path}img/#{$name}.svg');
 }
 
 /// Given the location of a webfont, will generate a font-face declaration with multiple file formats.

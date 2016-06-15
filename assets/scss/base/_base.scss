@@ -67,6 +67,7 @@ body {
   @include rms(0); // 1rem
   position: relative;
   padding-top: $header--main-height;
+  font-family: $font1 !important;
   &.has-navbar {
       @include mq($from: mobile, $until: desktop) {
           padding-top: calc(#{$header--main-height} + #{$dropdown-height});
