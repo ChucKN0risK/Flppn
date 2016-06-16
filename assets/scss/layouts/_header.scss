@@ -35,18 +35,9 @@ $header-side-padding: 2.5rem;
   min-width: 30rem;
 }
 
-.header-main__toggle-user-menu {
+.header-main__right-section {
+  display: flex;
   margin-left: auto;
-
-  .avatar {
-    margin-right: .5rem;
-  }
-  .username {
-    display: none;
-    @include mq($from: tablet) {
-      display: inline-block;
-    }
-  }
 }
 
 .header-main__user-menu {
