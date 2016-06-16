@@ -223,9 +223,9 @@
                 <input type="text" name="header-searchbar" placeholder="Search">
             </form>
 
-            <button class="header-main__toggle-user-menu js-toggle-user-menu">Concombre malicieux</button>
+            <button class="header-main__toggle-user-menu btn--squared js-toggle-user-menu">Concombre malicieux</button>
 
-            <div class="header-main__user-menu dropdown is-active">
+            <div class="header-main__user-menu dropdown">
               <header class="dropdown__part dropdown__header">
                 Concombre malicieux
               </header>
@@ -236,10 +236,35 @@
                   </li>
                 </ul>
               </main>
-
             </div>
         </header>
     </div>
+    <!-- Header Content -->
+    <header class="content-header">
+      <ul class="content-header__items">
+        <li class="content-header__item" ui-sref="collections">
+          <button class="content-header__item-content">
+            <span class="content-header__item-content-number">12</span>
+            <span class="content-header__item-content-text">Collections</span>
+          </button>
+        </li>
+        <li class="content-header__item" ui-sref="videos">
+          <button class="content-header__item-content">
+            <span class="content-header__item-content-number">28</span>
+            <span class="content-header__item-content-text">Videos</span>
+          </button>
+        </li>
+      </ul>
+    </header>
+    <!-- Header Collection -->
+    <header class="collection-header">
+      <div class="collection-header__content">
+        <p class="collection-header__collection-title">Teens &amp; School</p>
+        <p class="collection-header__videos-number">11 videos</p>
+        <button class="collection-header__edit-collection btn--squared js-toggle-user-menu">Edit this collection</button>
+      </div>
+    </header>
+    
     <main class="styleguide">
         <h1 class="styleguide__title">Styleguide</h1>
         <!-- USER AVATAR -->
@@ -301,6 +326,7 @@
                         </span>
                     </button>
                 </div>
+                <button class="btn btn--squared">Edit this collection</button>
             </div>
         </section>
         <!-- ICONS -->
