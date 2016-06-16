@@ -5,7 +5,7 @@
 .logo {
   height: 2rem;
   width: 5rem;
-  @include vector-bg-with-fallback(flppn-logo);
+  @include vector-bg-with-fallback(flppn-logo-black);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -13,6 +13,14 @@
     width: 8rem;
     height: 2.5rem;
   }
+
+  body.night-mode & {
+    @include vector-bg-with-fallback(flppn-logo);
+  }
+}
+
+.logo--white {
+  @include vector-bg-with-fallback(flppn-logo);
 }
 
 .logo--header {
