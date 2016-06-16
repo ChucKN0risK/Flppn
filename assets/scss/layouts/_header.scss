@@ -2,6 +2,8 @@
    Layout / Header
    ======================= */
 
+$header-side-padding: 2.5rem;
+
 // The '.headnav' class must be applied on the
 // element wrapping the header and the navigation
 .headnav {
@@ -17,8 +19,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0 2.5rem;
-  overflow: hidden;
+  padding: 0 $header-side-padding;
   background-color: $white;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   color: $black;
@@ -58,3 +59,12 @@
   }
 }
 
+.header-main__user-menu {
+  position: absolute;
+  top: 0;
+  right: $header-side-padding;
+
+  @include mq($from: desktop) {
+    top: calc(#{$header--main-height} - 10px);
+  }
+}

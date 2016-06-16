@@ -14,287 +14,287 @@
 </head>
 
 <body>
-
     <div class="modal-wrapper" id="modalWrapper">
         <!-- Modal Sign In -->
         <div class="modal js-modal u-hide">
-          <header class="modal__header">
-            <svg class="modal__header__logo" width="69" height="10" viewBox="0 0 69 10" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.58 1.1V0H0v10h1.183V5.714h4.835v-1.1H1.183V1.1H6.58zm9.088 7.814V0h-1.183v10h5.722V8.914h-4.54zM28.29 0v10h1.183V6.843h2.706c2.557 0 4.035-1.272 4.035-3.486C36.215 1.23 34.737 0 32.18 0h-3.89zm1.183 1.1h2.66c1.864 0 2.944.77 2.944 2.286 0 1.557-1.08 2.357-2.943 2.357h-2.66V1.1zM44.343 0v10h1.182V6.843h2.706c2.56 0 4.038-1.272 4.038-3.486C52.267 1.23 50.788 0 48.23 0h-3.888zm1.182 1.1h2.662c1.863 0 2.942.77 2.942 2.286 0 1.557-1.08 2.357-2.943 2.357h-2.662V1.1zM69 10V0h-1.168v8.043L61.622 0h-1.227v10h1.183V1.97l6.21 8.03H69z"/>
-            </svg>
-            <button class="modal__header__btn modal__close-btn js-modal-close">
-              <svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z"/>
-              </svg>
-            </button>
-          </header>
-          <main class="modal__content">
-            <form action="#" class="page__form modal__form" id="smartLoginForm">
-              <input class="modal__form__input" id="smartLoginUsername" type="text" placeholder="Username">
-              <input class="modal__form__input" id="smartLoginPassword" type="password" placeholder="Password">
-
-              <p class="error" id="errorWrapper">Username or password incorrect :(</p>
-
-              <button class="modal__form__submit" id="smartLoginSubmit" type="submit">Connect</button>
-            </form>
-          </main>
-          <p class="modal__outer-text">Don't have an account ? <a href="http://flppn.com/register">Get started</a></p>
+            <header class="modal__header">
+                <svg class="modal__header__logo" width="69" height="10" viewBox="0 0 69 10" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.58 1.1V0H0v10h1.183V5.714h4.835v-1.1H1.183V1.1H6.58zm9.088 7.814V0h-1.183v10h5.722V8.914h-4.54zM28.29 0v10h1.183V6.843h2.706c2.557 0 4.035-1.272 4.035-3.486C36.215 1.23 34.737 0 32.18 0h-3.89zm1.183 1.1h2.66c1.864 0 2.944.77 2.944 2.286 0 1.557-1.08 2.357-2.943 2.357h-2.66V1.1zM44.343 0v10h1.182V6.843h2.706c2.56 0 4.038-1.272 4.038-3.486C52.267 1.23 50.788 0 48.23 0h-3.888zm1.182 1.1h2.662c1.863 0 2.942.77 2.942 2.286 0 1.557-1.08 2.357-2.943 2.357h-2.662V1.1zM69 10V0h-1.168v8.043L61.622 0h-1.227v10h1.183V1.97l6.21 8.03H69z" />
+                </svg>
+                <button class="modal__header__btn modal__close-btn js-modal-close">
+                    <svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z" />
+                    </svg>
+                </button>
+            </header>
+            <main class="modal__content">
+                <form action="#" class="page__form modal__form" id="smartLoginForm">
+                    <input class="modal__form__input" id="smartLoginUsername" type="text" placeholder="Username">
+                    <input class="modal__form__input" id="smartLoginPassword" type="password" placeholder="Password">
+                    <p class="error" id="errorWrapper">Username or password incorrect :(</p>
+                    <button class="modal__form__submit" id="smartLoginSubmit" type="submit">Connect</button>
+                </form>
+            </main>
+            <p class="modal__outer-text">Don't have an account ? <a href="http://flppn.com/register">Get started</a></p>
         </div>
         <!-- Modal Delete Collection Confirmation -->
         <div class="modal modal--choice js-modal-collection-delete js-modal u-hide">
-          <header class="modal__header">
-            <div class="modal__header__content">
-              <p class="modal__header__title">Do you really want to delete this collection?</p>
-              <p class="modal__header__subtitle">All the videos in this collection will be deleted.</p>
-            </div>
-            <button class="modal__header__btn modal__close-btn js-modal-close">
-              <svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z"/>
-              </svg>
-            </button>
-          </header>
-          <main class="modal__content">
-            <div class="modal__choices">
-              <button class="modal__choice modal__choice--yes">Yes</button>
-              <button class="modal__choice">No</button>
-            </div>
-          </main>
+            <header class="modal__header">
+                <div class="modal__header__content">
+                    <p class="modal__header__title">Do you really want to delete this collection?</p>
+                    <p class="modal__header__subtitle">All the videos in this collection will be deleted.</p>
+                </div>
+                <button class="modal__header__btn modal__close-btn js-modal-close">
+                    <svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z" />
+                    </svg>
+                </button>
+            </header>
+            <main class="modal__content">
+                <div class="modal__choices">
+                    <button class="modal__choice modal__choice--yes">Yes</button>
+                    <button class="modal__choice">No</button>
+                </div>
+            </main>
         </div>
         <!-- Modal Add Video Link -->
         <div class="modal modal--url js-modal u-hide">
-          <header class="modal__header">
-            <div class="modal__header__content">
-              <p class="modal__header__title">Add a new video in your collections?</p>
-            </div>
-            <button class="modal__header__btn modal__close-btn js-modal-close">
-              <svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z"/>
-              </svg>
-            </button>
-          </header>
-          <main class="modal__content">
-            <input type="url" class="modal__url" placeholder="http://..." required>
-            <button class="btn btn--secondary modal__url-submit">Next</button>
-          </main>
+            <header class="modal__header">
+                <div class="modal__header__content">
+                    <p class="modal__header__title">Add a new video in your collections?</p>
+                </div>
+                <button class="modal__header__btn modal__close-btn js-modal-close">
+                    <svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z" />
+                    </svg>
+                </button>
+            </header>
+            <main class="modal__content">
+                <input type="url" class="modal__url" placeholder="http://..." required>
+                <button class="btn btn--secondary modal__url-submit">Next</button>
+            </main>
         </div>
         <!-- Modal New Collection -->
         <div class="modal modal--new-collection js-modal u-hide">
-          <header class="modal__header">
-            <div class="modal__header__content">
-              <p class="modal__header__title">Create a new collection</p>
-            </div>
-            <button class="modal__header__btn modal__close-btn js-modal-close">
-              <svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z"/>
-              </svg>
-            </button>
-          </header>
-          <main class="modal__content">
-            <form action="#" class="page__form modal__form" id="newCollectionModalForm">
-              <input class="modal__form__input" id="newCollectionModalInput" type="text" placeholder="Name of your collection" required>
-              <button class="btn modal__form__submit" id="newCollectionModalSubmit" type="submit">Create this collection</button>
-            </form>
-          </main>
+            <header class="modal__header">
+                <div class="modal__header__content">
+                    <p class="modal__header__title">Create a new collection</p>
+                </div>
+                <button class="modal__header__btn modal__close-btn js-modal-close">
+                    <svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z" />
+                    </svg>
+                </button>
+            </header>
+            <main class="modal__content">
+                <form action="#" class="page__form modal__form" id="newCollectionModalForm">
+                    <input class="modal__form__input" id="newCollectionModalInput" type="text" placeholder="Name of your collection" required>
+                    <button class="btn modal__form__submit" id="newCollectionModalSubmit" type="submit">Create this collection</button>
+                </form>
+            </main>
         </div>
         <!-- Modal Delete Video Confirmation -->
         <div class="modal modal--choice js-modal-video-delete js-modal u-hide">
-          <header class="modal__header">
-            <div class="modal__header__content">
-              <p class="modal__header__title">Do you really want to delete this video?</p>
-            </div>
-            <button class="modal__header__btn modal__close-btn js-modal-close">
-              <svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z"/>
-              </svg>
-            </button>
-          </header>
-          <main class="modal__content">
-            <div class="modal__choices">
-              <button class="modal__choice modal__choice--yes">Yes</button>
-              <button class="modal__choice">No</button>
-            </div>
-          </main>
+            <header class="modal__header">
+                <div class="modal__header__content">
+                    <p class="modal__header__title">Do you really want to delete this video?</p>
+                </div>
+                <button class="modal__header__btn modal__close-btn js-modal-close">
+                    <svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z" />
+                    </svg>
+                </button>
+            </header>
+            <main class="modal__content">
+                <div class="modal__choices">
+                    <button class="modal__choice modal__choice--yes">Yes</button>
+                    <button class="modal__choice">No</button>
+                </div>
+            </main>
         </div>
         <!-- Modal Choose Collection -->
         <div class="modal modal--choose-collection js-modal-choose-collection js-modal">
-          <div class="modal--choose-collection__link-section">
-            <div class="modal--choose-collection__link-poster"></div>
-            <div class="modal--choose-collection__link-content">
-              <p class="modal--choose-collection__link-name">My dad still thinks I'm a virgin whereas I'm deeply fucking not</p>
-              <p class="modal--choose-collection__link-provider">from <span>Pornhub</span></p>
+            <div class="modal--choose-collection__link-section">
+                <div class="modal--choose-collection__link-poster"></div>
+                <div class="modal--choose-collection__link-content">
+                    <p class="modal--choose-collection__link-name">My dad still thinks I'm a virgin whereas I'm deeply fucking not</p>
+                    <p class="modal--choose-collection__link-provider">from <span>Pornhub</span></p>
+                </div>
             </div>
-          </div>
-          <div class="modal--choose-collection__collections-section smartSaveMenu">
-            <header class="modal__header">
-              <div class="modal__header__content">
-                <p class="modal__header__title">Choose a collection</p>
-              </div>
-              <button class="modal__header__btn modal__close-btn js-modal-close">
-                <svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z"/>
-                </svg>
-              </button>
-            </header>
-            
-            <ul class="smartSaveMenu-part smartSaveMenu-collections">
-              <li class="smartSaveMenu-collection">
-                <div class="collection-cover"></div>
-                <div class="collection-content">
-                  <p class="collection-name">Prison</p>
-                  <p class="collection-infos">12 videos</p>
-                </div>
-              </li>
-              <li class="smartSaveMenu-collection">
-                <div class="collection-cover"></div>
-                <div class="collection-content">
-                  <p class="collection-name">School</p>
-                  <p class="collection-infos">2 videos</p>
-                </div>
-              </li>
-              <li class="smartSaveMenu-collection">
-                <div class="collection-cover"></div>
-                <div class="collection-content">
-                  <p class="collection-name">Church</p>
-                  <p class="collection-infos">28 videos</p>
-                </div>
-              </li>
-              <li class="smartSaveMenu-collection">
-                <div class="collection-cover"></div>
-                <div class="collection-content">
-                  <p class="collection-name">Home</p>
-                  <p class="collection-infos">17 videos</p>
-                </div>
-              </li>
-              <li class="smartSaveMenu-collection">
-                <div class="collection-cover"></div>
-                <div class="collection-content">
-                  <p class="collection-name">Trailer park</p>
-                  <p class="collection-infos">2 videos</p>
-                </div>
-              </li>
-              <li class="smartSaveMenu-collection">
-                <div class="collection-cover"></div>
-                <div class="collection-content">
-                  <p class="collection-name">School</p>
-                  <p class="collection-infos">2 videos</p>
-                </div>
-              </li>
-              <li class="smartSaveMenu-collection">
-                <div class="collection-cover"></div>
-                <div class="collection-content">
-                  <p class="collection-name">Church</p>
-                  <p class="collection-infos">28 videos</p>
-                </div>
-              </li>
-              <li class="smartSaveMenu-collection">
-                <div class="collection-cover"></div>
-                <div class="collection-content">
-                  <p class="collection-name">Home</p>
-                  <p class="collection-infos">17 videos</p>
-                </div>
-              </li>
-              <li class="smartSaveMenu-collection">
-                <div class="collection-cover"></div>
-                <div class="collection-content">
-                  <p class="collection-name">Trailer park</p>
-                  <p class="collection-infos">2 videos</p>
-                </div>
-              </li>
-            </ul>
-            
-            <form class="smartSaveMenu-part smartSaveMenu-createCollection">
-              <div class="smartSaveMenu-createCollectionIcon">
-                <svg width="15" height="16" viewBox="0 0 15 16" xmlns="http://www.w3.org/2000/svg"><defs><path d="M12 28.002c0-.553.45-1.002 1.007-1.002h12.986c.556 0 1.007.456 1.007 1.002v9.996C27 38.55 26.55 39 25.993 39H13.007C12.45 39 12 38.544 12 37.998v-9.996zM14 25h11v1H14v-1zm2-2h7v1h-7v-1z" id="a"/><mask id="b" x="0" y="0" width="15" height="16" fill="#fff"><use xlink:href="#a"/></mask></defs><use mask="url(#b)" xlink:href="#a" transform="translate(-12 -23)" stroke="#AAAAB1" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
-              </div>
-              <input class="createCollection-field" type="text" placeholder="Create new collection..." required/>
-              <p class="smartSaveMenu-createCollectionText">Press enter to save</p>
-            </form>
-          </div>
+            <div class="modal--choose-collection__collections-section smartSaveMenu">
+                <header class="modal__header">
+                    <div class="modal__header__content">
+                        <p class="modal__header__title">Choose a collection</p>
+                    </div>
+                    <button class="modal__header__btn modal__close-btn js-modal-close">
+                        <svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z" />
+                        </svg>
+                    </button>
+                </header>
+                <ul class="smartSaveMenu-part smartSaveMenu-collections">
+                    <li class="smartSaveMenu-collection">
+                        <div class="collection-cover"></div>
+                        <div class="collection-content">
+                            <p class="collection-name">Prison</p>
+                            <p class="collection-infos">12 videos</p>
+                        </div>
+                    </li>
+                    <li class="smartSaveMenu-collection">
+                        <div class="collection-cover"></div>
+                        <div class="collection-content">
+                            <p class="collection-name">School</p>
+                            <p class="collection-infos">2 videos</p>
+                        </div>
+                    </li>
+                    <li class="smartSaveMenu-collection">
+                        <div class="collection-cover"></div>
+                        <div class="collection-content">
+                            <p class="collection-name">Church</p>
+                            <p class="collection-infos">28 videos</p>
+                        </div>
+                    </li>
+                    <li class="smartSaveMenu-collection">
+                        <div class="collection-cover"></div>
+                        <div class="collection-content">
+                            <p class="collection-name">Home</p>
+                            <p class="collection-infos">17 videos</p>
+                        </div>
+                    </li>
+                    <li class="smartSaveMenu-collection">
+                        <div class="collection-cover"></div>
+                        <div class="collection-content">
+                            <p class="collection-name">Trailer park</p>
+                            <p class="collection-infos">2 videos</p>
+                        </div>
+                    </li>
+                    <li class="smartSaveMenu-collection">
+                        <div class="collection-cover"></div>
+                        <div class="collection-content">
+                            <p class="collection-name">School</p>
+                            <p class="collection-infos">2 videos</p>
+                        </div>
+                    </li>
+                    <li class="smartSaveMenu-collection">
+                        <div class="collection-cover"></div>
+                        <div class="collection-content">
+                            <p class="collection-name">Church</p>
+                            <p class="collection-infos">28 videos</p>
+                        </div>
+                    </li>
+                    <li class="smartSaveMenu-collection">
+                        <div class="collection-cover"></div>
+                        <div class="collection-content">
+                            <p class="collection-name">Home</p>
+                            <p class="collection-infos">17 videos</p>
+                        </div>
+                    </li>
+                    <li class="smartSaveMenu-collection">
+                        <div class="collection-cover"></div>
+                        <div class="collection-content">
+                            <p class="collection-name">Trailer park</p>
+                            <p class="collection-infos">2 videos</p>
+                        </div>
+                    </li>
+                </ul>
+                <form class="smartSaveMenu-part smartSaveMenu-createCollection">
+                    <div class="smartSaveMenu-createCollectionIcon">
+                        <svg width="15" height="16" viewBox="0 0 15 16" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <path d="M12 28.002c0-.553.45-1.002 1.007-1.002h12.986c.556 0 1.007.456 1.007 1.002v9.996C27 38.55 26.55 39 25.993 39H13.007C12.45 39 12 38.544 12 37.998v-9.996zM14 25h11v1H14v-1zm2-2h7v1h-7v-1z" id="a" />
+                                <mask id="b" x="0" y="0" width="15" height="16" fill="#fff">
+                                    <use xlink:href="#a" />
+                                </mask>
+                            </defs>
+                            <use mask="url(#b)" xlink:href="#a" transform="translate(-12 -23)" stroke="#AAAAB1" stroke-width="2" fill="none" fill-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <input class="createCollection-field" type="text" placeholder="Create new collection..." required/>
+                    <p class="smartSaveMenu-createCollectionText">Press enter to save</p>
+                </form>
+            </div>
         </div>
     </div>
-
     <div class="headnav">
         <header class="header-main" data-ui-component="Header" id="header-main">
-
             <a href="#" class="logo logo--header"></a>
-            
+
             <form class="header-main__search">
                 <input type="text" name="header-searchbar" placeholder="Search">
             </form>
 
-            <button class="header-main__toggle-user-menu">Concombre malicieux</button>
+            <button class="header-main__toggle-user-menu js-toggle-user-menu">Concombre malicieux</button>
+
+            <div class="header-main__user-menu dropdown is-active">
+              <header class="dropdown__part dropdown__header">
+                Concombre malicieux
+              </header>
+              <main class="dropdown__part dropdown__main-content">
+                <ul class="dropdown__main-content__items">
+                  <li class="dropdown__main-content__item">
+                    <a class="dropdown__main-content__item__link" href="#0">Log out</a>
+                  </li>
+                </ul>
+              </main>
+
+            </div>
         </header>
     </div>
-
     <main class="styleguide">
         <h1 class="styleguide__title">Styleguide</h1>
-        
         <!-- USER AVATAR -->
         <section class="styleguide__section u-hide">
             <h2 class="styleguide__section__title">User / Team Avatar</h2>
-
             <div class="styleguide__section__item styleguide__section__item--spaced">
                 <div class="avatar--small">
                     <img src="assets/img/avatar.jpg" alt="user avatar">
                 </div>
-
                 <div class="avatar--medium">
                     <img src="assets/img/avatar.jpg" alt="user avatar">
                 </div>
-
                 <div class="avatar--large">
                     <img src="assets/img/avatar.jpg" alt="user avatar">
                 </div>
-
                 <div class="avatar--big">
                     <img src="assets/img/avatar.jpg" alt="user avatar">
                 </div>
             </div>
         </section>
-        
         <!-- BUTTONS -->
         <section class="styleguide__section">
             <h2 class="styleguide__section__title">Buttons</h2>
-
             <div class="styleguide__section__item styleguide__section__item--buttons">
                 <a href="#0" class="btn btn--light">Create this collection</a>
-
                 <button class="btn btn--light">
-                  <span class="btn__content">
+                    <span class="btn__content">
                     <svg class="icon icon--left btn__icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M16.89 10.168l1.174-1.155.437-.428c.416-.408.773-.898 1.012-1.425.28-.615.442-1.238.48-1.912.034-.58-.05-1.185-.232-1.737-.404-1.226-1.275-2.285-2.432-2.902-1.128-.602-2.454-.758-3.7-.463-.934.22-1.77.728-2.447 1.39L8.6 4.074l-1.11 1.09c-.635.623-1.11 1.35-1.38 2.195-.32.997-.298 2.144.068 3.126.106.286.23.57.384.836.154.27.347.512.543.752.397.483.92.89 1.475 1.18.488.258 1.104.118 1.387-.364.27-.46.117-1.106-.37-1.363-.197-.103-.383-.22-.56-.35.07.05.138.102.206.154-.288-.22-.546-.47-.77-.752l.162.205c-.22-.283-.403-.59-.543-.92l.105.248c-.138-.33-.232-.676-.28-1.03l.035.264c-.044-.353-.043-.708.004-1.06l-.036.255c.05-.345.14-.68.276-1.003l-.1.236c.135-.32.31-.618.522-.894l-.157.202c.26-.332.58-.62.88-.915l1.435-1.41 1.405-1.38c.293-.287.578-.592.905-.843l-.207.16c.287-.218.6-.397.935-.535l-.252.103c.34-.136.69-.228 1.052-.275l-.27.034c.36-.044.72-.042 1.08.004l-.26-.035c.35.05.69.14 1.02.27l-.24-.097c.324.133.628.305.91.514-.07-.052-.14-.103-.208-.155.288.217.546.468.77.75l-.163-.205c.222.283.404.59.544.92l-.105-.248c.138.33.23.676.28 1.03-.013-.087-.025-.176-.036-.264.044.352.043.708-.004 1.06l.036-.256c-.05.345-.14.68-.275 1.002l.1-.235c-.135.318-.31.618-.522.893l.157-.203c-.302.387-.68.72-1.03 1.065l-.95.932c-.39.384-.384 1.03.008 1.41.395.384 1.045.378 1.436-.006zM3.11 9.832l-1.174 1.155-.437.428c-.416.408-.773.898-1.012 1.425-.28.615-.442 1.238-.48 1.912-.034.58.05 1.185.232 1.737.404 1.226 1.275 2.285 2.433 2.902 1.127.602 2.453.758 3.698.463.936-.22 1.773-.728 2.45-1.39l2.58-2.538 1.11-1.09c.635-.623 1.11-1.35 1.38-2.195.32-.997.298-2.144-.068-3.126-.106-.286-.23-.57-.384-.836-.154-.27-.347-.512-.543-.752-.397-.483-.92-.89-1.475-1.18-.488-.258-1.104-.118-1.387.364-.27.46-.117 1.106.37 1.363.197.103.383.22.56.35-.07-.05-.137-.102-.206-.154.288.22.546.47.77.752l-.162-.205c.22.283.403.59.543.92l-.105-.248c.138.33.232.676.28 1.03l-.035-.264c.044.353.043.708-.004 1.06l.036-.255c-.05.345-.14.68-.276 1.003l.1-.236c-.135.32-.31.618-.522.894l.157-.202c-.26.332-.58.62-.88.915l-1.435 1.41-1.404 1.38c-.293.287-.578.592-.905.843l.208-.16c-.288.218-.6.397-.936.534l.252-.103c-.34.136-.69.228-1.052.275l.27-.034c-.36.044-.72.042-1.08-.004l.26.035c-.35-.05-.69-.14-1.02-.27l.24.097c-.324-.133-.628-.305-.91-.514.07.052.14.103.208.155-.288-.217-.546-.468-.77-.75l.163.205c-.222-.283-.404-.59-.544-.92l.105.248c-.137-.33-.23-.676-.28-1.03l.036.264c-.044-.352-.043-.708.004-1.06l-.036.256c.05-.345.14-.68.276-1.002l-.1.235c.135-.318.31-.617.522-.893l-.157.203c.302-.387.68-.72 1.03-1.065l.95-.932c.39-.384.384-1.03-.008-1.41-.395-.384-1.045-.378-1.436.006z"/></svg>
                     <span class="btn__text">Ajouter un lien</span>
-                  </span>
+                    </span>
                 </button>
-
                 <a href="#0" class="btn btn--full">Create my secret account</a>
-
                 <button class="btn btn--secondary">
-                  <span class="btn__content">
+                    <span class="btn__content">
                     <svg class="icon icon--left btn__icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M16.89 10.168l1.174-1.155.437-.428c.416-.408.773-.898 1.012-1.425.28-.615.442-1.238.48-1.912.034-.58-.05-1.185-.232-1.737-.404-1.226-1.275-2.285-2.432-2.902-1.128-.602-2.454-.758-3.7-.463-.934.22-1.77.728-2.447 1.39L8.6 4.074l-1.11 1.09c-.635.623-1.11 1.35-1.38 2.195-.32.997-.298 2.144.068 3.126.106.286.23.57.384.836.154.27.347.512.543.752.397.483.92.89 1.475 1.18.488.258 1.104.118 1.387-.364.27-.46.117-1.106-.37-1.363-.197-.103-.383-.22-.56-.35.07.05.138.102.206.154-.288-.22-.546-.47-.77-.752l.162.205c-.22-.283-.403-.59-.543-.92l.105.248c-.138-.33-.232-.676-.28-1.03l.035.264c-.044-.353-.043-.708.004-1.06l-.036.255c.05-.345.14-.68.276-1.003l-.1.236c.135-.32.31-.618.522-.894l-.157.202c.26-.332.58-.62.88-.915l1.435-1.41 1.405-1.38c.293-.287.578-.592.905-.843l-.207.16c.287-.218.6-.397.935-.535l-.252.103c.34-.136.69-.228 1.052-.275l-.27.034c.36-.044.72-.042 1.08.004l-.26-.035c.35.05.69.14 1.02.27l-.24-.097c.324.133.628.305.91.514-.07-.052-.14-.103-.208-.155.288.217.546.468.77.75l-.163-.205c.222.283.404.59.544.92l-.105-.248c.138.33.23.676.28 1.03-.013-.087-.025-.176-.036-.264.044.352.043.708-.004 1.06l.036-.256c-.05.345-.14.68-.275 1.002l.1-.235c-.135.318-.31.618-.522.893l.157-.203c-.302.387-.68.72-1.03 1.065l-.95.932c-.39.384-.384 1.03.008 1.41.395.384 1.045.378 1.436-.006zM3.11 9.832l-1.174 1.155-.437.428c-.416.408-.773.898-1.012 1.425-.28.615-.442 1.238-.48 1.912-.034.58.05 1.185.232 1.737.404 1.226 1.275 2.285 2.433 2.902 1.127.602 2.453.758 3.698.463.936-.22 1.773-.728 2.45-1.39l2.58-2.538 1.11-1.09c.635-.623 1.11-1.35 1.38-2.195.32-.997.298-2.144-.068-3.126-.106-.286-.23-.57-.384-.836-.154-.27-.347-.512-.543-.752-.397-.483-.92-.89-1.475-1.18-.488-.258-1.104-.118-1.387.364-.27.46-.117 1.106.37 1.363.197.103.383.22.56.35-.07-.05-.137-.102-.206-.154.288.22.546.47.77.752l-.162-.205c.22.283.403.59.543.92l-.105-.248c.138.33.232.676.28 1.03l-.035-.264c.044.353.043.708-.004 1.06l.036-.255c-.05.345-.14.68-.276 1.003l.1-.236c-.135.32-.31.618-.522.894l.157-.202c-.26.332-.58.62-.88.915l-1.435 1.41-1.404 1.38c-.293.287-.578.592-.905.843l.208-.16c-.288.218-.6.397-.936.534l.252-.103c-.34.136-.69.228-1.052.275l.27-.034c-.36.044-.72.042-1.08-.004l.26.035c-.35-.05-.69-.14-1.02-.27l.24.097c-.324-.133-.628-.305-.91-.514.07.052.14.103.208.155-.288-.217-.546-.468-.77-.75l.163.205c-.222-.283-.404-.59-.544-.92l.105.248c-.137-.33-.23-.676-.28-1.03l.036.264c-.044-.352-.043-.708.004-1.06l-.036.256c.05-.345.14-.68.276-1.002l-.1.235c.135-.318.31-.617.522-.893l-.157.203c.302-.387.68-.72 1.03-1.065l.95-.932c.39-.384.384-1.03-.008-1.41-.395-.384-1.045-.378-1.436.006z"/></svg>
                     <span class="btn__text">Ajouter un lien</span>
-                  </span>
+                    </span>
                 </button>
-
                 <button class="btn btn--full">
-                  <span class="btn__content">
+                    <span class="btn__content">
                     <svg class="icon icon--left btn__icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M16.89 10.168l1.174-1.155.437-.428c.416-.408.773-.898 1.012-1.425.28-.615.442-1.238.48-1.912.034-.58-.05-1.185-.232-1.737-.404-1.226-1.275-2.285-2.432-2.902-1.128-.602-2.454-.758-3.7-.463-.934.22-1.77.728-2.447 1.39L8.6 4.074l-1.11 1.09c-.635.623-1.11 1.35-1.38 2.195-.32.997-.298 2.144.068 3.126.106.286.23.57.384.836.154.27.347.512.543.752.397.483.92.89 1.475 1.18.488.258 1.104.118 1.387-.364.27-.46.117-1.106-.37-1.363-.197-.103-.383-.22-.56-.35.07.05.138.102.206.154-.288-.22-.546-.47-.77-.752l.162.205c-.22-.283-.403-.59-.543-.92l.105.248c-.138-.33-.232-.676-.28-1.03l.035.264c-.044-.353-.043-.708.004-1.06l-.036.255c.05-.345.14-.68.276-1.003l-.1.236c.135-.32.31-.618.522-.894l-.157.202c.26-.332.58-.62.88-.915l1.435-1.41 1.405-1.38c.293-.287.578-.592.905-.843l-.207.16c.287-.218.6-.397.935-.535l-.252.103c.34-.136.69-.228 1.052-.275l-.27.034c.36-.044.72-.042 1.08.004l-.26-.035c.35.05.69.14 1.02.27l-.24-.097c.324.133.628.305.91.514-.07-.052-.14-.103-.208-.155.288.217.546.468.77.75l-.163-.205c.222.283.404.59.544.92l-.105-.248c.138.33.23.676.28 1.03-.013-.087-.025-.176-.036-.264.044.352.043.708-.004 1.06l.036-.256c-.05.345-.14.68-.275 1.002l.1-.235c-.135.318-.31.618-.522.893l.157-.203c-.302.387-.68.72-1.03 1.065l-.95.932c-.39.384-.384 1.03.008 1.41.395.384 1.045.378 1.436-.006zM3.11 9.832l-1.174 1.155-.437.428c-.416.408-.773.898-1.012 1.425-.28.615-.442 1.238-.48 1.912-.034.58.05 1.185.232 1.737.404 1.226 1.275 2.285 2.433 2.902 1.127.602 2.453.758 3.698.463.936-.22 1.773-.728 2.45-1.39l2.58-2.538 1.11-1.09c.635-.623 1.11-1.35 1.38-2.195.32-.997.298-2.144-.068-3.126-.106-.286-.23-.57-.384-.836-.154-.27-.347-.512-.543-.752-.397-.483-.92-.89-1.475-1.18-.488-.258-1.104-.118-1.387.364-.27.46-.117 1.106.37 1.363.197.103.383.22.56.35-.07-.05-.137-.102-.206-.154.288.22.546.47.77.752l-.162-.205c.22.283.403.59.543.92l-.105-.248c.138.33.232.676.28 1.03l-.035-.264c.044.353.043.708-.004 1.06l.036-.255c-.05.345-.14.68-.276 1.003l.1-.236c-.135.32-.31.618-.522.894l.157-.202c-.26.332-.58.62-.88.915l-1.435 1.41-1.404 1.38c-.293.287-.578.592-.905.843l.208-.16c-.288.218-.6.397-.936.534l.252-.103c-.34.136-.69.228-1.052.275l.27-.034c-.36.044-.72.042-1.08-.004l.26.035c-.35-.05-.69-.14-1.02-.27l.24.097c-.324-.133-.628-.305-.91-.514.07.052.14.103.208.155-.288-.217-.546-.468-.77-.75l.163.205c-.222-.283-.404-.59-.544-.92l.105.248c-.137-.33-.23-.676-.28-1.03l.036.264c-.044-.352-.043-.708.004-1.06l-.036.256c.05-.345.14-.68.276-1.002l-.1.235c.135-.318.31-.617.522-.893l-.157.203c.302-.387.68-.72 1.03-1.065l.95-.932c.39-.384.384-1.03-.008-1.41-.395-.384-1.045-.378-1.436.006z" fill="#FFF" fill-rule="evenodd"/></svg>
                     <span class="btn__text">Ajouter un lien</span>
-                  </span>
+                    </span>
                 </button>
-
                 <button class="btn btn--full btn--circled">
                     <span class="btn__icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M16.89 10.168l1.174-1.155.437-.428c.416-.408.773-.898 1.012-1.425.28-.615.442-1.238.48-1.912.034-.58-.05-1.185-.232-1.737-.404-1.226-1.275-2.285-2.432-2.902-1.128-.602-2.454-.758-3.7-.463-.934.22-1.77.728-2.447 1.39L8.6 4.074l-1.11 1.09c-.635.623-1.11 1.35-1.38 2.195-.32.997-.298 2.144.068 3.126.106.286.23.57.384.836.154.27.347.512.543.752.397.483.92.89 1.475 1.18.488.258 1.104.118 1.387-.364.27-.46.117-1.106-.37-1.363-.197-.103-.383-.22-.56-.35.07.05.138.102.206.154-.288-.22-.546-.47-.77-.752l.162.205c-.22-.283-.403-.59-.543-.92l.105.248c-.138-.33-.232-.676-.28-1.03l.035.264c-.044-.353-.043-.708.004-1.06l-.036.255c.05-.345.14-.68.276-1.003l-.1.236c.135-.32.31-.618.522-.894l-.157.202c.26-.332.58-.62.88-.915l1.435-1.41 1.405-1.38c.293-.287.578-.592.905-.843l-.207.16c.287-.218.6-.397.935-.535l-.252.103c.34-.136.69-.228 1.052-.275l-.27.034c.36-.044.72-.042 1.08.004l-.26-.035c.35.05.69.14 1.02.27l-.24-.097c.324.133.628.305.91.514-.07-.052-.14-.103-.208-.155.288.217.546.468.77.75l-.163-.205c.222.283.404.59.544.92l-.105-.248c.138.33.23.676.28 1.03-.013-.087-.025-.176-.036-.264.044.352.043.708-.004 1.06l.036-.256c-.05.345-.14.68-.275 1.002l.1-.235c-.135.318-.31.618-.522.893l.157-.203c-.302.387-.68.72-1.03 1.065l-.95.932c-.39.384-.384 1.03.008 1.41.395.384 1.045.378 1.436-.006zM3.11 9.832l-1.174 1.155-.437.428c-.416.408-.773.898-1.012 1.425-.28.615-.442 1.238-.48 1.912-.034.58.05 1.185.232 1.737.404 1.226 1.275 2.285 2.433 2.902 1.127.602 2.453.758 3.698.463.936-.22 1.773-.728 2.45-1.39l2.58-2.538 1.11-1.09c.635-.623 1.11-1.35 1.38-2.195.32-.997.298-2.144-.068-3.126-.106-.286-.23-.57-.384-.836-.154-.27-.347-.512-.543-.752-.397-.483-.92-.89-1.475-1.18-.488-.258-1.104-.118-1.387.364-.27.46-.117 1.106.37 1.363.197.103.383.22.56.35-.07-.05-.137-.102-.206-.154.288.22.546.47.77.752l-.162-.205c.22.283.403.59.543.92l-.105-.248c.138.33.232.676.28 1.03l-.035-.264c.044.353.043.708-.004 1.06l.036-.255c-.05.345-.14.68-.276 1.003l.1-.236c-.135.32-.31.618-.522.894l.157-.202c-.26.332-.58.62-.88.915l-1.435 1.41-1.404 1.38c-.293.287-.578.592-.905.843l.208-.16c-.288.218-.6.397-.936.534l.252-.103c-.34.136-.69.228-1.052.275l.27-.034c-.36.044-.72.042-1.08-.004l.26.035c-.35-.05-.69-.14-1.02-.27l.24.097c-.324-.133-.628-.305-.91-.514.07.052.14.103.208.155-.288-.217-.546-.468-.77-.75l.163.205c-.222-.283-.404-.59-.544-.92l.105.248c-.137-.33-.23-.676-.28-1.03l.036.264c-.044-.352-.043-.708.004-1.06l-.036.256c.05-.345.14-.68.276-1.002l-.1.235c.135-.318.31-.617.522-.893l-.157.203c.302-.387.68-.72 1.03-1.065l.95-.932c.39-.384.384-1.03-.008-1.41-.395-.384-1.045-.378-1.436.006z" fill="#FFF" fill-rule="evenodd"/></svg>
                     </span>
                 </button>
-
                 <div class="btn-wrapper btn-wrapper--page-actions btn-wrapper--bottom-right">
                     <button class="btn btn--full btn--circled">
                         <span class="btn__icon">
                             <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M16.89 10.168l1.174-1.155.437-.428c.416-.408.773-.898 1.012-1.425.28-.615.442-1.238.48-1.912.034-.58-.05-1.185-.232-1.737-.404-1.226-1.275-2.285-2.432-2.902-1.128-.602-2.454-.758-3.7-.463-.934.22-1.77.728-2.447 1.39L8.6 4.074l-1.11 1.09c-.635.623-1.11 1.35-1.38 2.195-.32.997-.298 2.144.068 3.126.106.286.23.57.384.836.154.27.347.512.543.752.397.483.92.89 1.475 1.18.488.258 1.104.118 1.387-.364.27-.46.117-1.106-.37-1.363-.197-.103-.383-.22-.56-.35.07.05.138.102.206.154-.288-.22-.546-.47-.77-.752l.162.205c-.22-.283-.403-.59-.543-.92l.105.248c-.138-.33-.232-.676-.28-1.03l.035.264c-.044-.353-.043-.708.004-1.06l-.036.255c.05-.345.14-.68.276-1.003l-.1.236c.135-.32.31-.618.522-.894l-.157.202c.26-.332.58-.62.88-.915l1.435-1.41 1.405-1.38c.293-.287.578-.592.905-.843l-.207.16c.287-.218.6-.397.935-.535l-.252.103c.34-.136.69-.228 1.052-.275l-.27.034c.36-.044.72-.042 1.08.004l-.26-.035c.35.05.69.14 1.02.27l-.24-.097c.324.133.628.305.91.514-.07-.052-.14-.103-.208-.155.288.217.546.468.77.75l-.163-.205c.222.283.404.59.544.92l-.105-.248c.138.33.23.676.28 1.03-.013-.087-.025-.176-.036-.264.044.352.043.708-.004 1.06l.036-.256c-.05.345-.14.68-.275 1.002l.1-.235c-.135.318-.31.618-.522.893l.157-.203c-.302.387-.68.72-1.03 1.065l-.95.932c-.39.384-.384 1.03.008 1.41.395.384 1.045.378 1.436-.006zM3.11 9.832l-1.174 1.155-.437.428c-.416.408-.773.898-1.012 1.425-.28.615-.442 1.238-.48 1.912-.034.58.05 1.185.232 1.737.404 1.226 1.275 2.285 2.433 2.902 1.127.602 2.453.758 3.698.463.936-.22 1.773-.728 2.45-1.39l2.58-2.538 1.11-1.09c.635-.623 1.11-1.35 1.38-2.195.32-.997.298-2.144-.068-3.126-.106-.286-.23-.57-.384-.836-.154-.27-.347-.512-.543-.752-.397-.483-.92-.89-1.475-1.18-.488-.258-1.104-.118-1.387.364-.27.46-.117 1.106.37 1.363.197.103.383.22.56.35-.07-.05-.137-.102-.206-.154.288.22.546.47.77.752l-.162-.205c.22.283.403.59.543.92l-.105-.248c.138.33.232.676.28 1.03l-.035-.264c.044.353.043.708-.004 1.06l.036-.255c-.05.345-.14.68-.276 1.003l.1-.236c-.135.32-.31.618-.522.894l.157-.202c-.26.332-.58.62-.88.915l-1.435 1.41-1.404 1.38c-.293.287-.578.592-.905.843l.208-.16c-.288.218-.6.397-.936.534l.252-.103c-.34.136-.69.228-1.052.275l.27-.034c-.36.044-.72.042-1.08-.004l.26.035c-.35-.05-.69-.14-1.02-.27l.24.097c-.324-.133-.628-.305-.91-.514.07.052.14.103.208.155-.288-.217-.546-.468-.77-.75l.163.205c-.222-.283-.404-.59-.544-.92l.105.248c-.137-.33-.23-.676-.28-1.03l.036.264c-.044-.352-.043-.708.004-1.06l-.036.256c.05-.345.14-.68.276-1.002l-.1.235c.135-.318.31-.617.522-.893l-.157.203c.302-.387.68-.72 1.03-1.065l.95-.932c.39-.384.384-1.03-.008-1.41-.395-.384-1.045-.378-1.436.006z"/></svg>
                         </span>
                     </button>
-
                     <button class="btn btn--secondary btn--circled">
                         <span class="btn__icon">
                             <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M16.89 10.168l1.174-1.155.437-.428c.416-.408.773-.898 1.012-1.425.28-.615.442-1.238.48-1.912.034-.58-.05-1.185-.232-1.737-.404-1.226-1.275-2.285-2.432-2.902-1.128-.602-2.454-.758-3.7-.463-.934.22-1.77.728-2.447 1.39L8.6 4.074l-1.11 1.09c-.635.623-1.11 1.35-1.38 2.195-.32.997-.298 2.144.068 3.126.106.286.23.57.384.836.154.27.347.512.543.752.397.483.92.89 1.475 1.18.488.258 1.104.118 1.387-.364.27-.46.117-1.106-.37-1.363-.197-.103-.383-.22-.56-.35.07.05.138.102.206.154-.288-.22-.546-.47-.77-.752l.162.205c-.22-.283-.403-.59-.543-.92l.105.248c-.138-.33-.232-.676-.28-1.03l.035.264c-.044-.353-.043-.708.004-1.06l-.036.255c.05-.345.14-.68.276-1.003l-.1.236c.135-.32.31-.618.522-.894l-.157.202c.26-.332.58-.62.88-.915l1.435-1.41 1.405-1.38c.293-.287.578-.592.905-.843l-.207.16c.287-.218.6-.397.935-.535l-.252.103c.34-.136.69-.228 1.052-.275l-.27.034c.36-.044.72-.042 1.08.004l-.26-.035c.35.05.69.14 1.02.27l-.24-.097c.324.133.628.305.91.514-.07-.052-.14-.103-.208-.155.288.217.546.468.77.75l-.163-.205c.222.283.404.59.544.92l-.105-.248c.138.33.23.676.28 1.03-.013-.087-.025-.176-.036-.264.044.352.043.708-.004 1.06l.036-.256c-.05.345-.14.68-.275 1.002l.1-.235c-.135.318-.31.618-.522.893l.157-.203c-.302.387-.68.72-1.03 1.065l-.95.932c-.39.384-.384 1.03.008 1.41.395.384 1.045.378 1.436-.006zM3.11 9.832l-1.174 1.155-.437.428c-.416.408-.773.898-1.012 1.425-.28.615-.442 1.238-.48 1.912-.034.58.05 1.185.232 1.737.404 1.226 1.275 2.285 2.433 2.902 1.127.602 2.453.758 3.698.463.936-.22 1.773-.728 2.45-1.39l2.58-2.538 1.11-1.09c.635-.623 1.11-1.35 1.38-2.195.32-.997.298-2.144-.068-3.126-.106-.286-.23-.57-.384-.836-.154-.27-.347-.512-.543-.752-.397-.483-.92-.89-1.475-1.18-.488-.258-1.104-.118-1.387.364-.27.46-.117 1.106.37 1.363.197.103.383.22.56.35-.07-.05-.137-.102-.206-.154.288.22.546.47.77.752l-.162-.205c.22.283.403.59.543.92l-.105-.248c.138.33.232.676.28 1.03l-.035-.264c.044.353.043.708-.004 1.06l.036-.255c-.05.345-.14.68-.276 1.003l.1-.236c-.135.32-.31.618-.522.894l.157-.202c-.26.332-.58.62-.88.915l-1.435 1.41-1.404 1.38c-.293.287-.578.592-.905.843l.208-.16c-.288.218-.6.397-.936.534l.252-.103c-.34.136-.69.228-1.052.275l.27-.034c-.36.044-.72.042-1.08-.004l.26.035c-.35-.05-.69-.14-1.02-.27l.24.097c-.324-.133-.628-.305-.91-.514.07.052.14.103.208.155-.288-.217-.546-.468-.77-.75l.163.205c-.222-.283-.404-.59-.544-.92l.105.248c-.137-.33-.23-.676-.28-1.03l.036.264c-.044-.352-.043-.708.004-1.06l-.036.256c.05-.345.14-.68.276-1.002l-.1.235c.135-.318.31-.617.522-.893l-.157.203c.302-.387.68-.72 1.03-1.065l.95-.932c.39-.384.384-1.03-.008-1.41-.395-.384-1.045-.378-1.436.006z"/></svg>
@@ -303,11 +303,9 @@
                 </div>
             </div>
         </section>
-        
         <!-- ICONS -->
         <section class="styleguide__section u-hide">
             <h2 class="styleguide__section__title">Icons</h2>
-
             <div class="styleguide__section__item styleguide__section__item--spaced styleguide__section__item--icons">
                 <div class="icon-wrapper" title="esthetisme">
                     <svg class="icon">
@@ -341,11 +339,9 @@
                 </div>
             </div>
         </section>
-        
         <!-- TYPOGRAPHY -->
         <section class="styleguide__section u-hide">
             <h2 class="styleguide__section__title">Typography</h2>
-
             <div class="styleguide__section__item styleguide__section__item--typography">
                 <div class="headings u-hide">
                     <h1>h1 - Gérez comme un pro votre équipe de sport amateur</h1>
@@ -354,42 +350,36 @@
                     <h4>h4 - Coachs gagnez du temps</h4>
                     <h5>h5 - Coachs gagnez du temps</h5>
                 </div>
-
                 <div class="text-wrapper">
                     <h1>Gérez comme un pro votre équipe de sport amateur</h1>
                     <p class="text-subtitle">Gérez comme un pro votre équipe de sport amateur</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adip<span style="color: red;">i</span>sicing elit. Ip<span style="color: red;">s</span>am dicta dignissimos tempora aperiam assumenda? Voluptatum accusamus voluptate expedita optio, libero porro praesentium numquam iusto, sit repellendus eaque est assumenda illo delectus nobis vero! Quibusdam nam at temporibus quidem est, consequatur laudantium, delectus culpa dolorum, nemo deserunt et dolorem iure quisquam. Aspernatur obcaecati magni labore sunt laboriosam molestiae dolor animi error quae eius, voluptas assumenda cupiditate, facere reprehenderit, doloremque corporis mollitia.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint odio dolores explicabo optio excepturi, eveniet dolorum beatae, doloribus similique a, nobis fugit consectetur! Veniam nemo, itaque incidunt consequatur. Quisquam ratione odit repellendus temporibus sed ducimus cumque incidunt nam impedit maxime voluptates laboriosam nesciunt rerum, vero ipsam ipsa, et repellat, ad.</p>
                 </div>
-
                 <div class="text-wrapper">
                     <h2>Gérez comme un pro votre équipe de sport amateur</h2>
                     <p class="text-subtitle">Gérez comme un pro votre équipe de sport amateur</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dicta dignissimos tempora aperiam assumenda? Voluptatum accusamus voluptate expedita optio, libero porro praesentium numquam iusto, sit repellendus eaque est assumenda illo delectus nobis vero! Quibusdam nam at temporibus quidem est, consequatur laudantium, delectus culpa dolorum, nemo deserunt et dolorem iure quisquam. Aspernatur obcaecati magni labore sunt laboriosam molestiae dolor animi error quae eius, voluptas assumenda cupiditate, facere reprehenderit, doloremque corporis mollitia.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint odio dolores explicabo optio excepturi, eveniet dolorum beatae, doloribus similique a, nobis fugit consectetur! Veniam nemo, itaque incidunt consequatur. Quisquam ratione odit repellendus temporibus sed ducimus cumque incidunt nam impedit maxime voluptates laboriosam nesciunt rerum, vero ipsam ipsa, et repellat, ad.</p>
                 </div>
-
                 <div class="text-wrapper">
                     <h3>Gérez comme un pro votre équipe de sport amateur</h3>
                     <p class="text-subtitle">Gérez comme un pro votre équipe de sport amateur</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dicta dignissimos tempora aperiam assumenda? Voluptatum accusamus voluptate expedita optio, libero porro praesentium numquam iusto, sit repellendus eaque est assumenda illo delectus nobis vero! Quibusdam nam at temporibus quidem est, consequatur laudantium, delectus culpa dolorum, nemo deserunt et dolorem iure quisquam. Aspernatur obcaecati magni labore sunt laboriosam molestiae dolor animi error quae eius, voluptas assumenda cupiditate, facere reprehenderit, doloremque corporis mollitia.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint odio dolores explicabo optio excepturi, eveniet dolorum beatae, doloribus similique a, nobis fugit consectetur! Veniam nemo, itaque incidunt consequatur. Quisquam ratione odit repellendus temporibus sed ducimus cumque incidunt nam impedit maxime voluptates laboriosam nesciunt rerum, vero ipsam ipsa, et repellat, ad.</p>
                 </div>
-
                 <div class="text-wrapper">
                     <h4>Gérez comme un pro votre équipe de sport amateur</h4>
                     <p class="text-subtitle">Gérez comme un pro votre équipe de sport amateur</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dicta dignissimos tempora aperiam assumenda? Voluptatum accusamus voluptate expedita optio, libero porro praesentium numquam iusto, sit repellendus eaque est assumenda illo delectus nobis vero! Quibusdam nam at temporibus quidem est, consequatur laudantium, delectus culpa dolorum, nemo deserunt et dolorem iure quisquam. Aspernatur obcaecati magni labore sunt laboriosam molestiae dolor animi error quae eius, voluptas assumenda cupiditate, facere reprehenderit, doloremque corporis mollitia.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint odio dolores explicabo optio excepturi, eveniet dolorum beatae, doloribus similique a, nobis fugit consectetur! Veniam nemo, itaque incidunt consequatur. Quisquam ratione odit repellendus temporibus sed ducimus cumque incidunt nam impedit maxime voluptates laboriosam nesciunt rerum, vero ipsam ipsa, et repellat, ad.</p>
                 </div>
-
                 <div class="text-wrapper text-wrapper--thin">
                     <h3>Lorem ipsum dolor sit amet</h3>
                     <p class="text-subtitle">Gérez comme un pro votre équipe de sport amateur</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam et culpa id perferendis non illo vero quasi, eius minima quidem natus nemo sed voluptatum deleniti laudantium eveniet debitis, laborum dicta unde enim. Quasi sit blanditiis, maiores, adipisci qui at rem.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos distinctio, quo. Molestiae delectus minus at odio ullam perferendis dignissimos esse.</p>
                 </div>
-
                 <div class="lists">
                     <div class="list-wrapper">
                         <h5 class="text-subtitle">Default List</h5>
@@ -410,37 +400,30 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="links">
                     <h5 class="text-subtitle">Links</h5>
-
                     <a href="#">Inscrire son équipe</a>
-
                     <a href="#" class="link--icon">
                         <svg class="icon">
                             <use xlink:href="assets/icons/dest/icons.svg#telephone" />
                         </svg>
                         0164707787
                     </a>
-
                     <a href="#" class="link--icon">
                         <svg class="icon">
                             <use xlink:href="assets/icons/dest/icons.svg#email" />
                         </svg>
                         extoplus@gmail.com
                     </a>
-
                     <a href="#" class="link--icon-rtl">
                         Découvrir cette équipe
                     </a>
                 </div>
             </div>
         </section>
-
         <!-- MEDIA OBJECTS -->
         <section class="styleguide__section u-hide">
             <h2 class="styleguide__section__title">Media objects</h2>
-
             <div class="styleguide__section__item styleguide__section__item--media">
                 <div class="service-pros content-section__body--three-items">
                     <div class="media media--icon">
@@ -498,7 +481,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="installation-steps content-section__body--three-items">
                     <div class="media media--installation-step">
                         <div class="media__body">
@@ -555,7 +537,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="order-steps">
                     <div class="media media--order-step">
                         <div class="media__body">
@@ -581,11 +562,9 @@
                 </div>
             </div>
         </section>
-        
         <!-- TESTIMONIES -->
         <section class="styleguide__section u-hide">
             <h2 class="styleguide__section__title">Testimonies</h2>
-
             <div class="styleguide__section__item styleguide__section__item--spaced">
                 <div class="testimonies-wrapper">
                     <div class="media media--testimony">
@@ -611,7 +590,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="glide u-hide" id="user-tesmimonies">
                     <div class="glide__arrows">
                         <span class="glide__arrow prev" data-glide-dir="<">
@@ -704,30 +682,24 @@
                             Cette adresse email n'est pas valide. Veuillez réessayer.
                         </span>
                     </div>
-                    
                     <div class="input-wrapper">
                         <label for="input-password-example">Mot de passe</label>
                         <input type="password" id="input-password-example" placeholder="Mot de passe">
                     </div>
-
                     <div class="input-wrapper">
                         <label for="input-phone-example">Téléphone</label>
                         <input type="tel" id="input-phone-example" placeholder="+33 6 23 45 67 89">
                     </div>
-
                     <div class="input-inline-group">
                         <div class="input-wrapper">
                             <label for="input-postal-example">Code Postal</label>
                             <input type="text" id="input-postal-example" placeholder="ex: 93100">
                         </div>
-
                         <div class="input-wrapper">
                             <label for="input-city-example">Ville</label>
                             <input type="text" id="input-city-example" placeholder="ex: Montreuil">
                         </div>
                     </div>
-
-                    
                     <div class="input-wrapper">
                         <label for="input-phone-example">Least</label>
                         <select>
@@ -738,14 +710,12 @@
                             <option value="Option 5">Tim Berners-Lee</option>
                         </select>
                     </div>
-
                     <div class="checkbox-wrapper">
                         <input type="checkbox" id="checkbox-example">
                         <label for="checkbox-example" class="checkbox-label">
                             En m'inscrivant via email ou via Facebook j'accepte les conditions générales d'utilisation.
                         </label>
                     </div>
-
                     <div class="radio-wrapper">
                         <input type="radio" name="radio-example" id="radio-example1">
                         <label for="radio-example1" class="radio-label">Choix 1</label>
@@ -758,26 +728,21 @@
                         <input type="radio" name="radio-example" id="radio-example3">
                         <label for="radio-example3" class="radio-label">Choix 3</label>
                     </div>
-
                     <div class="searchbar">
                         <input type="text" class="searchbar__input">
                         <button class="searchbar__submit btn--red">
                         </button>
                     </div>
-
                     <div class="fake-input">
                         <p class="fake-input__label">Nom</p>
                         <p class="fake-input__text">Mastro</p>
                     </div>
-
-                </form>
-            </div>
+                    </form>
+                </div>
         </section>
-        
         <!-- ALERT BOXES -->
         <section class="styleguide__section u-hide">
             <h2 class="styleguide__section__title">Alert Boxes</h2>
-
             <div class="styleguide__section__item styleguide__section__item--alert">
                 <div class="alert">
                     <p class="alert__text">[Alert Normale] Cliquez ici pour agrandir votre Monneypenny.</p>
@@ -801,11 +766,9 @@
                 </div>
             </div>
         </section>
-        
         <!-- SKEWED IMAGES -->
         <section class="styleguide__section u-hide">
             <h2 class="styleguide__section__title">Skewed Images</h2>
-            
             <div class="styleguide__section__item styleguide__section__item--image">
                 <div class="img-skewed-wrapper">
                     <figure class="figure--skewed">
@@ -823,11 +786,9 @@
                 </div>
             </div>
         </section>
-        
         <!-- CONTENT HEADER -->
         <section class="styleguide__section u-hide">
             <h2 class="styleguide__section__title">Content Header</h2>
-
             <div class="styleguide__section__item">
                 <header class="content-header">
                     <div class="content-header__body">
@@ -835,7 +796,6 @@
                         <h4 class="content-header__subtitle">Caractéristiques techniques</h4>
                     </div>
                 </header>
-
                 <header class="content-header content-header--centered">
                     <div class="content-header__body">
                         <h3 class="content-header__title">Mise en oeuvre</h3>
@@ -852,17 +812,17 @@
                             <a href="#" class="btn btn--medium btn--full">
                                 <span class="btn__content">
                                     <span class="btn__text">Télécharger le kit</span>
-                                    <svg class="icon btn__icon">
-                                        <use xlink:href="assets/icons/dest/icons.svg#download" />
-                                    </svg>
+                                <svg class="icon btn__icon">
+                                    <use xlink:href="assets/icons/dest/icons.svg#download" />
+                                </svg>
                                 </span>
                             </a>
                             <a href="#" class="btn btn--medium btn--full">
                                 <span class="btn__content">
                                     <span class="btn__text">Vidéo YouTube</span>
-                                    <svg class="icon btn__icon">
-                                        <use xlink:href="assets/icons/dest/icons.svg#arrow" />
-                                    </svg>
+                                <svg class="icon btn__icon">
+                                    <use xlink:href="assets/icons/dest/icons.svg#arrow" />
+                                </svg>
                                 </span>
                             </a>
                         </div>
@@ -870,11 +830,9 @@
                 </header>
             </div>
         </section>
-
         <!-- KIT CARD -->
         <section class="styleguide__section u-hide">
             <h2 class="styleguide__section__title">Kit Card</h2>
-
             <div class="styleguide__section__item">
                 <form class="kit-wrapper js-kit-wrapper" action="#">
                     <div class="kit js-kit">
@@ -883,7 +841,7 @@
                             <div class="kit__system-amount">
                                 <p class="kit__system-amount__text">Quantité de systèmes ayant la même configuration : </p>
                                 <div class="kit__system-amount__selector numeric-spinner">
-                                    <input type="button" class="numeric-spinner__btn qtyminus" value="-"  field="quantity" />
+                                    <input type="button" class="numeric-spinner__btn qtyminus" value="-" field="quantity" />
                                     <input type="number" class="numeric-spinner__number qty" min="1" name="quantity" value="1" />
                                     <input type="button" class="numeric-spinner__btn qtyplus" value="+" field="quantity" />
                                 </div>
@@ -947,7 +905,7 @@
                                         <div class="rive-length">
                                             <span class="input-pre-text">de</span>
                                             <div class="numeric-spinner">
-                                                <input type="button" class="numeric-spinner__btn qtyminus" value="-"  field="quantity" />
+                                                <input type="button" class="numeric-spinner__btn qtyminus" value="-" field="quantity" />
                                                 <input type="number" class="numeric-spinner__number qty" name="quantity" value="0" />
                                                 <input type="button" class="numeric-spinner__btn qtyplus" value="+" field="quantity" />
                                             </div>
@@ -969,7 +927,7 @@
                                         <div class="rive-length">
                                             <span class="input-pre-text">de</span>
                                             <div class="numeric-spinner">
-                                                <input type="button" class="numeric-spinner__btn qtyminus" value="-"  field="quantity" />
+                                                <input type="button" class="numeric-spinner__btn qtyminus" value="-" field="quantity" />
                                                 <input type="number" class="numeric-spinner__number qty" name="quantity" value="0" />
                                                 <input type="button" class="numeric-spinner__btn qtyplus" value="+" field="quantity" />
                                             </div>
@@ -978,12 +936,12 @@
                                     </div>
                                 </div>
                                 <button class="btn btn--medium btn--border btn--border-red">
-                                   <span class="btn__content">
+                                    <span class="btn__content">
                                         <svg class="icon icon--left btn__icon">
                                             <use xlink:href="assets/icons/dest/icons.svg#add" />
                                         </svg>
                                         <span class="btn__text">Ajouter une autre rive</span>
-                                    </span> 
+                                    </span>
                                 </button>
                             </div>
                             <div class="kit__body__part kit-details">
@@ -1012,18 +970,18 @@
                                         </tr>
                                         <tr>
                                             <td class="kit-details__designation">
-                                               <div class="checkbox-wrapper">
+                                                <div class="checkbox-wrapper">
                                                     <input type="checkbox" id="checkbox-sikaflex">
                                                     <label for="checkbox-sikaflex" class="checkbox-label">
                                                         Sikaflex Pro-11 FC 300Ml
                                                     </label>
-                                                </div> 
+                                                </div>
                                             </td>
                                             <td class="kit-details__quatity">50</td>
                                             <td class="kit-details__price-nt">10,12€</td>
                                             <td class="kit-details__price-wt">505,10€</td>
                                         </tr>
-                                    </tbody>  
+                                    </tbody>
                                     <tfoot>
                                         <tr class="kit-details__final-price">
                                             <td class="kit-details__final-price__text" rowspan="2">Prix de la configuration</td>
@@ -1042,7 +1000,7 @@
                                 <use xlink:href="assets/icons/dest/icons.svg#add-white" />
                             </svg>
                             <span class="btn__text">Ajouter un autre système</span>
-                        </span> 
+                        </span>
                     </button>
                     <div class="kit-price-section">
                         <div class="input-wrapper bottom-sep discount-block">
@@ -1073,17 +1031,17 @@
                             <button class="btn btn--medium btn--full">
                                 <span class="btn__content">
                                     <span class="btn__text">Télécharger le devis</span>
-                                    <svg class="icon btn__icon">
-                                        <use xlink:href="assets/icons/dest/icons.svg#download" />
-                                    </svg>
+                                <svg class="icon btn__icon">
+                                    <use xlink:href="assets/icons/dest/icons.svg#download" />
+                                </svg>
                                 </span>
                             </button>
                             <a href="#" class="btn btn--medium btn--full">
                                 <span class="btn__content">
                                     <span class="btn__text">Commander <span>la configuration</span></span>
-                                    <svg class="icon btn__icon">
-                                        <use xlink:href="assets/icons/dest/icons.svg#commander" />
-                                    </svg>
+                                <svg class="icon btn__icon">
+                                    <use xlink:href="assets/icons/dest/icons.svg#commander" />
+                                </svg>
                                 </span>
                             </a>
                         </div>
@@ -1092,7 +1050,6 @@
             </div>
         </section>
     </main>
-    
     <script src="assets/js/vendor/typerendering-1.1.0.min.js" defer></script>
     <script src="assets/bower_components/hideshowpassword/hideshowpassword.min.js" defer></script>
     <script src="assets/js/build/all.js"></script>
