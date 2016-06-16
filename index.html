@@ -10,12 +10,13 @@
     <script src="assets/js/vendor/modernizr-2.8.3.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/styleguide.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 
     <div class="modal-wrapper is-active" id="modalWrapper">
+        <!-- Modal Sign In -->
         <div class="modal js-modal u-hide">
           <header class="modal__header">
             <svg class="modal__header__logo" width="69" height="10" viewBox="0 0 69 10" xmlns="http://www.w3.org/2000/svg">
@@ -37,6 +38,7 @@
               <button class="modal__form__submit" id="smartLoginSubmit" type="submit">Connect</button>
             </form>
           </main>
+          <p class="modal__outer-text">Don't have an account ? <a href="http://flppn.com/register">Get started</a></p>
         </div>
         <!-- Modal Delete Collection Confirmation -->
         <div class="modal modal--choice js-modal-collection-delete js-modal u-hide">
@@ -95,7 +97,7 @@
           </main>
         </div>
         <!-- Modal Delete Video Confirmation -->
-        <div class="modal modal--choice js-modal-video-delete js-modal">
+        <div class="modal modal--choice js-modal-video-delete js-modal u-hide">
           <header class="modal__header">
             <div class="modal__header__content">
               <p class="modal__header__title">Do you really want to delete this video?</p>
@@ -113,7 +115,102 @@
             </div>
           </main>
         </div>
-        <p class="modal__outer-text u-hide">Don't have an account ? <a href="http://flppn.com/register">Get started</a></p>
+        <!-- Modal Choose Collection -->
+        <div class="modal modal--choose-collection js-modal-choose-collection js-modal">
+          <div class="modal--choose-collection__link-section">
+            <div class="modal--choose-collection__link-poster"></div>
+            <div class="modal--choose-collection__link-content">
+              <p class="modal--choose-collection__link-name">My dad still thinks I'm a virgin whereas I'm deeply fucking not</p>
+              <p class="modal--choose-collection__link-provider">from <span>Pornhub</span></p>
+            </div>
+          </div>
+          <div class="modal--choose-collection__collections-section smartSaveMenu">
+            <header class="modal__header">
+              <div class="modal__header__content">
+                <p class="modal__header__title">Choose a collection</p>
+              </div>
+              <button class="modal__header__btn modal__close-btn js-modal-close">
+                <svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.9 4.43L2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z"/>
+                </svg>
+              </button>
+            </header>
+            
+            <ul class="smartSaveMenu-part smartSaveMenu-collections">
+              <li class="smartSaveMenu-collection">
+                <div class="collection-cover"></div>
+                <div class="collection-content">
+                  <p class="collection-name">Prison</p>
+                  <p class="collection-infos">12 videos</p>
+                </div>
+              </li>
+              <li class="smartSaveMenu-collection">
+                <div class="collection-cover"></div>
+                <div class="collection-content">
+                  <p class="collection-name">School</p>
+                  <p class="collection-infos">2 videos</p>
+                </div>
+              </li>
+              <li class="smartSaveMenu-collection">
+                <div class="collection-cover"></div>
+                <div class="collection-content">
+                  <p class="collection-name">Church</p>
+                  <p class="collection-infos">28 videos</p>
+                </div>
+              </li>
+              <li class="smartSaveMenu-collection">
+                <div class="collection-cover"></div>
+                <div class="collection-content">
+                  <p class="collection-name">Home</p>
+                  <p class="collection-infos">17 videos</p>
+                </div>
+              </li>
+              <li class="smartSaveMenu-collection">
+                <div class="collection-cover"></div>
+                <div class="collection-content">
+                  <p class="collection-name">Trailer park</p>
+                  <p class="collection-infos">2 videos</p>
+                </div>
+              </li>
+              <li class="smartSaveMenu-collection">
+                <div class="collection-cover"></div>
+                <div class="collection-content">
+                  <p class="collection-name">School</p>
+                  <p class="collection-infos">2 videos</p>
+                </div>
+              </li>
+              <li class="smartSaveMenu-collection">
+                <div class="collection-cover"></div>
+                <div class="collection-content">
+                  <p class="collection-name">Church</p>
+                  <p class="collection-infos">28 videos</p>
+                </div>
+              </li>
+              <li class="smartSaveMenu-collection">
+                <div class="collection-cover"></div>
+                <div class="collection-content">
+                  <p class="collection-name">Home</p>
+                  <p class="collection-infos">17 videos</p>
+                </div>
+              </li>
+              <li class="smartSaveMenu-collection">
+                <div class="collection-cover"></div>
+                <div class="collection-content">
+                  <p class="collection-name">Trailer park</p>
+                  <p class="collection-infos">2 videos</p>
+                </div>
+              </li>
+            </ul>
+            
+            <form class="smartSaveMenu-part smartSaveMenu-createCollection">
+              <div class="smartSaveMenu-createCollectionIcon">
+                <svg width="15" height="16" viewBox="0 0 15 16" xmlns="http://www.w3.org/2000/svg"><defs><path d="M12 28.002c0-.553.45-1.002 1.007-1.002h12.986c.556 0 1.007.456 1.007 1.002v9.996C27 38.55 26.55 39 25.993 39H13.007C12.45 39 12 38.544 12 37.998v-9.996zM14 25h11v1H14v-1zm2-2h7v1h-7v-1z" id="a"/><mask id="b" x="0" y="0" width="15" height="16" fill="#fff"><use xlink:href="#a"/></mask></defs><use mask="url(#b)" xlink:href="#a" transform="translate(-12 -23)" stroke="#AAAAB1" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+              </div>
+              <input class="createCollection-field" type="text" placeholder="Create new collection..." required/>
+              <p class="smartSaveMenu-createCollectionText">Press enter to save</p>
+            </form>
+          </div>
+        </div>
     </div>
 
     <div class="headnav">
