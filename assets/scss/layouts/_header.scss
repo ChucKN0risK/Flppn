@@ -31,6 +31,15 @@ $header-side-padding: 2.5rem;
   }
 }
 
+.header-main__content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .header-main__search {
   min-width: 30rem;
 }

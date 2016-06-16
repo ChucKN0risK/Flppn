@@ -13,15 +13,16 @@ textarea,
 select {
   display: flex;
   width: 100%;
-  @include rms(0);
-  font-weight: 300;
-  color: $black;
   height: $input-height;
   padding: .5em;
   border: 1px solid $lightgrey2;
-  @include border-radius();
   background-color: $lightgrey;
+  @include border-radius();
   @include placeholder($grey);
+  color: $black;
+  font-family: $font1;
+  @include rms(0);
+  font-weight: 300;
   outline: none;
   &:focus {
     border-color: $pink;
