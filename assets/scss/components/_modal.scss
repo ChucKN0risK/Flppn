@@ -256,7 +256,10 @@ $modal-padding: 2rem;
 }
 
 .modal__close-btn {
-  svg { fill: $grey; }
+  svg { 
+    margin: auto;
+    fill: $grey;
+  }
   &:hover {
     transform: rotate(90deg);
   }
