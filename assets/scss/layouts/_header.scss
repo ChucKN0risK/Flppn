@@ -13,6 +13,7 @@ $header-side-padding: 2.5rem;
   z-index: $zIndex-headerMain;
 }
 
+// Starting from under 1040px things get too little
 .header-main {
   position: relative;
   height: $header--main-height;
@@ -42,6 +43,11 @@ $header-side-padding: 2.5rem;
 
 .header-main__search {
   min-width: 30rem;
+
+  input[type=text] {
+    height: 2.5rem;
+    font-weight: 300;
+  }
 }
 
 .header-main__right-section {
