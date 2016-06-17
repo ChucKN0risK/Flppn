@@ -7,3 +7,9 @@ chrome.windows.onCreated.addListener(function(){
   chrome.storage.sync.clear();
 });
 
+chrome.browserAction.onClicked.addListener(function(){
+  var properties = {
+    url: "http://flppn.com"
+  };
+  chrome.tabs.create(properties);
+});
