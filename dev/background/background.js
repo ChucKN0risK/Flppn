@@ -2,3 +2,8 @@
 // chrome.runtime.onInstalled.addListener(function () {
 //   chrome.tabs.create({"url": "http://flppn.com/register"})
 // });
+
+chrome.windows.onCreated.addListener(function(){
+  chrome.storage.sync.clear();
+});
+
