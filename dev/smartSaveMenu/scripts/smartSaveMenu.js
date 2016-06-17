@@ -124,13 +124,13 @@ smartSaveMenu.prototype = {
       }
     })
   },
-  constructCategories: function (video) {
+  constructCategories: function (collection) {
     var cat = document.createElement('li');
     cat.classList.add('smartSaveMenu-collection');
-    cat.setAttribute('data-collectionID', video._id);
+    cat.setAttribute('data-collectionID', collection._id);
     var div = document.createElement('div');
     div.classList.add('collection-cover');
-    div.style.backgroundImage = "url(" + video.img + ")";
+    div.style.backgroundImage = "url(" + collection.img + ")";
     var div2 = document.createElement('div');
     div2.classList.add('collection-content');
     var p = document.createElement('p');
@@ -140,9 +140,12 @@ smartSaveMenu.prototype = {
     cat.appendChild(div);
     cat.appendChild(div2);
     div2.appendChild(p);
-    p.appendChild(document.createTextNode(video.title));
+    if(collection.title === 'unClassified'){
+      collection.title = 'My Video';
+    }
+    p.appendChild(document.createTextNode(collection.title));
     div2.appendChild(p2);
-    p2.appendChild(document.createTextNode(video.videoNumber + ' videos'));
+    p2.appendChild(document.createTextNode(collection.videoNumber + ' videos'));
     cat.addEventListener('click', this.saveVideo);
     return cat;
   }
