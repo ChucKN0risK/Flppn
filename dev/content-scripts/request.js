@@ -1,4 +1,4 @@
-  var urlAPI = "http://api.flppn.com:8080";
+  var urlAPI = 'http://ec2-54-154-225-53.eu-west-1.compute.amazonaws.com:8080';
 
   var request = function(verb, url, options, cb) {
 
