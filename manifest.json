@@ -3,7 +3,7 @@
 
   "name": "Flppn Plugin",
   "description": "This extension will add a link in Flppn",
-  "version": "1.0",
+  "version": "0.0.1",
 
   "browser_action": {
     "default_title": "Flppn",
@@ -34,7 +34,7 @@
     "scripts": ["dev/background/background.js"],
     "persistent": false
   },
-  "options_page": "dev/options.html",
+//  "options_page": "dev/options.html",
   "content_scripts": [
     {
       "matches": [
