@@ -4,8 +4,8 @@
 
 
 chrome.storage.sync.get(function(localstorage) {
-  token = localstorage.token;
-  var videoWrapper = document.querySelector('#player');
+  token = localstorage.id_token;
+  var videoWrapper = document.querySelector('#player') || document.querySelector('#videoWrapper')
   if (videoWrapper) {
     smartSaveButton(videoWrapper);
   }
@@ -14,7 +14,7 @@ chrome.storage.sync.get(function(localstorage) {
 chrome.storage.onChanged.addListener(function(changes) {
   // If the token stored in the localstorage has changed
   // then its new value is cached in our global token variable.
-  token = changes.token;
+  token = changes.id_token;
 });
 
 var smartSaveButton = function(videoWrapper) {
@@ -44,10 +44,11 @@ var SmartSaveButton = {
     var clone = document.importNode(template.content, true);
     host.appendChild(clone);
 
-    var button = host.firstChild.nextSibling.nextSibling.nextSibling;
+    var button = host.querySelector('button');
     button.addEventListener('click', function(e) {
       _this.openSmartSaveMenu();
     });
+
 
     return host;
   },
@@ -55,7 +56,7 @@ var SmartSaveButton = {
     // Here we get our smartSaveButton DOM from a file in the project 
     // doing a xhr request.
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', chrome.extension.getURL('dev/smartSaveButton/smartSaveButton.html'), true);
+    xhr.open('GET', chrome.extension.getURL('smartSaveButton/smartSaveButton.html'), true);
     xhr.onload = function() {
         var z = document.createElement('div');
         z.style.zIndex = '858575959';

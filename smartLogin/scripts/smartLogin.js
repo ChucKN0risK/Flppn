@@ -74,7 +74,7 @@ smartLogin.prototype = {
 // Here we get our smartSaveButton DOM from a file in the project 
 // doing a xhr request.
 var xhr = new XMLHttpRequest();
-xhr.open('GET', chrome.extension.getURL('dev/smartLogin/smartLogin.html'), true);
+xhr.open('GET', chrome.extension.getURL('smartLogin/smartLogin.html'), true);
 xhr.onload = function() {
     var smartLoginHook = document.createElement('div');
     smartLoginHook.style.zIndex = '958575959';

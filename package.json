@@ -26,6 +26,7 @@
     "gulp-cached": "^1.1.0",
     "gulp-clean-css": "^2.0.7",
     "gulp-concat": "^2.6.0",
+    "gulp-copy": "^1.0.0",
     "gulp-imagemin": "^2.2.1",
     "gulp-load-plugins": "^0.10.0",
     "gulp-rename": "^1.2.2",
@@ -43,6 +44,7 @@
   },
   "dependencies": {
     "critical": "^0.7.3",
+    "gulp-cleanhtml": "^1.0.1",
     "sassdoc": "^2.1.20"
   }
 }

@@ -1,4 +1,5 @@
   var urlAPI = 'http://ec2-54-154-184-39.eu-west-1.compute.amazonaws.com:8080';
+  // var urlAPI = 'http://localhost:3000';
 
   var request = function(verb, url, options, cb) {
 
@@ -22,10 +23,11 @@
   };
 
   var getToken = function(cb) {
-      chrome.storage.sync.get('token', function(token) {
+      chrome.storage.sync.get(function(localStorage) {
+        
 
-          if (token.token) {
-              return cb(token.token);
+          if (localStorage.id_token) {
+              return cb(localStorage.id_token);
           }
 
           login.toggle();
@@ -34,9 +36,10 @@
 
 
   var getCollections = function(cb) {
-      getToken(function(token) {
+      getToken(function(id_token) {
+
           var options = {
-              token: token
+              token: id_token
           };
 
           request("GET", urlAPI + "/collections", options, function(err, result) {
@@ -65,7 +68,7 @@
               return cb(err)
           }
 
-          chrome.storage.sync.set({token: result.token});
+          chrome.storage.sync.set({id_token: result.id_token});
 
           cb(null, result);
       })
@@ -73,10 +76,10 @@
 
 
   var createCollectionRequest = function(title, cb) {
-      getToken(function(token) {
+      getToken(function(id_token) {
 
           var options = {
-              token: token,
+              token: id_token,
               data: {
                   "title": title
               }
@@ -95,10 +98,10 @@
 
   var addVideoRequest = function(url, collectionID, cb) {
 
-      getToken(function(token) {
+      getToken(function(id_token) {
 
           var options = {
-              token: token,
+              token: id_token,
               data: {
                   "url": url
               }

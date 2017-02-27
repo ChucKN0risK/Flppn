@@ -24,7 +24,7 @@ var panicButton = function(){
   this.originalTitle = document.getElementsByTagName('title')[0].text;
   this.originalFavicon = document.createElement('link');
   this.fakeTitle = 'NoSQL — Wikipédia';
-  this.fakeUrl = 'https://fr.wikipedia.org/wiki/NoSQL';
+  this.fakeUrl = 'https://fr.wikipedia.org/wiki/P%C3%A9rou';
   this.fakeIcon ='https://fr.wikipedia.org/static/favicon/wikipedia.ico';
   this.constructor();
 };

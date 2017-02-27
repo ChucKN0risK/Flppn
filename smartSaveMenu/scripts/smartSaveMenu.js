@@ -166,7 +166,7 @@ var getFavicon = function () {
 // Here we get our smartSaveButton DOM from a file in the project 
 // doing a xhr request.
 var xhr = new XMLHttpRequest();
-xhr.open('GET', chrome.extension.getURL('dev/smartSaveMenu/smartSaveMenu.html'), true);
+xhr.open('GET', chrome.extension.getURL('smartSaveMenu/smartSaveMenu.html'), true);
 xhr.onload = function () {
   var smartSaveMenuHook = document.createElement('div');
   smartSaveMenuHook.style.zIndex = '858575959';

@@ -9,7 +9,7 @@ chrome.windows.onCreated.addListener(function(){
 
 chrome.browserAction.onClicked.addListener(function(){
   var properties = {
-    url: "http://flppn.com"
+    url: "http://alpha.flppn.com"
   };
   chrome.tabs.create(properties);
 });

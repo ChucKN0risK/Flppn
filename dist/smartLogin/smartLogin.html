@@ -1,0 +1,178 @@
+<div id="smartLoginHost"></div><template id="smartLoginTemplate"><style>
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+        :host {
+            --white: #fff;
+            --black: #171717;
+            --lightgrey: #fbfbfb;
+            --grey: #aaaab1;
+            --red: #e65c5c;
+            --border-color: #f4f4f5;
+            --border-radius: 2px;
+            --transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --padding: .75rem;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        a {
+            color: #f55180;
+        }
+
+        p.error {
+            color: var(--red);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .modal-wrapper {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.7);
+            font-family: 'Open Sans';
+            font-size: 1rem;
+            z-index: 40;
+        }
+
+        .modal-wrapper.is-active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-wrapper.is-active .modal {
+            transform: none;
+            opacity: 1;
+        }
+
+        .modal-wrapper.is-active .modal__outer-text {
+            opacity: 1;
+        }
+
+        .modal {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            max-width: 40rem;
+            background-color: var(--white);
+            border-radius: 4px;
+            z-index: 40;
+            width: 30rem;
+            max-width: 30rem;
+            font-family: inherit;
+            overflow: hidden;
+            transition: var(--transition);
+            will-change: transform;
+            transform: translateY(1rem);
+            opacity: 0;
+        }
+
+        .modal__header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 4rem;
+            background-color: inherit;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .modal__header__logo {
+            transform: scale(1.5);
+        }
+
+        .modal__header__btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 2rem;
+            width: 2rem;
+            background-color: transparent;
+            border: none;
+            transition: var(--transition);
+            will-change: transform;
+            cursor: pointer;
+        }
+
+        .modal__header__btn:hover {
+            transform: rotate(90deg);
+        }
+
+        .modal__content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2rem;
+        }
+
+        .modal__form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 70%;
+            max-width: 30rem;
+        }
+
+        .modal__form__input {
+            display: flex;
+            font-weight: 300;
+            color: #303030;
+            height: 3rem;
+            width: 100%;
+            padding: .5em;
+            margin-bottom: .5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 2px;
+            background-color: var(--lightgrey);
+            font-family: inherit;
+            font-size: 1rem;
+            color: var(--grey);
+            outline: none;
+        }
+
+        .modal__form__input:focus {
+            border-color: #f551c6;
+            color: var(--black);
+        }
+
+        .modal__form__submit {
+            height: 3rem;
+            width: 10rem;
+            border-radius: 3rem;
+            border: none;
+            background-image: linear-gradient(to bottom, #f551c6, #f55180);
+            margin-top: 1rem;
+            color: var(--white);
+            font-size: 1rem;
+            font-family: inherit;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .modal__outer-text {
+            margin-top: 1rem;
+            color: var(--white);
+            transition: var(--transition);
+            will-change: opacity;
+            opacity: 0;
+        }
+
+        .modal__outer-text a {
+            text-decoration: none;
+        }
+
+    </style><div class="modal-wrapper" id="modalWrapper" style="visibility: hidden"><div class="modal js-modal"><header class="modal__header"><svg class="modal__header__logo" width="69" height="10" viewBox="0 0 69 10" xmlns="http://www.w3.org/2000/svg"><path d="M6.58 1.1V0H0v10h1.183V5.714h4.835v-1.1H1.183V1.1H6.58zm9.088 7.814V0h-1.183v10h5.722V8.914h-4.54zM28.29 0v10h1.183V6.843h2.706c2.557 0 4.035-1.272 4.035-3.486C36.215 1.23 34.737 0 32.18 0h-3.89zm1.183 1.1h2.66c1.864 0 2.944.77 2.944 2.286 0 1.557-1.08 2.357-2.943 2.357h-2.66V1.1zM44.343 0v10h1.182V6.843h2.706c2.56 0 4.038-1.272 4.038-3.486C52.267 1.23 50.788 0 48.23 0h-3.888zm1.182 1.1h2.662c1.863 0 2.942.77 2.942 2.286 0 1.557-1.08 2.357-2.943 2.357h-2.662V1.1zM69 10V0h-1.168v8.043L61.622 0h-1.227v10h1.183V1.97l6.21 8.03H69z" fill="#000" fill-rule="evenodd"/></svg><button class="modal__header__btn modal__close-btn js-modal-close"><svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg"><path d="M5.9 4.43 2.28.814C1.914.443 1.32.447.95.815c-.37.37-.37.964-.002 1.33l3.618 3.62L.948 9.383c-.37.368-.367.963.002 1.33.37.372.964.37 1.33.003L5.9 7.098l3.618 3.618c.368.37.963.367 1.33-.002.372-.37.37-.964.003-1.33l-3.617-3.62 3.618-3.618c.37-.368.367-.963 0-1.33-.372-.372-.965-.37-1.332-.003L5.898 4.43z" fill="#AAAAB1" fill-rule="evenodd"/></svg></button></header><main class="modal__content"><form action="#" class="page__form modal__form" id="smartLoginForm"> <input class="modal__form__input" id="smartLoginUsername" type="text" placeholder="Username"> <input class="modal__form__input" id="smartLoginPassword" type="password" placeholder="Password"><p class="error" id="errorWrapper">Username or password incorrect :(</p> <button class="modal__form__submit" id="smartLoginSubmit" type="submit">Connect</button></form></main></div><p class="modal__outer-text">Don't have an account ? <a href="http://flppn.com/register">Get started</a></p></div></template>
